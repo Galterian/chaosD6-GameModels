@@ -39,7 +39,8 @@ innate_effect }, card: { name, tags, resources: { wbc3_*, sprites: { idle, walk,
 
 - `role`: `quest_giver`, `storyteller` (tells you about the Dimension), `builder`, `healer`, `guard`, `villager`,
   `wanderer` (roams 50–100 hexes from its village centre), `smith`, `wizard`, `mercenary` (follows a hero the village
-  welcomes, when asked), `trader` (barters: its quests with `consume: true`).
+  welcomes, when asked), `trader` (barters: its quests with `consume: true`), `dragon` (guards the centre building),
+  `engineer` (builds siege engines for a price), `siege` (a siege engine: only ever a follower).
 - `talk` (optional): `[ { id, ask, say[] } ]` — the NPC's own questions in its card, next to the ones its role gives
   (who are you · a storyteller's news, dangers and villages · a guard's gate and roads · a wizard reading your cards ·
   a smith's arms · a mercenary's hire · a trader's wares · its quests / barters · your standing · farewell). `say` is
@@ -51,6 +52,18 @@ innate_effect }, card: { name, tags, resources: { wbc3_*, sprites: { idle, walk,
   `build_max` (1..10): how many of its buildings stand at once (the oldest comes down). Its price is one of its
   `quests`: a `consume` quest whose `allies` reward names the builder itself ("Hire me — pay one effect card").
 - `life` = round(Σstats / 10) (ruling 2026-10-28). `deck_effects` are effect ids the unit casts.
+- `unit.tags` (optional): `flying` — the unit passes over walls, scenery and labyrinth walls but lands on an open hex
+  (a monster tagged `flyer` flies too). `unit.breath: { range 1..3 }` (a dragon must have one): the Breath Attack —
+  each Attack strikes every enemy within `range`.
+- `siege` (exactly the `siege` role): `{ kind: catapult | ballista | ram, class, min, max, speed? | rounds? }`. The
+  engine plays only Empty Posture / Empty Move; its class is ready again at the start of each turn.
+  `catapult` (min ≥ 2, max ≤ 4, `speed` hexes per action 1..4): a stone flies to the target hex and deals 1 damage to
+  an enemy standing there when it lands. `ballista` (1..3): a bolt flies along the line through the target, 1 damage
+  to each enemy on hexes 1..max as it passes. `ram` (max 1, `rounds` 1..6): next to a wall hex (labyrinth wall,
+  village wall, Barricade) or a fortress for `rounds` actions in a row, not moving, it breaks it; a village wall costs
+  the hero `building_broken` relationship. A siege engine gives no quests and builds nothing.
+- An `engineer` sells engines: a `consume` (and `repeatable`) quest whose `allies` reward is one siege npc ("Build me
+  a Catapult — pay one effect card"). One engine at a time per hero.
 - Line placeholders: `{need}`, `{reward}`, `{village}`, `{village_dir}`, `{village_dist}`, `{lore}`, `{lore_dir}`.
 - A villager's team is its village's `"<Name> Village"`.
 
@@ -106,6 +119,7 @@ start_same_race, hostile, enter, ally_all, building_broken, villager_attacked, t
   (`gate × (R+1)/R`); give it the `gate_guard` agenda: it steps onto the gate to bar a stranger the village does not
   welcome yet and steps back for a welcome one. A resident with `post: "outside"` (the quest givers, the storyteller)
   waits between the wall and the cleared edge, never next to the gate, so a stranger gets quests and news there.
+  `post: "centre"` (a dragon only) stands next to the centre building (distance 1) and guards it.
 
 - `size: "hamlet"`: a smaller village (no wall, a few buildings and people). The map picks a full template for a cell
   as always, then turns 40 % of the cells away from the spawn into the hamlet of the same race (`HAMLET_RATE`).
