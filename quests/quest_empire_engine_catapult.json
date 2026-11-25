@@ -1,0 +1,35 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_empire_engine_catapult",
+  "name": "Stones for the Arm",
+  "version": "1.0.0",
+  "race": "race_empire",
+  "giver": "npc_empire_engineer",
+  "need_text": "one effect card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "effect"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "allies",
+      "count": 1,
+      "units": [
+        "npc_empire_catapult"
+      ]
+    }
+  ],
+  "repeatable": true
+}

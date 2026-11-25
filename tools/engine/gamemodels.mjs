@@ -38,7 +38,16 @@ export const KINDS = {
   quest: ['quests', 'chaosd6.quest/1', /^quest_[a-z0-9_]+$/],
   lib: ['lib', 'chaosd6.agenda-lib/1', /^agenda_[a-z0-9_]+$/],
 };
-export const ROLES = ['quest_giver', 'storyteller', 'builder', 'healer', 'guard', 'villager', 'wanderer', 'smith', 'wizard', 'mercenary', 'trader'];
+// dragon (user 2026-11-25): guards the centre building (post "centre"); engineer: builds a siege engine for a price
+// (its consume quests reward one); siege: the engine itself — a follower that only plays EP / EM (npc.siege)
+export const ROLES = ['quest_giver', 'storyteller', 'builder', 'healer', 'guard', 'villager', 'wanderer', 'smith', 'wizard', 'mercenary', 'trader', 'dragon', 'engineer', 'siege'];
+// A siege engine's class (npc.siege, user 2026-11-25), once per turn, ready at the start of each turn:
+//   catapult — a stone onto a hex min..max away (2..4), flying `speed` hexes an action: 1 damage to an enemy there
+//   ballista — a bolt along a line, hexes 1..max (3): 1 damage to each enemy on its path as it passes
+//   ram      — next to a wall for `rounds` actions in a row (3): the wall hex breaks
+export const SIEGE_KINDS = { catapult: { min: 2, max: 4 }, ballista: { min: 1, max: 3 }, ram: { min: 1, max: 1 } };
+// unit.tags the engine reads: flying (passes over walls and scenery, lands on open ground)
+export const UNIT_TAGS = ['flying'];
 export const BUILDING_ROLES = ['centre', 'keep', 'producer', 'temple', 'shop', 'lore', 'house', 'tower'];
 // What a hired builder's building does (npc.builds[].power → js/building-bonus.js, for a hero standing on it).
 export const BUILD_POWERS = ['stance', 'mend', 'draw', 'explore'];
@@ -130,6 +139,26 @@ export function checkGameModels(m, { known = null, assetFile = null } = {}) {
     else if (u.life !== Math.round(STATS.reduce((a, k) => a + u.stats[k], 0) / 10)) e(id, `unit.life ${u.life} ≠ round(Σstats/10) (ruling 2026-10-28)`);
     if (!Number.isInteger(u.actions_per_round) || u.actions_per_round < 1 || u.actions_per_round > 4) e(id, 'unit.actions_per_round 1..4');
     for (const fx of u.deck_effects || []) if (known?.effects && !known.effects.has(fx)) e(id, `unknown deck effect ${fx}`);
+    if (u.tags !== undefined && !(Array.isArray(u.tags) && u.tags.every(t => UNIT_TAGS.includes(t)))) e(id, `unit.tags: a list of ${UNIT_TAGS.join('|')}`);
+    // breath (a dragon's Breath Attack): its Attack strikes every enemy within `range`
+    if (u.breath !== undefined && !(Number.isInteger(u.breath?.range) && u.breath.range >= 1 && u.breath.range <= 3)) e(id, 'unit.breath: { range 1..3 }');
+    if (n.role === 'dragon' && !u.breath) e(id, 'a dragon needs unit.breath');
+    // siege (user 2026-11-25): the engine an engineer builds — { kind, class, min, max, speed?, rounds? }
+    if ((n.role === 'siege') !== (n.siege !== undefined)) e(id, 'siege: exactly the siege role has one');
+    if (n.siege !== undefined) {
+      const s = n.siege, k = SIEGE_KINDS[s?.kind];
+      if (!k) e(id, `siege.kind not in ${Object.keys(SIEGE_KINDS).join('|')}`);
+      else {
+        if (typeof s.class !== 'string' || !s.class) e(id, 'siege.class: its class name ("Catapult Siege Engine")');
+        if (!(Number.isInteger(s.min) && Number.isInteger(s.max) && s.min >= k.min && s.max <= k.max && s.min <= s.max)) e(id, `siege ${s.kind}: min ${k.min}..max ${k.max}`);
+        if (s.kind !== 'ram' && !(Number.isInteger(s.speed) && s.speed >= 1 && s.speed <= 4)) e(id, 'siege.speed: hexes the ammunition flies per action (1..4)');
+        if (s.kind === 'ram' && !(Number.isInteger(s.rounds) && s.rounds >= 1 && s.rounds <= 6)) e(id, 'siege.rounds: actions in a row next to a wall (1..6)');
+      }
+      if (n.quests?.length || n.builds) e(id, 'a siege engine gives no quests and builds nothing');
+    }
+    // an engineer's price: consume quests whose allies reward is one siege engine
+    if (n.role === 'engineer' && !(n.quests || []).some(q => m.quest[q]?.consume && (m.quest[q].rewards || []).some(r => r.kind === 'allies' && (r.units || []).some(u => m.npc[u]?.role === 'siege'))))
+      e(id, 'an engineer needs a consume quest whose allies reward is a siege engine');
     for (const q of n.quests || []) if (m.quest[q]?.giver !== id) e(id, `quest ${q} missing or given by someone else`);
     if (n.role === 'quest_giver' && !(n.quests || []).length) e(id, 'a quest_giver needs quests');
     if (n.role === 'trader' && !(n.quests || []).some(q => m.quest[q]?.consume)) e(id, 'a trader needs a barter (a quest with consume: true)');
@@ -232,6 +261,10 @@ export function checkGameModels(m, { known = null, assetFile = null } = {}) {
         if (!w) e(id, `resident ${rs.npc}: post "outside" needs a wall`);
         else if (!(dist(rs.at) > w.radius && dist(rs.at) <= cr)) e(id, `resident ${rs.npc}: post "outside" stands between the wall and the cleared edge (${w.radius} < d ≤ ${cr})`);
         else if (nextToGate) e(id, `resident ${rs.npc}: post "outside" must not stand next to the gate`);
+      } else if (rs.post === 'centre') {
+        // the village dragon (user 2026-11-25): next to the centre building, which it guards
+        if (dist(rs.at) !== 1) e(id, `resident ${rs.npc}: post "centre" stands next to the centre building (distance 1)`);
+        if (m.npc[rs.npc]?.role !== 'dragon') e(id, `resident ${rs.npc}: only a dragon holds post "centre"`);
       } else if (dist(rs.at) > v.radius) e(id, `resident ${rs.npc} outside the radius`);
       else if (rs.post !== undefined) e(id, `resident ${rs.npc}: unknown post "${rs.post}"`);
     }
@@ -263,7 +296,7 @@ export function compileCatalog(m) {
     races: Object.fromEntries(Object.entries(m.race).map(([id, r]) => [id, pick(r, ['name', 'temper', 'village', 'village_names', 'person_names', 'wbc3_race'])])),
     buildings: Object.fromEntries(Object.entries(m.building).map(([id, b]) => [id, { ...pick(b, ['name', 'race', 'role', 'bank', 'blocks', 'produces', 'text']), sprites: b.card.resources.sprites }])),
     villages: Object.fromEntries(Object.entries(m.village).map(([id, v]) => [id, pick(v, ['race', 'size', 'team', 'radius', 'clear_radius', 'cap', 'layout', 'residents', 'wanderers', 'reputation', 'quests', 'wall'])])),
-    npcs: Object.fromEntries(Object.entries(m.npc).map(([id, n]) => [id, { ...pick(n, ['name', 'race', 'role', 'home', 'persona', 'lines', 'quests', 'unit', 'talk', 'builds', 'build_max']), agenda: compileAgenda(n.agenda, lib), resources: n.card.resources }])),
+    npcs: Object.fromEntries(Object.entries(m.npc).map(([id, n]) => [id, { ...pick(n, ['name', 'race', 'role', 'home', 'persona', 'lines', 'quests', 'unit', 'talk', 'builds', 'build_max', 'siege']), agenda: compileAgenda(n.agenda, lib), resources: n.card.resources }])),
     monsters: Object.fromEntries(Object.entries(m.monster).map(([id, mo]) => [id, { creature: mo.creature ?? id, agenda: compileAgenda(mo.agenda, lib) }])),
     // the creatures collection (data/index.json creatures → catalog_key): the monster/2 cards as chaosD6 VersionedEntries
     creatures: creaturesCollection(m),
@@ -290,7 +323,7 @@ export function buildIndex(m) {
 // monster/companion with its own stats, deck and life.
 export function npcCreatureEntries(catalog) {
   return Object.fromEntries(Object.entries(catalog?.npcs || {}).map(([id, n]) => [id, {
-    id, name: n.name, tags: ['npc', n.role],
+    id, name: n.name, tags: ['npc', n.role, ...(n.unit.tags || [])],
     data: { stats: n.unit.stats, life: n.unit.life, actions_per_round: n.unit.actions_per_round, dice_pattern: null, innate_effect: n.unit.innate_effect || null, on_action_rider: null, deck_effects: n.unit.deck_effects || [] },
   }]));
 }

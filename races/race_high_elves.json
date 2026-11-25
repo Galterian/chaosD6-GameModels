@@ -2,7 +2,7 @@
   "schema": "chaosd6.race/1",
   "id": "race_high_elves",
   "name": "High Elves",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "alignment": "good",
   "temper": "Proud, patient and old; they measure time in moons and trust short-lived folk only after a deed.",
   "village": "vil_high_elves",
@@ -76,7 +76,12 @@
     "npc_high_elves_blacksmith",
     "npc_high_elves_wizard",
     "npc_high_elves_mercenary",
-    "npc_high_elves_trader"
+    "npc_high_elves_trader",
+    "npc_high_elves_dragon",
+    "npc_high_elves_engineer",
+    "npc_high_elves_catapult",
+    "npc_high_elves_ballista",
+    "npc_high_elves_ram"
   ],
   "card": {
     "name": "High Elves",

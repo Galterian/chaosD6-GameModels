@@ -1,0 +1,77 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_high_elves_ballista",
+  "name": "Ballista",
+  "version": "1.0.0",
+  "race": "race_high_elves",
+  "role": "siege",
+  "persona": "A great crossbow on wheels: its bolt tears through everything in a line, 3 hexes out.",
+  "lines": {
+    "greet": [
+      "*creak*"
+    ]
+  },
+  "agenda": {
+    "uses": "follower",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 0,
+      "world": 0,
+      "matter": 25,
+      "will": 0
+    },
+    "life": 3,
+    "actions_per_round": 2,
+    "deck_effects": [],
+    "innate_effect": null
+  },
+  "siege": {
+    "kind": "ballista",
+    "class": "Ballista Siege Engine",
+    "min": 1,
+    "max": 3,
+    "speed": 2
+  },
+  "card": {
+    "name": "Ballista",
+    "tags": [
+      "npc",
+      "siege",
+      "ballista"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ballista",
+      "wbc3_code": "ASSC",
+      "wbc3_race": "Siege",
+      "match_reason": "Ballista Siege Engine of the High Elves engineer",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Siege/Ballista/Ballista - death [ASSCd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Siege/Ballista/Ballista - fidget [ASSCf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Siege/Ballista/Ballista - idle [ASSC].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Siege/Ballista/Ballista - info [ASSCi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Siege/Ballista/Ballista - walk [ASSCw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

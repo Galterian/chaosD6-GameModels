@@ -2,7 +2,7 @@
   "schema": "chaosd6.race/1",
   "id": "race_empire",
   "name": "Empire",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "alignment": "good",
   "temper": "Practical, loud and loyal to the Lion Throne; they pay for help in bread, steel and favours.",
   "village": "vil_empire",
@@ -76,7 +76,12 @@
     "npc_empire_blacksmith",
     "npc_empire_wizard",
     "npc_empire_mercenary",
-    "npc_empire_trader"
+    "npc_empire_trader",
+    "npc_empire_dragon",
+    "npc_empire_engineer",
+    "npc_empire_catapult",
+    "npc_empire_ballista",
+    "npc_empire_ram"
   ],
   "card": {
     "name": "Empire",

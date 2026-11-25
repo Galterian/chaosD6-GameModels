@@ -1,7 +1,7 @@
 {
   "schema": "chaosd6.village/1",
   "id": "vil_high_elves",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "race": "race_high_elves",
   "team": "{name} Village",
   "radius": 6,
@@ -160,6 +160,21 @@
         9
       ],
       "post": "gate"
+    },
+    {
+      "npc": "npc_high_elves_dragon",
+      "at": [
+        1,
+        -1
+      ],
+      "post": "centre"
+    },
+    {
+      "npc": "npc_high_elves_engineer",
+      "at": [
+        -1,
+        2
+      ]
     }
   ],
   "wanderers": {
