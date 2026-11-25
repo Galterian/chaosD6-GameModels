@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_fey_gatekeeper",
+  "name": "Gate Oakman",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "guard",
+  "home": "bld_fey_tower",
+  "persona": "Sworn to the gate; nobody the village does not trust walks past.",
+  "lines": {
+    "warn": [
+      "Gate's closed to strangers. Earn your welcome first.",
+      "Halt. State your business — from there."
+    ],
+    "greet": [
+      "You're known here. In you go."
+    ]
+  },
+  "talk": [
+    {
+      "id": "duty",
+      "ask": "Why do you guard the gate?",
+      "say": [
+        "Orders, stranger. And because the last one let a goblin in."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "gate_guard",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 8,
+      "matter": 18,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_shield",
+      "effect_earthquake",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Gate Oakman",
+    "tags": [
+      "npc",
+      "guard",
+      "gatekeeper"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Oakman",
+      "wbc3_code": "AFBX",
+      "wbc3_race": "Fey",
+      "match_reason": "Gate Oakman of the Fey",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - attack [AFBXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - death [AFBXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - fidget [AFBXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - idle [AFBX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - info [AFBXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - walk [AFBXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_knights_wanderer",
+  "name": "Dancing Sword",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "wanderer",
+  "home": null,
+  "persona": "Walks the wide circle around the villages of the Knights.",
+  "lines": {
+    "greet": [
+      "Fair road, friend."
+    ],
+    "lore": [
+      "{village} lies {village_dir}, {village_dist} hexes. Tell them I sent you.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_haste",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Dancing Sword",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dancing Sword",
+      "wbc3_code": "AHLX",
+      "wbc3_race": "Knights",
+      "match_reason": "Dancing Sword of the Knights",
+      "confidence": "high",
+      "sprites": {
+        "fidget": {
+          "path": "assets/Sprites/Units/Knights/Dancing Sword/Dancing Sword - fidget [AHLXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Knights/Dancing Sword/Dancing Sword - idle [AHLX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Knights/Dancing Sword/Dancing Sword - info [AHLXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Knights/Dancing Sword/Dancing Sword - walk [AHLXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

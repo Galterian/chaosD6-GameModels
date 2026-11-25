@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_wizard",
+  "name": "Rune Hall",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Rune Hall",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Citadel (level 4)",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Citadel (level 4)/Citadel (level 4) - base [BKD3].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Citadel (level 4)/Citadel (level 4) - info [BKD3i].png"
+      }
+    }
+  }
+}

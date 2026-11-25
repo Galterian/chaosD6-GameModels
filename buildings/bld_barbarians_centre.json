@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_centre",
+  "name": "Chieftain's Hut",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Barbarians: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Chieftain's Hut",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Chieftain's Hut",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Chieftain's Hut/Chieftain's Hut - base [BPHU].png",
+        "construction": "assets/Sprites/Buildings/Barbarians/Chieftain's Hut/Chieftain's Hut - construction [BPHUz].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Chieftain's Hut/Chieftain's Hut - info [BPHUi].png"
+      }
+    }
+  }
+}

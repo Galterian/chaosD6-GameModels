@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_temple",
+  "name": "Religious Sect",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Religious Sect",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Religious Sect",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Religious Sect/Religious Sect - base [BARS].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Religious Sect/Religious Sect - construction [BARSz].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Religious Sect/Religious Sect - info [BARSi].png"
+      }
+    }
+  }
+}

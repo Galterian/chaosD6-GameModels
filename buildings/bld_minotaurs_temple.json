@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_temple",
+  "name": "Henge",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Henge",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Henge",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Henge/Henge - base [BPHG].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Henge/Henge - construction [BPHGz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Henge/Henge - info [BPHGi].png"
+      }
+    }
+  }
+}

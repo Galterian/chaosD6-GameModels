@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_high_elves_white_tower",
   "name": "White Tower",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
   "role": "keep",
   "bank": {
@@ -10,11 +10,7 @@
     "value": 60
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_high_elves_moonguard",
-    "every_turns": 40
-  },
-  "text": "The keep of the village; once in a long while a Moonguard steps out of it.",
+  "text": "The keep of the village.",
   "card": {
     "name": "White Tower",
     "tags": [

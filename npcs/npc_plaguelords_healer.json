@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_plaguelords_healer",
+  "name": "Plague Doctor",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "healer",
+  "home": "bld_plaguelords_temple",
+  "persona": "Tends the sick and the wounded of the village.",
+  "lines": {
+    "greet": [
+      "Sit, sit. Let me look at that."
+    ]
+  },
+  "agenda": {
+    "uses": "healer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 10,
+      "matter": 8,
+      "will": 14
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_turn_life",
+      "effect_shield",
+      "effect_blessing_curse",
+      "effect_potion_brew"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Plague Doctor",
+    "tags": [
+      "npc",
+      "healer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Plague Priest",
+      "wbc3_code": "AGGX",
+      "wbc3_race": "Plaguelords",
+      "match_reason": "Plague Doctor of the Plaguelords",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - attack [AGGXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - cast [AGGXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - death [AGGXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - fidget [AGGXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - idle [AGGX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - info [AGGXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - walk [AGGXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

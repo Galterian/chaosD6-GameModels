@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_wood_elves_wanderer2",
+  "name": "Wandering Druid",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "wanderer",
+  "home": null,
+  "persona": "A rover of the Wood Elves, far from home.",
+  "lines": {
+    "greet": [
+      "Hm. A traveller."
+    ],
+    "lore": [
+      "We come from {village}, {village_dir} of here.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 18,
+      "world": 10,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_haste",
+      "effect_poison",
+      "effect_super_force",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wandering Druid",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Druid",
+      "wbc3_code": "AWNX",
+      "wbc3_race": "Wood Elves",
+      "match_reason": "Wandering Druid of the Wood Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Wood Elves/Druid/Druid - attack [AWNXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Wood Elves/Druid/Druid - death [AWNXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Wood Elves/Druid/Druid - fidget [AWNXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Wood Elves/Druid/Druid - idle [AWNX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Wood Elves/Druid/Druid - info [AWNXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Wood Elves/Druid/Druid - walk [AWNXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dwarves_wall_guard",
+  "name": "Wall Crossbow",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "guard",
+  "home": "bld_dwarves_tower",
+  "persona": "Walks the wall from the inside, day and night.",
+  "lines": {
+    "greet": [
+      "All quiet on the wall."
+    ],
+    "warn": [
+      "Off the wall, stranger!"
+    ]
+  },
+  "agenda": {
+    "uses": "wall_guard",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wall Crossbow",
+    "tags": [
+      "npc",
+      "guard"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dwarf Crossbow",
+      "wbc3_code": "ADMX",
+      "wbc3_race": "Dwarves",
+      "match_reason": "Wall Crossbow of the Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Crossbow/Dwarf Crossbow - attack [ADMXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Crossbow/Dwarf Crossbow - death [ADMXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Crossbow/Dwarf Crossbow - fidget [ADMXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Crossbow/Dwarf Crossbow - idle [ADMX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Crossbow/Dwarf Crossbow - info [ADMXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Crossbow/Dwarf Crossbow - walk [ADMXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

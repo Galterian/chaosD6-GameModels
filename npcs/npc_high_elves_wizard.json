@@ -2,10 +2,10 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_high_elves_wizard",
   "name": "Archmage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
   "role": "wizard",
-  "home": "bld_high_elves_white_tower",
+  "home": "bld_high_elves_tower_of_the_moon",
   "persona": "Keeper of the White Tower's star charts; old even for an elf, and certain that every question has a spell for an answer.",
   "lines": {
     "greet": [

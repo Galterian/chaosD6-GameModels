@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_smithy",
+  "name": "Smithy",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Smithy",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Smithy",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Smithy/Smithy - base [BPSM].png",
+        "construction": "assets/Sprites/Buildings/Knights/Smithy/Smithy - construction [BPSMz].png",
+        "info": "assets/Sprites/Buildings/Knights/Smithy/Smithy - info [BPSMi].png"
+      }
+    }
+  }
+}

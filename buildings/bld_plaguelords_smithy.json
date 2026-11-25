@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_smithy",
+  "name": "Fire Cave",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Fire Cave",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Fire Cave",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Fire Cave/Fire Cave - base [BPFC].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Fire Cave/Fire Cave - info [BPFCi].png"
+      }
+    }
+  }
+}

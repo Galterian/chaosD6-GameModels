@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_centre",
+  "name": "Shrine of the Sword",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Knights: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Shrine of the Sword",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Shrine of the Sword",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Shrine of the Sword/Shrine of the Sword - base [BPSS].png",
+        "construction": "assets/Sprites/Buildings/Knights/Shrine of the Sword/Shrine of the Sword - construction [BPSSz].png",
+        "info": "assets/Sprites/Buildings/Knights/Shrine of the Sword/Shrine of the Sword - info [BPSSi].png"
+      }
+    }
+  }
+}

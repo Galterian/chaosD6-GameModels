@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_lore",
+  "name": "Hall of Heralds",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Hall of Heralds",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Keep (level 3)",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Keep (level 3)/Keep (level 3) - base [BKK2].png",
+        "info": "assets/Sprites/Buildings/Knights/Keep (level 3)/Keep (level 3) - info [BKK2i].png"
+      }
+    }
+  }
+}

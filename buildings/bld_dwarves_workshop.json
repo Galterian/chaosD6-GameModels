@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_workshop",
+  "name": "Workshop",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Workshop",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Workshop",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Workshop/Workshop - base [BPWS].png",
+        "construction": "assets/Sprites/Buildings/Dwarves/Workshop/Workshop - construction [BPWSz].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Workshop/Workshop - info [BPWSi].png"
+      }
+    }
+  }
+}

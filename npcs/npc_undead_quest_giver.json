@@ -1,0 +1,107 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_undead_quest_giver",
+  "name": "Gravewarden",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "quest_giver",
+  "home": "bld_undead_keep",
+  "persona": "The headman of the village: speaks for the Altar of Shadows, and always has work for strong hands.",
+  "lines": {
+    "greet": [
+      "Welcome to {village}, stranger.",
+      "In the name of the Altar of Shadows — a new face!"
+    ],
+    "quest": [
+      "We need {need}. Bring it and {village} owes you.",
+      "Find {need} out there on the map and come back to me."
+    ],
+    "thanks": [
+      "{need}! Good work. {reward}",
+      "You are a friend of {village} now. {reward}"
+    ],
+    "warn": [
+      "Mind yourself in my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "village",
+      "ask": "Tell me about this village.",
+      "say": [
+        "{village} is a village of the Undead. The restless dead; they hold no grudge and feel no mercy, and every living guest is one they have not met yet."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "quest_giver",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_undead_teach",
+    "quest_undead_elders"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 10,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_drain",
+      "effect_fear",
+      "effect_aging",
+      "effect_light_darkness"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Gravewarden",
+    "tags": [
+      "npc",
+      "quest_giver"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Undead Hero",
+      "wbc3_code": "AUHX",
+      "wbc3_race": "Undead",
+      "match_reason": "Gravewarden of the Undead",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - attack [AUHXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - cast [AUHXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - death [AUHXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - fidget [AUHXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - idle [AUHX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - info [AUHXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Undead/Undead Hero/Undead Hero - walk [AUHXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

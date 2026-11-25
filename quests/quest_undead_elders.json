@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_undead_elders",
+  "name": "Oblivion for the Elders",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "giver": "npc_undead_quest_giver",
+  "need_text": "the Oblivion effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_oblivion"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_counter_spell"
+    }
+  ],
+  "repeatable": false
+}

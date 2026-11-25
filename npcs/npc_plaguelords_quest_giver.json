@@ -1,0 +1,107 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_plaguelords_quest_giver",
+  "name": "Plague Abbot",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "quest_giver",
+  "home": "bld_plaguelords_keep",
+  "persona": "The headman of the village: speaks for the Plague, and always has work for strong hands.",
+  "lines": {
+    "greet": [
+      "Welcome to {village}, stranger.",
+      "In the name of the Plague — a new face!"
+    ],
+    "quest": [
+      "We need {need}. Bring it and {village} owes you.",
+      "Find {need} out there on the map and come back to me."
+    ],
+    "thanks": [
+      "{need}! Good work. {reward}",
+      "You are a friend of {village} now. {reward}"
+    ],
+    "warn": [
+      "Mind yourself in my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "village",
+      "ask": "Tell me about this village.",
+      "say": [
+        "{village} is a village of the Plaguelords. Worshippers of rot and change; to the Plaguelords every living thing is a cure that has not yet spoiled."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "quest_giver",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_plaguelords_teach",
+    "quest_plaguelords_elders"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 10,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_poison",
+      "effect_harm",
+      "effect_mutate",
+      "effect_combustion"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Plague Abbot",
+    "tags": [
+      "npc",
+      "quest_giver"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Plague Priest",
+      "wbc3_code": "AGGX",
+      "wbc3_race": "Plaguelords",
+      "match_reason": "Plague Abbot of the Plaguelords",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - attack [AGGXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - cast [AGGXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - death [AGGXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - fidget [AGGXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - idle [AGGX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - info [AGGXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Plaguelords/Plague Priest/Plague Priest - walk [AGGXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

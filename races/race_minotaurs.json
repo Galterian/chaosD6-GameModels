@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_minotaurs",
+  "name": "Minotaurs",
+  "version": "1.0.0",
+  "alignment": "neutral",
+  "alignment_pct": 45,
+  "temper": "Proud bull-folk of the arena; they honour a fair fight above gold, and an unfair one is never forgiven.",
+  "village": "vil_minotaurs",
+  "village_names": {
+    "prefix": [
+      "Horn",
+      "Bull",
+      "Bronze",
+      "Red",
+      "Maze",
+      "Sun",
+      "Dust",
+      "Hoof",
+      "Brass",
+      "Thunder"
+    ],
+    "suffix": [
+      "maze",
+      "arena",
+      "mound",
+      "step",
+      "hold",
+      "rock",
+      "gate",
+      "altar",
+      "field"
+    ]
+  },
+  "person_names": [
+    "Asterion",
+    "Brontes",
+    "Cretos",
+    "Daedra",
+    "Ephira",
+    "Gorros",
+    "Kharos",
+    "Menta",
+    "Pasiph",
+    "Taurok",
+    "Thoros",
+    "Zandra"
+  ],
+  "buildings": [
+    "bld_minotaurs_centre",
+    "bld_minotaurs_keep",
+    "bld_minotaurs_ministry",
+    "bld_minotaurs_barracks",
+    "bld_minotaurs_shop",
+    "bld_minotaurs_lore",
+    "bld_minotaurs_temple",
+    "bld_minotaurs_smithy",
+    "bld_minotaurs_workshop",
+    "bld_minotaurs_wizard",
+    "bld_minotaurs_merc",
+    "bld_minotaurs_tower"
+  ],
+  "npcs": [
+    "npc_minotaurs_quest_giver",
+    "npc_minotaurs_storyteller",
+    "npc_minotaurs_trader",
+    "npc_minotaurs_smith",
+    "npc_minotaurs_wizard",
+    "npc_minotaurs_mercenary",
+    "npc_minotaurs_healer",
+    "npc_minotaurs_diplomat",
+    "npc_minotaurs_builder",
+    "npc_minotaurs_mason",
+    "npc_minotaurs_gatekeeper",
+    "npc_minotaurs_wall_guard",
+    "npc_minotaurs_fighter",
+    "npc_minotaurs_wanderer",
+    "npc_minotaurs_wanderer2",
+    "npc_minotaurs_dragon",
+    "npc_minotaurs_catapult",
+    "npc_minotaurs_ballista",
+    "npc_minotaurs_ram",
+    "npc_minotaurs_engineer"
+  ],
+  "card": {
+    "name": "Minotaurs",
+    "tags": [
+      "race",
+      "neutral"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Minotaurs"
+    }
+  },
+  "wbc3_race": "Minotaurs"
+}

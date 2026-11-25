@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_merc",
+  "name": "Wardens' Lodge",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Wardens' Lodge",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Haven (level 4)",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Haven (level 4)/Haven (level 4) - base [BKW3].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Haven (level 4)/Haven (level 4) - info [BKW3i].png"
+      }
+    }
+  }
+}

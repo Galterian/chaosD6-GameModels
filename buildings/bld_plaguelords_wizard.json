@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_wizard",
+  "name": "Laboratory",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Laboratory",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Laboratory",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Laboratory/Laboratory - base [BPLB].png",
+        "construction": "assets/Sprites/Buildings/Plaguelords/Laboratory/Laboratory - construction [BPLBz].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Laboratory/Laboratory - info [BPLBi].png"
+      }
+    }
+  }
+}

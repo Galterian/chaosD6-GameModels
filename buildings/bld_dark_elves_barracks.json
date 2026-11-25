@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_elves_barracks",
+  "name": "Reformatory",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Reformatory",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Reformatory",
+      "wbc3_race": "Dark Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Elves/Reformatory/Reformatory - base [BPDU].png",
+        "construction": "assets/Sprites/Buildings/Dark Elves/Reformatory/Reformatory - construction [BPDUz].png",
+        "info": "assets/Sprites/Buildings/Dark Elves/Reformatory/Reformatory - info [BPDUi].png"
+      }
+    }
+  }
+}

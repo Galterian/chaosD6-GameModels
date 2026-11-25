@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_centre",
+  "name": "Tree of Life",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Wood Elves: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Tree of Life",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Tree of Life",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Tree of Life/Tree of Life - base [BATL].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Tree of Life/Tree of Life - construction [BATLz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Tree of Life/Tree of Life - info [BATLi].png"
+      }
+    }
+  }
+}

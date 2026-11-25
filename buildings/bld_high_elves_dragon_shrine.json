@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_high_elves_dragon_shrine",
   "name": "Dragon Shrine",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
   "role": "producer",
   "bank": {
@@ -10,11 +10,7 @@
     "value": 45
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_high_elves_wisp",
-    "every_turns": 25
-  },
-  "text": "Wisps gather at the shrine; one wakes every 25 turns to help with the building.",
+  "text": "Wisps gather at the shrine.",
   "card": {
     "name": "Dragon Shrine",
     "tags": [

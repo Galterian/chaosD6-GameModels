@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_barracks",
+  "name": "Hive",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Hive",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hive (level 1)",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Hive (level 1)/Hive (level 1) - base [BAH0].png",
+        "construction": "assets/Sprites/Buildings/Swarm/Hive (level 1)/Hive (level 1) - construction [BAH0z].png",
+        "info": "assets/Sprites/Buildings/Swarm/Hive (level 1)/Hive (level 1) - info [BAH0i].png"
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const GAMEMODELS_REPO_CANDIDATES = [
   path.resolve(HERE, '..', '..', 'chaosd6-gamemodels-repo'),
   path.resolve(HERE, '..', '..', '..', 'chaosd6-gamemodels-repo'),
+  path.resolve(HERE, 'gamemodels-repo'),   // the phone: stage-mobile-bundle's read-only copy in nodejs-project/ (b9, 2026-11-25)
 ];
 const isModelsDir = (d) => { try { return fs.statSync(path.join(d, 'lib')).isDirectory(); } catch { return false; } };
 export function resolveGameModelsDir(env = process.env) {
@@ -40,7 +41,7 @@ export const KINDS = {
 };
 // dragon (user 2026-11-25): guards the centre building (post "centre"); engineer: builds a siege engine for a price
 // (its consume quests reward one); siege: the engine itself — a follower that only plays EP / EM (npc.siege)
-export const ROLES = ['quest_giver', 'storyteller', 'builder', 'healer', 'guard', 'villager', 'wanderer', 'smith', 'wizard', 'mercenary', 'trader', 'dragon', 'engineer', 'siege'];
+export const ROLES = ['quest_giver', 'storyteller', 'builder', 'healer', 'guard', 'villager', 'wanderer', 'smith', 'wizard', 'mercenary', 'trader', 'dragon', 'engineer', 'siege', 'diplomat', 'fighter'];   // + diplomat (leads to other villages), fighter (fights the villages at war; back after 50 turns) — 2026-11-25
 // A siege engine's class (npc.siege, user 2026-11-25), once per turn, ready at the start of each turn:
 //   catapult — a stone onto a hex min..max away (2..4), flying `speed` hexes an action: 1 damage to an enemy there
 //   ballista — a bolt along a line, hexes 1..max (3): 1 damage to each enemy on its path as it passes
@@ -48,11 +49,11 @@ export const ROLES = ['quest_giver', 'storyteller', 'builder', 'healer', 'guard'
 export const SIEGE_KINDS = { catapult: { min: 2, max: 4 }, ballista: { min: 1, max: 3 }, ram: { min: 1, max: 1 } };
 // unit.tags the engine reads: flying (passes over walls and scenery, lands on open ground)
 export const UNIT_TAGS = ['flying'];
-export const BUILDING_ROLES = ['centre', 'keep', 'producer', 'temple', 'shop', 'lore', 'house', 'tower'];
+export const BUILDING_ROLES = ['centre', 'keep', 'producer', 'temple', 'shop', 'lore', 'house', 'tower', 'ministry'];   // ministry: the Ministry of Foreign Affairs (2026-11-25)
 // What a hired builder's building does (npc.builds[].power → js/building-bonus.js, for a hero standing on it).
 export const BUILD_POWERS = ['stance', 'mend', 'draw', 'explore'];
 export const STATS = ['vitality', 'world', 'matter', 'will'];
-export const REWARDS = ['reputation', 'allies', 'effect', 'skill', 'enter'];
+export const REWARDS = ['reputation', 'allies', 'effect', 'skill', 'enter', 'sabotage'];   // sabotage (2026-11-25): the diplomat's price paid — led to a village it spies there (−5 % between the two)
 // talk topic ids the engine gives by role (peer.mjs talkTopics) — an NPC's own `talk` may not reuse them
 export const TALK_RESERVED = ['who', 'news', 'danger', 'villages', 'enter', 'standing', 'magic', 'arms', 'hire', 'wares', 'bye'];
 
@@ -117,6 +118,8 @@ export function checkGameModels(m, { known = null, assetFile = null } = {}) {
     if (!(r.village_names?.prefix?.length && r.village_names?.suffix?.length)) e(id, 'village_names.prefix/suffix needed');
     if (r.wbc3_race !== undefined && typeof r.wbc3_race !== 'string') e(id, 'wbc3_race: the WBC3 race name a hero character art must carry to start at start_same_race');
     if (!r.person_names?.length) e(id, 'person_names needed');
+    // alignment in percent of good (user 2026-11-25: High Elves 100 … Undead 0): two villages start at 100 − 2·|gap|
+    if (!(Number.isFinite(r.alignment_pct) && r.alignment_pct >= 0 && r.alignment_pct <= 100)) e(id, 'alignment_pct 0..100 (percent of good) needed');
   }
   for (const [id, b] of Object.entries(m.building)) {
     if (!m.race[b.race]) e(id, `unknown race ${b.race}`);
@@ -156,6 +159,13 @@ export function checkGameModels(m, { known = null, assetFile = null } = {}) {
       }
       if (n.quests?.length || n.builds) e(id, 'a siege engine gives no quests and builds nothing');
     }
+    // the village mason (2026-11-25): mends its village's broken buildings and wall — a builder that stays home
+    if (n.repairs !== undefined) {
+      if (n.role !== 'builder') e(id, 'repairs: only a builder mends');
+      if (!(Number.isInteger(n.repairs?.rounds) && n.repairs.rounds >= 1 && n.repairs.rounds <= 6)) e(id, 'repairs: { rounds 1..6 } (actions of work in a row)');
+      if (n.builds) e(id, 'repairs: the mason stays home — no builds menu (that is the builder for hire)');
+    }
+    if (n.role === 'diplomat' && !n.home) e(id, 'a diplomat needs its home (the Ministry of Foreign Affairs that brings it back)');
     // an engineer's price: consume quests whose allies reward is one siege engine
     if (n.role === 'engineer' && !(n.quests || []).some(q => m.quest[q]?.consume && (m.quest[q].rewards || []).some(r => r.kind === 'allies' && (r.units || []).some(u => m.npc[u]?.role === 'siege'))))
       e(id, 'an engineer needs a consume quest whose allies reward is a siege engine');
@@ -221,6 +231,7 @@ export function checkGameModels(m, { known = null, assetFile = null } = {}) {
       if (r.kind === 'allies') for (const u of r.units || []) if (!m.npc[u]) e(id, `allies: unknown npc ${u}`);
       if (r.kind === 'effect' && known?.effects && !known.effects.has(r.id)) e(id, `reward: unknown effect ${r.id}`);
       if (r.kind === 'skill' && known?.skills && !known.skills.has(r.id)) e(id, `reward: unknown skill ${r.id}`);
+      if (r.kind === 'sabotage' && (m.npc[q.giver]?.role !== 'diplomat' || !q.consume)) e(id, 'reward sabotage: a consume quest of a diplomat');
     }
     if (!(q.rewards || []).length) e(id, 'rewards needed');
   }
@@ -265,11 +276,18 @@ export function checkGameModels(m, { known = null, assetFile = null } = {}) {
         // the village dragon (user 2026-11-25): next to the centre building, which it guards
         if (dist(rs.at) !== 1) e(id, `resident ${rs.npc}: post "centre" stands next to the centre building (distance 1)`);
         if (m.npc[rs.npc]?.role !== 'dragon') e(id, `resident ${rs.npc}: only a dragon holds post "centre"`);
+      } else if (rs.post === 'wall') {
+        // a wall guard (2026-11-25): walks the ring just inside the wall
+        if (!w) e(id, `resident ${rs.npc}: post "wall" needs a wall`);
+        else if (dist(rs.at) !== w.radius - 1) e(id, `resident ${rs.npc}: post "wall" starts on the ring inside the wall (distance ${w.radius - 1})`);
       } else if (dist(rs.at) > v.radius) e(id, `resident ${rs.npc} outside the radius`);
       else if (rs.post !== undefined) e(id, `resident ${rs.npc}: unknown post "${rs.post}"`);
     }
     if (w && (v.residents || []).filter(rs => rs.post === 'gate').length !== 1) e(id, 'a walled village has exactly one gate guard (post "gate")');
     if ((v.residents || []).length > v.cap) e(id, 'more residents than the cap');
+    // only two builders (2026-11-25): the one for hire and the mason who stays — and a full village has its Ministry
+    if ((v.residents || []).filter(rs => m.npc[rs.npc]?.role === 'builder').length > 2) e(id, 'at most two builders (one for hire, one mason)');
+    if (!v.size && (v.residents || []).some(rs => m.npc[rs.npc]?.role === 'diplomat') && !(v.layout || []).some(l => m.building[l.building]?.role === 'ministry')) e(id, 'a diplomat needs the Ministry of Foreign Affairs in the layout');
     const [a, b] = v.wanderers?.ring || [];
     if (!(a >= 50 && b <= 100 && a < b)) e(id, 'wanderers.ring within [50, 100]');
     for (const w of v.wanderers?.npcs || []) if (m.npc[w]?.role !== 'wanderer') e(id, `wanderer ${w} missing or not a wanderer`);
@@ -293,10 +311,10 @@ export function compileCatalog(m) {
   const pick = (o, keys) => Object.fromEntries(keys.filter(k => o[k] !== undefined).map(k => [k, o[k]]));
   return {
     format: 1, hash: sha.digest('hex'),
-    races: Object.fromEntries(Object.entries(m.race).map(([id, r]) => [id, pick(r, ['name', 'temper', 'village', 'village_names', 'person_names', 'wbc3_race'])])),
+    races: Object.fromEntries(Object.entries(m.race).map(([id, r]) => [id, pick(r, ['name', 'temper', 'village', 'village_names', 'person_names', 'wbc3_race', 'alignment', 'alignment_pct'])])),
     buildings: Object.fromEntries(Object.entries(m.building).map(([id, b]) => [id, { ...pick(b, ['name', 'race', 'role', 'bank', 'blocks', 'produces', 'text']), sprites: b.card.resources.sprites }])),
     villages: Object.fromEntries(Object.entries(m.village).map(([id, v]) => [id, pick(v, ['race', 'size', 'team', 'radius', 'clear_radius', 'cap', 'layout', 'residents', 'wanderers', 'reputation', 'quests', 'wall'])])),
-    npcs: Object.fromEntries(Object.entries(m.npc).map(([id, n]) => [id, { ...pick(n, ['name', 'race', 'role', 'home', 'persona', 'lines', 'quests', 'unit', 'talk', 'builds', 'build_max', 'siege']), agenda: compileAgenda(n.agenda, lib), resources: n.card.resources }])),
+    npcs: Object.fromEntries(Object.entries(m.npc).map(([id, n]) => [id, { ...pick(n, ['name', 'race', 'role', 'home', 'persona', 'lines', 'quests', 'unit', 'talk', 'builds', 'build_max', 'siege', 'repairs']), agenda: compileAgenda(n.agenda, lib), resources: n.card.resources }])),
     monsters: Object.fromEntries(Object.entries(m.monster).map(([id, mo]) => [id, { creature: mo.creature ?? id, agenda: compileAgenda(mo.agenda, lib) }])),
     // the creatures collection (data/index.json creatures → catalog_key): the monster/2 cards as chaosD6 VersionedEntries
     creatures: creaturesCollection(m),

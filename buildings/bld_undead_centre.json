@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_centre",
+  "name": "Altar of Shadows",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Undead: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Altar of Shadows",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Altar of Shadows",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Altar of Shadows/Altar of Shadows - base [BPAS].png",
+        "construction": "assets/Sprites/Buildings/Undead/Altar of Shadows/Altar of Shadows - construction [BPASz].png",
+        "info": "assets/Sprites/Buildings/Undead/Altar of Shadows/Altar of Shadows - info [BPASi].png"
+      }
+    }
+  }
+}

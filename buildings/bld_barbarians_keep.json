@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_keep",
+  "name": "Longhall",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Longhall",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Fortress (level 1)",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Fortress (level 1)/Fortress (level 1) - base [BKB0].png",
+        "construction": "assets/Sprites/Buildings/Barbarians/Fortress (level 1)/Fortress (level 1) - construction [BKB0z].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Fortress (level 1)/Fortress (level 1) - info [BKB0i].png"
+      }
+    }
+  }
+}

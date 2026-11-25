@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_minotaurs_storyteller",
+  "name": "Skull of Sartek",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "storyteller",
+  "home": "bld_minotaurs_lore",
+  "persona": "Keeps the old tales of the Minotaurs and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "Sartek was the first bull to walk on two legs; he built the maze to keep his children safe, and every minotaur still knows its way."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Skull of Sartek",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Skull of Sartek",
+      "wbc3_code": "ATMX",
+      "wbc3_race": "Minotaurs",
+      "match_reason": "Skull of Sartek of the Minotaurs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Minotaurs/Skull of Sartek/Skull of Sartek - attack [ATMXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Minotaurs/Skull of Sartek/Skull of Sartek - death [ATMXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Minotaurs/Skull of Sartek/Skull of Sartek - fidget [ATMXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Minotaurs/Skull of Sartek/Skull of Sartek - idle [ATMX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Minotaurs/Skull of Sartek/Skull of Sartek - info [ATMXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Minotaurs/Skull of Sartek/Skull of Sartek - walk [ATMXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

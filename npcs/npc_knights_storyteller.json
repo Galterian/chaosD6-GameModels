@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_knights_storyteller",
+  "name": "Herald",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "storyteller",
+  "home": "bld_knights_lore",
+  "persona": "Keeps the old tales of the Knights and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The first knight drew the Sword from the stone of the Shrine and swore never to sheathe it while one village stood undefended."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Herald",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Squire",
+      "wbc3_code": "Ahmx",
+      "wbc3_race": "Knights",
+      "match_reason": "Herald of the Knights",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Knights/Squire/Squire - attack [Ahmxa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Knights/Squire/Squire - death [Ahmxd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Knights/Squire/Squire - fidget [Ahmxf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Knights/Squire/Squire - idle [Ahmx].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Knights/Squire/Squire - info [Ahmxi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Knights/Squire/Squire - walk [Ahmxw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

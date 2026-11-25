@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_barbarians_elders",
+  "name": "Earthquake for the Elders",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "giver": "npc_barbarians_quest_giver",
+  "need_text": "the Earthquake effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_earthquake"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_intimidation"
+    }
+  ],
+  "repeatable": false
+}

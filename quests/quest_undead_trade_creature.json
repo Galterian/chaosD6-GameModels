@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_undead_trade_creature",
+  "name": "A Beast for Aging",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "giver": "npc_undead_trader",
+  "need_text": "one monster card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "creature"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_aging"
+    }
+  ],
+  "repeatable": true
+}

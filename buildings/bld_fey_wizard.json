@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_wizard",
+  "name": "Orb of Wonder",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Orb of Wonder",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orb of Wonder",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Orb of Wonder/Orb of Wonder - base [BPOW].png",
+        "construction": "assets/Sprites/Buildings/Fey/Orb of Wonder/Orb of Wonder - construction [BPOWz].png",
+        "info": "assets/Sprites/Buildings/Fey/Orb of Wonder/Orb of Wonder - info [BPOWi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_shop",
+  "name": "Saurus Market",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Saurus Market",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Saurus Pen",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Saurus Pen/Saurus Pen - base [BPLP].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Saurus Pen/Saurus Pen - construction [BPLPz].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Saurus Pen/Saurus Pen - info [BPLPi].png"
+      }
+    }
+  }
+}

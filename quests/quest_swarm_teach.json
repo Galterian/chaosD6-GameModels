@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_swarm_teach",
+  "name": "Teach Us Grapple",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "giver": "npc_swarm_quest_giver",
+  "need_text": "the Grapple skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_grapple"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_mutate"
+    }
+  ],
+  "repeatable": false
+}

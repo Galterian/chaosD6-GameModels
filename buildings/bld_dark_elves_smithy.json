@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_elves_smithy",
+  "name": "Blackforge",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Blackforge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Tower (level 3)",
+      "wbc3_race": "Dark Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 3)/Dark Tower (level 3) - base [BKT2].png",
+        "info": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 3)/Dark Tower (level 3) - info [BKT2i].png"
+      }
+    }
+  }
+}

@@ -2,11 +2,11 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_empire_pikeman",
   "name": "Pikeman",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
   "role": "guard",
   "home": "bld_empire_barracks",
-  "persona": "A pikeman of the village watch.",
+  "persona": "A pikeman of the village watch — walks the wall from the inside.",
   "lines": {
     "greet": [
       "Halt — who goes there?"
@@ -17,7 +17,7 @@
     ]
   },
   "agenda": {
-    "uses": "guard",
+    "uses": "wall_guard",
     "params": {},
     "rules": []
   },

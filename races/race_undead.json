@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_undead",
+  "name": "Undead",
+  "version": "1.0.0",
+  "alignment": "evil",
+  "alignment_pct": 0,
+  "temper": "The restless dead; they hold no grudge and feel no mercy, and every living guest is one they have not met yet.",
+  "village": "vil_undead",
+  "village_names": {
+    "prefix": [
+      "Grave",
+      "Bone",
+      "Ghast",
+      "Dread",
+      "Crypt",
+      "Pale",
+      "Wight",
+      "Night",
+      "Barrow",
+      "Shroud"
+    ],
+    "suffix": [
+      "yard",
+      "barrow",
+      "crypt",
+      "moor",
+      "tomb",
+      "hollow",
+      "keep",
+      "mire",
+      "rest"
+    ]
+  },
+  "person_names": [
+    "Azrael",
+    "Bane",
+    "Corvin",
+    "Desmond",
+    "Ebon",
+    "Griselda",
+    "Hollis",
+    "Morwen",
+    "Ossian",
+    "Sable",
+    "Vesper",
+    "Wraithe"
+  ],
+  "buildings": [
+    "bld_undead_centre",
+    "bld_undead_keep",
+    "bld_undead_ministry",
+    "bld_undead_barracks",
+    "bld_undead_shop",
+    "bld_undead_lore",
+    "bld_undead_temple",
+    "bld_undead_smithy",
+    "bld_undead_workshop",
+    "bld_undead_wizard",
+    "bld_undead_merc",
+    "bld_undead_tower"
+  ],
+  "npcs": [
+    "npc_undead_quest_giver",
+    "npc_undead_storyteller",
+    "npc_undead_trader",
+    "npc_undead_smith",
+    "npc_undead_wizard",
+    "npc_undead_mercenary",
+    "npc_undead_healer",
+    "npc_undead_diplomat",
+    "npc_undead_builder",
+    "npc_undead_mason",
+    "npc_undead_gatekeeper",
+    "npc_undead_wall_guard",
+    "npc_undead_fighter",
+    "npc_undead_wanderer",
+    "npc_undead_wanderer2",
+    "npc_undead_dragon",
+    "npc_undead_catapult",
+    "npc_undead_ballista",
+    "npc_undead_ram",
+    "npc_undead_engineer"
+  ],
+  "card": {
+    "name": "Undead",
+    "tags": [
+      "race",
+      "evil"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Undead"
+    }
+  },
+  "wbc3_race": "Undead"
+}

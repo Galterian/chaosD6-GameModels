@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_lore",
+  "name": "Temple of Eyes",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Temple of Eyes",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Temple of Eyes",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Temple of Eyes/Temple of Eyes - base [BATE].png",
+        "construction": "assets/Sprites/Buildings/Plaguelords/Temple of Eyes/Temple of Eyes - construction [BATEz].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Temple of Eyes/Temple of Eyes - info [BATEi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_elves_shop",
+  "name": "Gallery",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Gallery",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Gallery",
+      "wbc3_race": "Dark Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Elves/Gallery/Gallery - base [BPGL].png",
+        "construction": "assets/Sprites/Buildings/Dark Elves/Gallery/Gallery - construction [BPGLz].png",
+        "info": "assets/Sprites/Buildings/Dark Elves/Gallery/Gallery - info [BPGLi].png"
+      }
+    }
+  }
+}

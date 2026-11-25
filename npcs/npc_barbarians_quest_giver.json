@@ -1,0 +1,103 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_barbarians_quest_giver",
+  "name": "Chieftain",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "quest_giver",
+  "home": "bld_barbarians_keep",
+  "persona": "The headman of the village: speaks for the Tempest, and always has work for strong hands.",
+  "lines": {
+    "greet": [
+      "Welcome to {village}, stranger.",
+      "In the name of the Tempest — a new face!"
+    ],
+    "quest": [
+      "We need {need}. Bring it and {village} owes you.",
+      "Find {need} out there on the map and come back to me."
+    ],
+    "thanks": [
+      "{need}! Good work. {reward}",
+      "You are a friend of {village} now. {reward}"
+    ],
+    "warn": [
+      "Mind yourself in my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "village",
+      "ask": "Tell me about this village.",
+      "say": [
+        "{village} is a village of the Barbarians. Loud, proud and fearless; they respect strength first and honesty second, and test both with a fist."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "quest_giver",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_barbarians_teach",
+    "quest_barbarians_elders"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 10,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_anger",
+      "effect_haste",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Chieftain",
+    "tags": [
+      "npc",
+      "quest_giver"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Warlord",
+      "wbc3_code": "ABEX",
+      "wbc3_race": "Barbarians",
+      "match_reason": "Chieftain of the Barbarians",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Barbarians/Warlord/Warlord - attack [ABEXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Barbarians/Warlord/Warlord - death [ABEXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Barbarians/Warlord/Warlord - fidget [ABEXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Barbarians/Warlord/Warlord - idle [ABEX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Barbarians/Warlord/Warlord - info [ABEXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Barbarians/Warlord/Warlord - walk [ABEXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_orcs_trader",
+  "name": "Swapper",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "trader",
+  "home": "bld_orcs_shop",
+  "persona": "A haggler with a cart full of oddments; barters cards for cards and never says what anything is worth.",
+  "lines": {
+    "greet": [
+      "Everything has a price, friend!",
+      "Come, see what the road brought me."
+    ],
+    "quest": [
+      "Give me {need} and you shall have {reward}. A bargain!"
+    ],
+    "thanks": [
+      "Pleasure doing business! {reward}"
+    ],
+    "warn": [
+      "No credit, no haggling with thieves."
+    ]
+  },
+  "talk": [
+    {
+      "id": "rumours",
+      "ask": "Heard any rumours?",
+      "say": [
+        "They say the Orcs pay well for Poison. They say a lot of things.",
+        "A merchant swore he saw a dragon over the hills. He also swore his prices were fair."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {
+      "beckon": 7,
+      "leash": 6
+    },
+    "rules": [
+      {
+        "id": "hawk",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "!": {
+                "cond": "far_from_home"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.talk"
+                }
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_orcs_trade_creature",
+    "quest_orcs_trade_skill"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 12,
+      "world": 14,
+      "matter": 10,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_haste",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Swapper",
+    "tags": [
+      "npc",
+      "trader"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Goblin",
+      "wbc3_code": "AOSX",
+      "wbc3_race": "Orcs",
+      "match_reason": "Swapper of the Orcs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Orcs/Goblin/Goblin - attack [AOSXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Orcs/Goblin/Goblin - death [AOSXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Orcs/Goblin/Goblin - fidget [AOSXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Orcs/Goblin/Goblin - idle [AOSX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Orcs/Goblin/Goblin - info [AOSXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Orcs/Goblin/Goblin - walk [AOSXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_barracks",
+  "name": "War Camp",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "War Camp",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Camp",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Camp/Camp - base [BACA].png",
+        "construction": "assets/Sprites/Buildings/Barbarians/Camp/Camp - construction [BACAz].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Camp/Camp - info [BACAi].png"
+      }
+    }
+  }
+}

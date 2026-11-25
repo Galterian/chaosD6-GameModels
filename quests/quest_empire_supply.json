@@ -2,9 +2,9 @@
   "schema": "chaosd6.quest/1",
   "id": "quest_empire_supply",
   "name": "Meat for the Garrison",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "race": "race_empire",
-  "giver": "npc_empire_quartermaster",
+  "giver": "npc_empire_reeve",
   "need_text": "a captured brute or bruiser monster card",
   "need": {
     "some": [

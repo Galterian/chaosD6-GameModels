@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_barbarians",
+  "name": "Barbarians",
+  "version": "1.0.0",
+  "alignment": "neutral",
+  "alignment_pct": 60,
+  "temper": "Loud, proud and fearless; they respect strength first and honesty second, and test both with a fist.",
+  "village": "vil_barbarians",
+  "village_names": {
+    "prefix": [
+      "Wolf",
+      "Storm",
+      "Raven",
+      "Bear",
+      "Frost",
+      "Blood",
+      "Thunder",
+      "Elk",
+      "Skull",
+      "Grim"
+    ],
+    "suffix": [
+      "hall",
+      "fjord",
+      "stead",
+      "heim",
+      "mark",
+      "crag",
+      "barrow",
+      "holt",
+      "fell"
+    ]
+  },
+  "person_names": [
+    "Asa",
+    "Bjorn",
+    "Freya",
+    "Gunnar",
+    "Helga",
+    "Ivar",
+    "Ketil",
+    "Runa",
+    "Sigrun",
+    "Torvald",
+    "Ulf",
+    "Ylva"
+  ],
+  "buildings": [
+    "bld_barbarians_centre",
+    "bld_barbarians_keep",
+    "bld_barbarians_ministry",
+    "bld_barbarians_barracks",
+    "bld_barbarians_shop",
+    "bld_barbarians_lore",
+    "bld_barbarians_temple",
+    "bld_barbarians_smithy",
+    "bld_barbarians_workshop",
+    "bld_barbarians_wizard",
+    "bld_barbarians_merc",
+    "bld_barbarians_tower"
+  ],
+  "npcs": [
+    "npc_barbarians_quest_giver",
+    "npc_barbarians_storyteller",
+    "npc_barbarians_trader",
+    "npc_barbarians_smith",
+    "npc_barbarians_wizard",
+    "npc_barbarians_mercenary",
+    "npc_barbarians_healer",
+    "npc_barbarians_diplomat",
+    "npc_barbarians_builder",
+    "npc_barbarians_mason",
+    "npc_barbarians_gatekeeper",
+    "npc_barbarians_wall_guard",
+    "npc_barbarians_fighter",
+    "npc_barbarians_wanderer",
+    "npc_barbarians_wanderer2",
+    "npc_barbarians_dragon",
+    "npc_barbarians_catapult",
+    "npc_barbarians_ballista",
+    "npc_barbarians_ram",
+    "npc_barbarians_engineer"
+  ],
+  "card": {
+    "name": "Barbarians",
+    "tags": [
+      "race",
+      "neutral"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Barbarians"
+    }
+  },
+  "wbc3_race": "Barbarians"
+}

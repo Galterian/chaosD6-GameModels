@@ -1,0 +1,107 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_dwarves_quest_giver",
+  "name": "Overseer",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "quest_giver",
+  "home": "bld_dark_dwarves_keep",
+  "persona": "The headman of the village: speaks for the Furnace, and always has work for strong hands.",
+  "lines": {
+    "greet": [
+      "Welcome to {village}, stranger.",
+      "In the name of the Furnace — a new face!"
+    ],
+    "quest": [
+      "We need {need}. Bring it and {village} owes you.",
+      "Find {need} out there on the map and come back to me."
+    ],
+    "thanks": [
+      "{need}! Good work. {reward}",
+      "You are a friend of {village} now. {reward}"
+    ],
+    "warn": [
+      "Mind yourself in my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "village",
+      "ask": "Tell me about this village.",
+      "say": [
+        "{village} is a village of the Dark Dwarves. Soot-black smiths of fire and iron; they trade fairly, build cruelly, and think every other folk a fuel."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "quest_giver",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_dark_dwarves_teach",
+    "quest_dark_dwarves_elders"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 10,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_fireball",
+      "effect_shield",
+      "effect_combustion",
+      "effect_artifice"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Overseer",
+    "tags": [
+      "npc",
+      "quest_giver"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Dwarf Hero",
+      "wbc3_code": "AAHX",
+      "wbc3_race": "Dark Dwarves",
+      "match_reason": "Overseer of the Dark Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - attack [AAHXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - cast [AAHXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - death [AAHXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - fidget [AAHXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - idle [AAHX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - info [AAHXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - walk [AAHXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

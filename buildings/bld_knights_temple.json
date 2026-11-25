@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_temple",
+  "name": "Cathedral",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Cathedral",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Cathedral",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Cathedral/Cathedral - base [BPCA].png",
+        "construction": "assets/Sprites/Buildings/Knights/Cathedral/Cathedral - construction [BPCAz].png",
+        "info": "assets/Sprites/Buildings/Knights/Cathedral/Cathedral - info [BPCAi].png"
+      }
+    }
+  }
+}

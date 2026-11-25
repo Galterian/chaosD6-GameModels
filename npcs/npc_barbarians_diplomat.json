@@ -1,0 +1,150 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_barbarians_diplomat",
+  "name": "Speaker",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "diplomat",
+  "home": "bld_barbarians_ministry",
+  "persona": "Speaks for the village to the other peoples: knows the roads, and who stands with whom. For a price, also what they whisper.",
+  "lines": {
+    "greet": [
+      "Peace be with you — and with your people.",
+      "News of the other villages? Ask me."
+    ],
+    "quest": [
+      "For {need} I go where you lead me — and they will not like what I leave behind."
+    ],
+    "thanks": [
+      "Our secret, then. Lead me to them."
+    ],
+    "warn": [
+      "I do not travel with enemies of my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "envoys",
+      "ask": "What does a diplomat do?",
+      "say": [
+        "I speak for my village to the other peoples. Walk me to one of them and I stay there as our envoy: both villages think better of each other — and of you.",
+        "Villages that think less than forty in a hundred of each other are at war; their fighters fall on each other wherever they meet. Peace is my trade, in the name of the Tempest."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "diplomat",
+    "params": {
+      "beckon": 8
+    },
+    "rules": [
+      {
+        "id": "offer",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_barbarians_spy"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 8,
+      "will": 14
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_haste",
+      "effect_vision"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Speaker",
+    "tags": [
+      "npc",
+      "diplomat"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Barbarian Hero",
+      "wbc3_code": "AMHX",
+      "wbc3_race": "Barbarians",
+      "match_reason": "Speaker of the Barbarians",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - attack [AMHXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - cast [AMHXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - death [AMHXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - fidget [AMHXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - idle [AMHX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - info [AMHXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Barbarians/Barbarian Hero/Barbarian Hero - walk [AMHXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

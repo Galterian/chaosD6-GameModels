@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_temple",
+  "name": "Shaman's Hut",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Shaman's Hut",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Shaman's Hut",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Shaman's Hut/Shaman's Hut - base [BASM].png",
+        "construction": "assets/Sprites/Buildings/Orcs/Shaman's Hut/Shaman's Hut - construction [BASMz].png",
+        "info": "assets/Sprites/Buildings/Orcs/Shaman's Hut/Shaman's Hut - info [BASMi].png"
+      }
+    }
+  }
+}

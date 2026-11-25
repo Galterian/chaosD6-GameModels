@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_smithy",
+  "name": "Forge",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Forge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orchold (level 4)",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Orchold (level 4)/Orchold (level 4) - base [BKO3].png",
+        "info": "assets/Sprites/Buildings/Orcs/Orchold (level 4)/Orchold (level 4) - info [BKO3i].png"
+      }
+    }
+  }
+}

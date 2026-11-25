@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_barracks",
+  "name": "Arena",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Arena",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Arena",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Arena/Arena - base [BPAR].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Arena/Arena - construction [BPARz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Arena/Arena - info [BPARi].png"
+      }
+    }
+  }
+}

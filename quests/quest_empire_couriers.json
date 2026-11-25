@@ -2,9 +2,9 @@
   "schema": "chaosd6.quest/1",
   "id": "quest_empire_couriers",
   "name": "Swift Couriers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
-  "giver": "npc_empire_quartermaster",
+  "giver": "npc_empire_reeve",
   "need_text": "a Haste",
   "need": {
     "some": [

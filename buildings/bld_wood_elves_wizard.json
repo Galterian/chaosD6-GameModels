@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_wizard",
+  "name": "Magic Well",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Magic Well",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Magic Well",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Magic Well/Magic Well - base [BPMW].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Magic Well/Magic Well - construction [BPMWz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Magic Well/Magic Well - info [BPMWi].png"
+      }
+    }
+  }
+}

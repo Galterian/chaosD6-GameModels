@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_shop",
+  "name": "Trading Post",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Trading Post",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Trading Post",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Trading Post/Trading Post - base [BPTP].png",
+        "construction": "assets/Sprites/Buildings/Dwarves/Trading Post/Trading Post - construction [BPTPz].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Trading Post/Trading Post - info [BPTPi].png"
+      }
+    }
+  }
+}

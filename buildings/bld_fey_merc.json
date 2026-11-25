@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_merc",
+  "name": "Banshee Hall",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Banshee Hall",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dreamhold (level 5)",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Dreamhold (level 5)/Dreamhold (level 5) - base [BKF4].png",
+        "info": "assets/Sprites/Buildings/Fey/Dreamhold (level 5)/Dreamhold (level 5) - info [BKF4i].png"
+      }
+    }
+  }
+}

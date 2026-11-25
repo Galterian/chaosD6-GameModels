@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_shop",
+  "name": "Hostel",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Hostel",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hostel",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Hostel/Hostel - base [BPHS].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Hostel/Hostel - construction [BPHSz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Hostel/Hostel - info [BPHSi].png"
+      }
+    }
+  }
+}

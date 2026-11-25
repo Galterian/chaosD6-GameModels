@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_keep",
+  "name": "Ziggurat",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Ziggurat",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ziggurat (level 1)",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Ziggurat (level 1)/Ziggurat (level 1) - base [BKH0].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Ziggurat (level 1)/Ziggurat (level 1) - construction [BKH0z].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Ziggurat (level 1)/Ziggurat (level 1) - info [BKH0i].png"
+      }
+    }
+  }
+}

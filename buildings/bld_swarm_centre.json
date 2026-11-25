@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_centre",
+  "name": "The Queen",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Swarm: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "The Queen",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Queen",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Queen/Queen - base [BPSQ].png",
+        "construction": "assets/Sprites/Buildings/Swarm/Queen/Queen - construction [BPSQz].png",
+        "info": "assets/Sprites/Buildings/Swarm/Queen/Queen - info [BPSQi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_dwarves_tower",
+  "name": "Watchtower",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "tower",
+  "bank": {
+    "stat": "matter",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "A watchtower of the village wall.",
+  "card": {
+    "name": "Watchtower",
+    "tags": [
+      "building",
+      "tower"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Tower (Dark Dwarf)",
+      "wbc3_race": "Shared",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Shared/Tower (Dark Dwarf)/Tower (Dark Dwarf) - base [BWTA].png",
+        "construction": "assets/Sprites/Buildings/Shared/Tower (Dark Dwarf)/Tower (Dark Dwarf) - construction [BWTAz].png",
+        "info": "assets/Sprites/Buildings/Shared/Tower (Dark Dwarf)/Tower (Dark Dwarf) - info [BWTAi].png"
+      }
+    }
+  }
+}

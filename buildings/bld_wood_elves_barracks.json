@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_barracks",
+  "name": "Rangers' Guild",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Rangers' Guild",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Rangers' Guild",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Rangers' Guild/Rangers' Guild - base [BPRG].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Rangers' Guild/Rangers' Guild - construction [BPRGz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Rangers' Guild/Rangers' Guild - info [BPRGi].png"
+      }
+    }
+  }
+}

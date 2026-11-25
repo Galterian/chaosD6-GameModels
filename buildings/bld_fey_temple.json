@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_temple",
+  "name": "Magic Pool",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Magic Pool",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Magic Pool",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Magic Pool/Magic Pool - base [BPMP].png",
+        "construction": "assets/Sprites/Buildings/Fey/Magic Pool/Magic Pool - construction [BPMPz].png",
+        "info": "assets/Sprites/Buildings/Fey/Magic Pool/Magic Pool - info [BPMPi].png"
+      }
+    }
+  }
+}

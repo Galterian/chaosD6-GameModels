@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_dark_elves",
+  "name": "Dark Elves",
+  "version": "1.0.0",
+  "alignment": "evil",
+  "alignment_pct": 30,
+  "temper": "Elegant, cruel and clever; the Dark Elves smile at every guest and count the cost of each smile.",
+  "village": "vil_dark_elves",
+  "village_names": {
+    "prefix": [
+      "Shadow",
+      "Night",
+      "Venom",
+      "Raven",
+      "Silk",
+      "Thorn",
+      "Gloom",
+      "Onyx",
+      "Spider",
+      "Dusk"
+    ],
+    "suffix": [
+      "spire",
+      "web",
+      "shade",
+      "veil",
+      "hollow",
+      "reach",
+      "mire",
+      "crypt",
+      "fall"
+    ]
+  },
+  "person_names": [
+    "Ilvara",
+    "Jhaelra",
+    "Kaelith",
+    "Lirzza",
+    "Malice",
+    "Nym",
+    "Quenth",
+    "Rilros",
+    "Sabal",
+    "Vhondryl",
+    "Xullrae",
+    "Zesstra"
+  ],
+  "buildings": [
+    "bld_dark_elves_centre",
+    "bld_dark_elves_keep",
+    "bld_dark_elves_ministry",
+    "bld_dark_elves_barracks",
+    "bld_dark_elves_shop",
+    "bld_dark_elves_lore",
+    "bld_dark_elves_temple",
+    "bld_dark_elves_smithy",
+    "bld_dark_elves_workshop",
+    "bld_dark_elves_wizard",
+    "bld_dark_elves_merc",
+    "bld_dark_elves_tower"
+  ],
+  "npcs": [
+    "npc_dark_elves_quest_giver",
+    "npc_dark_elves_storyteller",
+    "npc_dark_elves_trader",
+    "npc_dark_elves_smith",
+    "npc_dark_elves_wizard",
+    "npc_dark_elves_mercenary",
+    "npc_dark_elves_healer",
+    "npc_dark_elves_diplomat",
+    "npc_dark_elves_builder",
+    "npc_dark_elves_mason",
+    "npc_dark_elves_gatekeeper",
+    "npc_dark_elves_wall_guard",
+    "npc_dark_elves_fighter",
+    "npc_dark_elves_wanderer",
+    "npc_dark_elves_wanderer2",
+    "npc_dark_elves_dragon",
+    "npc_dark_elves_catapult",
+    "npc_dark_elves_ballista",
+    "npc_dark_elves_ram",
+    "npc_dark_elves_engineer"
+  ],
+  "card": {
+    "name": "Dark Elves",
+    "tags": [
+      "race",
+      "evil"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Dark Elves"
+    }
+  },
+  "wbc3_race": "Dark Elves"
+}

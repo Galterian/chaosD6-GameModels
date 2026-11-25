@@ -1,0 +1,288 @@
+{
+  "schema": "chaosd6.village/1",
+  "id": "vil_minotaurs",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "team": "{name} Village",
+  "radius": 6,
+  "clear_radius": 9,
+  "cap": 20,
+  "layout": [
+    {
+      "building": "bld_minotaurs_centre",
+      "at": [
+        0,
+        0
+      ]
+    },
+    {
+      "building": "bld_minotaurs_keep",
+      "at": [
+        0,
+        -3
+      ]
+    },
+    {
+      "building": "bld_minotaurs_barracks",
+      "at": [
+        3,
+        -3
+      ]
+    },
+    {
+      "building": "bld_minotaurs_tower",
+      "at": [
+        3,
+        0
+      ]
+    },
+    {
+      "building": "bld_minotaurs_smithy",
+      "at": [
+        0,
+        3
+      ]
+    },
+    {
+      "building": "bld_minotaurs_shop",
+      "at": [
+        -3,
+        3
+      ]
+    },
+    {
+      "building": "bld_minotaurs_lore",
+      "at": [
+        -3,
+        0
+      ]
+    },
+    {
+      "building": "bld_minotaurs_temple",
+      "at": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "building": "bld_minotaurs_ministry",
+      "at": [
+        2,
+        2
+      ]
+    },
+    {
+      "building": "bld_minotaurs_wizard",
+      "at": [
+        4,
+        -2
+      ]
+    },
+    {
+      "building": "bld_minotaurs_workshop",
+      "at": [
+        -4,
+        2
+      ]
+    },
+    {
+      "building": "bld_minotaurs_merc",
+      "at": [
+        2,
+        -4
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "npc": "npc_minotaurs_quest_giver",
+      "at": [
+        -2,
+        9
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_minotaurs_storyteller",
+      "at": [
+        2,
+        7
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_minotaurs_diplomat",
+      "at": [
+        -4,
+        9
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_minotaurs_gatekeeper",
+      "at": [
+        0,
+        9
+      ],
+      "post": "gate"
+    },
+    {
+      "npc": "npc_minotaurs_dragon",
+      "at": [
+        1,
+        -1
+      ],
+      "post": "centre"
+    },
+    {
+      "npc": "npc_minotaurs_wall_guard",
+      "at": [
+        7,
+        -7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_minotaurs_wall_guard",
+      "at": [
+        -7,
+        0
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_minotaurs_trader",
+      "at": [
+        -2,
+        2
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_builder",
+      "at": [
+        -3,
+        1
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_mason",
+      "at": [
+        -3,
+        2
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_smith",
+      "at": [
+        0,
+        2
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_wizard",
+      "at": [
+        3,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_mercenary",
+      "at": [
+        1,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_healer",
+      "at": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_engineer",
+      "at": [
+        -4,
+        1
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_fighter",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_fighter",
+      "at": [
+        2,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_fighter",
+      "at": [
+        3,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_fighter",
+      "at": [
+        4,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_minotaurs_fighter",
+      "at": [
+        4,
+        -3
+      ]
+    }
+  ],
+  "wanderers": {
+    "ring": [
+      50,
+      100
+    ],
+    "npcs": [
+      "npc_minotaurs_wanderer",
+      "npc_minotaurs_wanderer2",
+      "npc_minotaurs_wanderer"
+    ]
+  },
+  "reputation": {
+    "unit": "percent",
+    "start": 50,
+    "start_same_race": 70,
+    "hostile": 40,
+    "enter": 70,
+    "ally_all": 90,
+    "building_broken": -5,
+    "villager_attacked": -5,
+    "trespass": -5,
+    "threat_radius": 9
+  },
+  "quests": [
+    "quest_minotaurs_teach",
+    "quest_minotaurs_elders",
+    "quest_minotaurs_forge",
+    "quest_minotaurs_secret"
+  ],
+  "wall": {
+    "radius": 8,
+    "gate": [
+      0,
+      8
+    ],
+    "name": "Bronze Maze Wall",
+    "text": "The outer maze wall of bronze-bound stone; the Gate Bull opens it only to friends of the herd.",
+    "sprites": {
+      "joint": "assets/Sprites/Buildings/Shared/Walls (neutral, 2x2 joint)/Walls (neutral, 2x2 joint) - base [BWN0].png",
+      "horizontal": "assets/Sprites/Buildings/Shared/Walls (neutral, 2x1 horizontal)/Walls (neutral, 2x1 horizontal) - base [BWN1].png",
+      "vertical": "assets/Sprites/Buildings/Shared/Walls (neutral, 1x2 vertical)/Walls (neutral, 1x2 vertical) - base [BWN2].png"
+    }
+  }
+}

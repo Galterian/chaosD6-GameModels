@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_dwarves_forge",
+  "name": "Inner Fire for the Forge",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "giver": "npc_dwarves_smith",
+  "need_text": "the Inner Fire effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_inner_fire"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_powerful_attack"
+    }
+  ],
+  "repeatable": false
+}

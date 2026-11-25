@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dwarves_healer",
+  "name": "Brewmaster",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "healer",
+  "home": "bld_dwarves_temple",
+  "persona": "Tends the sick and the wounded of the village.",
+  "lines": {
+    "greet": [
+      "Sit, sit. Let me look at that."
+    ]
+  },
+  "agenda": {
+    "uses": "healer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 10,
+      "matter": 8,
+      "will": 14
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_turn_life",
+      "effect_shield",
+      "effect_blessing_curse",
+      "effect_potion_brew"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Brewmaster",
+    "tags": [
+      "npc",
+      "healer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dwarf Lord",
+      "wbc3_code": "ADGX",
+      "wbc3_race": "Dwarves",
+      "match_reason": "Brewmaster of the Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - attack [ADGXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - cast [ADGXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - death [ADGXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - fidget [ADGXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - idle [ADGX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - info [ADGXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Lord/Dwarf Lord - walk [ADGXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

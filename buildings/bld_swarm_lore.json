@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_lore",
+  "name": "Burial Hall",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Burial Hall",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Burial Hall",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Burial Hall/Burial Hall - base [BABC].png",
+        "construction": "assets/Sprites/Buildings/Swarm/Burial Hall/Burial Hall - construction [BABCz].png",
+        "info": "assets/Sprites/Buildings/Swarm/Burial Hall/Burial Hall - info [BABCi].png"
+      }
+    }
+  }
+}

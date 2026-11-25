@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_dwarves",
+  "name": "Dwarves",
+  "version": "1.0.0",
+  "alignment": "good",
+  "alignment_pct": 75,
+  "temper": "Stubborn, honest and slow to trust; a dwarf remembers a debt — and a grudge — for three generations.",
+  "village": "vil_dwarves",
+  "village_names": {
+    "prefix": [
+      "Stone",
+      "Iron",
+      "Deep",
+      "Anvil",
+      "Copper",
+      "Granite",
+      "Hammer",
+      "Coal",
+      "Gold",
+      "Rune"
+    ],
+    "suffix": [
+      "delve",
+      "hold",
+      "forge",
+      "hall",
+      "mount",
+      "barrow",
+      "peak",
+      "gate",
+      "deep"
+    ]
+  },
+  "person_names": [
+    "Balin",
+    "Borri",
+    "Dagna",
+    "Durin",
+    "Gimra",
+    "Hilda",
+    "Khazdun",
+    "Nori",
+    "Orsik",
+    "Thrain",
+    "Ulfa",
+    "Vistra"
+  ],
+  "buildings": [
+    "bld_dwarves_centre",
+    "bld_dwarves_keep",
+    "bld_dwarves_ministry",
+    "bld_dwarves_barracks",
+    "bld_dwarves_shop",
+    "bld_dwarves_lore",
+    "bld_dwarves_temple",
+    "bld_dwarves_smithy",
+    "bld_dwarves_workshop",
+    "bld_dwarves_wizard",
+    "bld_dwarves_merc",
+    "bld_dwarves_tower"
+  ],
+  "npcs": [
+    "npc_dwarves_quest_giver",
+    "npc_dwarves_storyteller",
+    "npc_dwarves_trader",
+    "npc_dwarves_smith",
+    "npc_dwarves_wizard",
+    "npc_dwarves_mercenary",
+    "npc_dwarves_healer",
+    "npc_dwarves_diplomat",
+    "npc_dwarves_builder",
+    "npc_dwarves_mason",
+    "npc_dwarves_gatekeeper",
+    "npc_dwarves_wall_guard",
+    "npc_dwarves_fighter",
+    "npc_dwarves_wanderer",
+    "npc_dwarves_wanderer2",
+    "npc_dwarves_dragon",
+    "npc_dwarves_catapult",
+    "npc_dwarves_ballista",
+    "npc_dwarves_ram",
+    "npc_dwarves_engineer"
+  ],
+  "card": {
+    "name": "Dwarves",
+    "tags": [
+      "race",
+      "good"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Dwarves"
+    }
+  },
+  "wbc3_race": "Dwarves"
+}

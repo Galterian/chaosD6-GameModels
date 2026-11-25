@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_keep",
+  "name": "Deathkeep",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Deathkeep",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Deathkeep (level 1)",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Deathkeep (level 1)/Deathkeep (level 1) - base [BKU0].png",
+        "construction": "assets/Sprites/Buildings/Undead/Deathkeep (level 1)/Deathkeep (level 1) - construction [BKU0z].png",
+        "info": "assets/Sprites/Buildings/Undead/Deathkeep (level 1)/Deathkeep (level 1) - info [BKU0i].png"
+      }
+    }
+  }
+}

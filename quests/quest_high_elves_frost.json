@@ -2,9 +2,9 @@
   "schema": "chaosd6.quest/1",
   "id": "quest_high_elves_frost",
   "name": "Frost for the Cellars",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "race": "race_high_elves",
-  "giver": "npc_high_elves_merchant",
+  "giver": "npc_high_elves_elder",
   "need_text": "an Ice Blast or a Blizzard",
   "need": {
     "some": [

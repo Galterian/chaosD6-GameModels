@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_centre",
+  "name": "Citadel",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Dwarves: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Citadel",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Citadel (level 1)",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Citadel (level 1)/Citadel (level 1) - base [BKD0].png",
+        "construction": "assets/Sprites/Buildings/Dwarves/Citadel (level 1)/Citadel (level 1) - construction [BKD0z].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Citadel (level 1)/Citadel (level 1) - info [BKD0i].png"
+      }
+    }
+  }
+}

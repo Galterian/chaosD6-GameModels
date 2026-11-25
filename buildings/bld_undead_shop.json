@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_shop",
+  "name": "Cage Market",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Cage Market",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Cage",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Cage/Cage - base [BPCG].png",
+        "construction": "assets/Sprites/Buildings/Undead/Cage/Cage - construction [BPCGz].png",
+        "info": "assets/Sprites/Buildings/Undead/Cage/Cage - info [BPCGi].png"
+      }
+    }
+  }
+}

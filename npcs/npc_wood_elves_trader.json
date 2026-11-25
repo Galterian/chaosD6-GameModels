@@ -1,0 +1,154 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_wood_elves_trader",
+  "name": "Fur Trader",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "trader",
+  "home": "bld_wood_elves_shop",
+  "persona": "A haggler with a cart full of oddments; barters cards for cards and never says what anything is worth.",
+  "lines": {
+    "greet": [
+      "Everything has a price, friend!",
+      "Come, see what the road brought me."
+    ],
+    "quest": [
+      "Give me {need} and you shall have {reward}. A bargain!"
+    ],
+    "thanks": [
+      "Pleasure doing business! {reward}"
+    ],
+    "warn": [
+      "No credit, no haggling with thieves."
+    ]
+  },
+  "talk": [
+    {
+      "id": "rumours",
+      "ask": "Heard any rumours?",
+      "say": [
+        "They say the Wood Elves pay well for Vision. They say a lot of things.",
+        "A merchant swore he saw a dragon over the hills. He also swore his prices were fair."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {
+      "beckon": 7,
+      "leash": 6
+    },
+    "rules": [
+      {
+        "id": "hawk",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "!": {
+                "cond": "far_from_home"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.talk"
+                }
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_wood_elves_trade_creature",
+    "quest_wood_elves_trade_skill"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 12,
+      "world": 14,
+      "matter": 10,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_haste",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Fur Trader",
+    "tags": [
+      "npc",
+      "trader"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Elven Hunter",
+      "wbc3_code": "AEEX",
+      "wbc3_race": "Wood Elves",
+      "match_reason": "Fur Trader of the Wood Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Wood Elves/Elven Hunter/Elven Hunter - attack [AEEXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Wood Elves/Elven Hunter/Elven Hunter - death [AEEXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Wood Elves/Elven Hunter/Elven Hunter - fidget [AEEXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Wood Elves/Elven Hunter/Elven Hunter - idle [AEEX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Wood Elves/Elven Hunter/Elven Hunter - info [AEEXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Wood Elves/Elven Hunter/Elven Hunter - walk [AEEXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -2,11 +2,11 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_high_elves_moonguard",
   "name": "Moonguard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
   "role": "guard",
   "home": "bld_high_elves_white_tower",
-  "persona": "A moonlit knight sworn to the keep.",
+  "persona": "A moonlit knight sworn to the keep — walks the wall from the inside.",
   "lines": {
     "greet": [
       "The moon sees you."
@@ -16,7 +16,7 @@
     ]
   },
   "agenda": {
-    "uses": "guard",
+    "uses": "wall_guard",
     "params": {},
     "rules": []
   },

@@ -1,0 +1,35 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_dark_dwarves_engine_ballista",
+  "name": "Bolts and Windlass",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "giver": "npc_dark_dwarves_engineer",
+  "need_text": "one effect card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "effect"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "allies",
+      "count": 1,
+      "units": [
+        "npc_dark_dwarves_ballista"
+      ]
+    }
+  ],
+  "repeatable": true
+}

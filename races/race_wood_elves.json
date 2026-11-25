@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_wood_elves",
+  "name": "Wood Elves",
+  "version": "1.0.0",
+  "alignment": "good",
+  "alignment_pct": 95,
+  "temper": "Quiet hunters of the deep forest; they forgive a stranger once, and remember forever.",
+  "village": "vil_wood_elves",
+  "village_names": {
+    "prefix": [
+      "Green",
+      "Thorn",
+      "Fern",
+      "Oak",
+      "Moss",
+      "Willow",
+      "Ash",
+      "Briar",
+      "Leaf",
+      "Hollow"
+    ],
+    "suffix": [
+      "wood",
+      "glen",
+      "bower",
+      "grove",
+      "dell",
+      "brook",
+      "thicket",
+      "shaw",
+      "root"
+    ]
+  },
+  "person_names": [
+    "Aerin",
+    "Briallen",
+    "Cael",
+    "Daerwen",
+    "Eluin",
+    "Faelan",
+    "Gwyneth",
+    "Haldir",
+    "Ilyana",
+    "Lirien",
+    "Merethyl",
+    "Tauriel"
+  ],
+  "buildings": [
+    "bld_wood_elves_centre",
+    "bld_wood_elves_keep",
+    "bld_wood_elves_ministry",
+    "bld_wood_elves_barracks",
+    "bld_wood_elves_shop",
+    "bld_wood_elves_lore",
+    "bld_wood_elves_temple",
+    "bld_wood_elves_smithy",
+    "bld_wood_elves_workshop",
+    "bld_wood_elves_wizard",
+    "bld_wood_elves_merc",
+    "bld_wood_elves_tower"
+  ],
+  "npcs": [
+    "npc_wood_elves_quest_giver",
+    "npc_wood_elves_storyteller",
+    "npc_wood_elves_trader",
+    "npc_wood_elves_smith",
+    "npc_wood_elves_wizard",
+    "npc_wood_elves_mercenary",
+    "npc_wood_elves_healer",
+    "npc_wood_elves_diplomat",
+    "npc_wood_elves_builder",
+    "npc_wood_elves_mason",
+    "npc_wood_elves_gatekeeper",
+    "npc_wood_elves_wall_guard",
+    "npc_wood_elves_fighter",
+    "npc_wood_elves_wanderer",
+    "npc_wood_elves_wanderer2",
+    "npc_wood_elves_dragon",
+    "npc_wood_elves_catapult",
+    "npc_wood_elves_ballista",
+    "npc_wood_elves_ram",
+    "npc_wood_elves_engineer"
+  ],
+  "card": {
+    "name": "Wood Elves",
+    "tags": [
+      "race",
+      "good"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Wood Elves"
+    }
+  },
+  "wbc3_race": "Wood Elves"
+}

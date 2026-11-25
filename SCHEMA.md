@@ -16,9 +16,17 @@ chaosD6-Resources (`assets/Sprites/...`).
 
 ## Race
 
-`{ schema, id, name, version, alignment, temper, village, village_names: { prefix[], suffix[] }, person_names[],
+`{ schema, id, name, version, alignment, alignment_pct, temper, village, village_names: { prefix[], suffix[] }, person_names[],
 buildings[], npcs[], card: { name, tags, resources } }` — a village is named prefix + suffix ("Silverleaf",
 "Ashford"), its team is `"<Name> Village"`, its people are called "Aelindra, Elder of Silverleaf".
+
+- `alignment_pct` (0..100, percent of good): High Elves 100 · Wood Elves 95 · Fey 85 · Knights 80 · Dwarves 75 ·
+  Empire 70 · Barbarians 60 · Orcs 55 · Minotaurs 45 · Ssrathi 40 · Dark Dwarves 35 · Dark Elves 30 · Swarm 20 ·
+  Daemons 15 · Plaguelords 5 · Undead 0. Two villages start at `100 − 2 × |gap|` with each other; under 40 they are
+  at **war** (their people fight where they meet; the fighters walk out). Every NPC carries its race's alignment; a
+  hero starts at its character race's (50 for none) and moves ±5 with its deeds (helping an NPC: a quest, an envoy
+  led, a wanderer walked home +5; attacking a villager who meant no harm −5). Monsters have none. A wanderer more
+  than 30 apart from a hero is hostile to it. `alignment` (good / neutral / evil) picks the wall sprites.
 
 ## Building
 
@@ -26,10 +34,16 @@ buildings[], npcs[], card: { name, tags, resources } }` — a village is named p
 card: { resources: { sprites: { base, construction?, info } } } }`
 
 - `role`: `tower` (a watchtower / spire a hired builder raises), `centre` (the **relationship building** — exactly one per village, at the village centre: its card shows
-  your reputation, the thresholds and the open quests), `keep`, `producer`, `temple`, `shop`, `lore`, `house`.
+  your reputation, the thresholds and the open quests), `keep`, `producer`, `temple`, `shop`, `lore`, `house`,
+  `ministry` (the **Ministry of Foreign Affairs**: its card counts, live, how the village stands with every village
+  found — a full village with a diplomat needs one).
 - `bank`: the building is a fortress of that stat and value — stand within 1 hex and stat-buy it (a `stat` emission
   banks your stat once per action); at bank ≥ value it breaks (and costs you reputation with the village).
-- `produces`: one unit of that NPC every `every_turns` turns while the village is below its cap (20 at most).
+- `produces`: one unit of that NPC every `every_turns` turns while the village is below its cap (20 at most). The
+  races of 2026-11-25 produce nobody: every resident who falls comes back instead (see Village).
+- A building **brings back** the residents whose `home` it is: one who dies (or a diplomat who stays abroad as an
+  envoy) is reborn there 20 turns later (a `fighter` 50), while the building stands; both builders come back from the
+  centre.
 
 ## NPC
 
@@ -40,7 +54,15 @@ innate_effect }, card: { name, tags, resources: { wbc3_*, sprites: { idle, walk,
 - `role`: `quest_giver`, `storyteller` (tells you about the Dimension), `builder`, `healer`, `guard`, `villager`,
   `wanderer` (roams 50–100 hexes from its village centre), `smith`, `wizard`, `mercenary` (follows a hero the village
   welcomes, when asked), `trader` (barters: its quests with `consume: true`), `dragon` (guards the centre building),
-  `engineer` (builds siege engines for a price), `siege` (a siege engine: only ever a follower).
+  `engineer` (builds siege engines for a price), `siege` (a siege engine: only ever a follower), `diplomat` (says
+  where the other villages are — direction, walking time — and how they stand; a hero may lead it to one: there it
+  stays as the envoy, the two villages +5 % with each other and the hero +5 % with both, once per hero and pair; its
+  `sabotage` quest pays for a spy mission instead: −5 % between the two, the hero +5 % with the diplomat's village;
+  needs a `home`, its Ministry), `fighter` (the village host: falls on the people of villages at war with its own; walks
+  out only while its village is at war; back 50 turns after it falls).
+- `repairs: { rounds 1..6 }` (a `builder` without `builds` — the **mason**, who never leaves): `rounds` actions in a
+  row of Empty Posture next to a broken building or wall hex of its village put it back (`vfix:` / the wall piece).
+  A village has at most two builders: the one for hire and the mason.
 - `talk` (optional): `[ { id, ask, say[] } ]` — the NPC's own questions in its card, next to the ones its role gives
   (who are you · a storyteller's news, dangers and villages · a guard's gate and roads · a wizard reading your cards ·
   a smith's arms · a mercenary's hire · a trader's wares · its quests / barters · your standing · farewell). `say` is
@@ -64,6 +86,8 @@ innate_effect }, card: { name, tags, resources: { wbc3_*, sprites: { idle, walk,
   the hero `building_broken` relationship. A siege engine gives no quests and builds nothing.
 - An `engineer` sells engines: a `consume` (and `repeatable`) quest whose `allies` reward is one siege npc ("Build me
   a Catapult — pay one effect card"). One engine at a time per hero.
+- A `wanderer` far from its village asks a hero "Shall I walk you home?" — walked inside its village's cleared disc
+  it is home: the hero +5 % with that village (and +5 alignment).
 - Line placeholders: `{need}`, `{reward}`, `{village}`, `{village_dir}`, `{village_dist}`, `{lore}`, `{lore_dir}`.
 - A villager's team is its village's `"<Name> Village"`.
 
@@ -80,7 +104,7 @@ The context a `when` reads (missing → null):
 |---|---|
 | `me` | `life, life_max, q, r, dist_home, role` |
 | `home` | `q, r` |
-| `foe` | nearest hostile unit: `id, dist, life, life_max` |
+| `foe` | nearest hostile unit: `id, dist, life, life_max, war` (`war` 1: a villager of a village at war with mine) |
 | `friend` | nearest friendly unit: `id, dist, life, life_max` |
 | `stranger` | nearest human hero not of my side: `id, dist, dist_village, rep, quests_open, quests_ready` |
 | `leader` | the hero a follower follows: `id, dist` |
@@ -90,7 +114,9 @@ The context a `when` reads (missing → null):
 Goals (`goal.do`): `flee`, `attack`, `cast`, `defend`, `approach`, `talk` (`say`: greet / quest / thanks / lore /
 warn; `complete: true` hands out a ready quest), `return`, `patrol`, `wander`, `roam` (`min`, `max`), `build`
 (`ring`; inside a walled village: tend the wall), `heal`, `follow`, `post` (`at`: `gate` / `gate_inner` / `home` — go
-there and hold it), `idle`. A quest giver or storyteller inside a walled village meets a stranger outside at the gate's
+there and hold it; `wall` — walk the ring just inside the wall), `repair` (the mason: the nearest broken building /
+wall hex of its village), `idle`. Library agendas of 2026-11-25: `wall_guard`, `mason`, `fighter`, `diplomat`;
+condition `foe_at_war` (the guards fight it, the civilians run from it). A quest giver or storyteller inside a walled village meets a stranger outside at the gate's
 inner hex.
 
 ## Quest
@@ -104,7 +130,8 @@ inner hex.
 - `consume: true` (a trader's barter): handing it in gives up the first archive card that meets `need` on its own;
   only by asking ("Trade … → …"), never by walking past. `repeatable: true`: it can be done again.
 - `rewards[]`: `{ kind: 'reputation', value }`, `{ kind: 'allies', count, units[] }` (villagers join the hero and follow
-  it), `{ kind: 'effect', id }`, `{ kind: 'skill', id }` (a card into the archive), `{ kind: 'enter' }`.
+  it), `{ kind: 'effect', id }`, `{ kind: 'skill', id }` (a card into the archive), `{ kind: 'enter' }`,
+  `{ kind: 'sabotage' }` (a diplomat's `consume` quest only: one spy mission — "Spy on <village> for me").
 
 ## Village
 
@@ -119,7 +146,12 @@ start_same_race, hostile, enter, ally_all, building_broken, villager_attacked, t
   (`gate × (R+1)/R`); give it the `gate_guard` agenda: it steps onto the gate to bar a stranger the village does not
   welcome yet and steps back for a welcome one. A resident with `post: "outside"` (the quest givers, the storyteller)
   waits between the wall and the cleared edge, never next to the gate, so a stranger gets quests and news there.
-  `post: "centre"` (a dragon only) stands next to the centre building (distance 1) and guards it.
+  `post: "centre"` (a dragon only) stands next to the centre building (distance 1) and guards it. `post: "wall"` (a
+  wall guard) starts on the ring just inside the wall (distance `radius − 1`) and walks it.
+- A full village (2026-11-25) holds 20: its dragon, one of each type (quest giver, storyteller, trader, smith, wizard,
+  mercenary, healer, engineer, diplomat), the builder for hire and the mason, the gate guard, two wall guards and five
+  fighters; the Ministry of Foreign Affairs in its layout. A generated NPC placed into a full village takes a
+  fighter's place.
 
 - `size: "hamlet"`: a smaller village (no wall, a few buildings and people). The map picks a full template for a cell
   as always, then turns 40 % of the cells away from the spawn into the hamlet of the same race (`HAMLET_RATE`).

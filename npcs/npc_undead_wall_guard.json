@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_undead_wall_guard",
+  "name": "Wall Skeleton",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "guard",
+  "home": "bld_undead_tower",
+  "persona": "Walks the wall from the inside, day and night.",
+  "lines": {
+    "greet": [
+      "All quiet on the wall."
+    ],
+    "warn": [
+      "Off the wall, stranger!"
+    ]
+  },
+  "agenda": {
+    "uses": "wall_guard",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wall Skeleton",
+    "tags": [
+      "npc",
+      "guard"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Skeleton",
+      "wbc3_code": "AUIX",
+      "wbc3_race": "Undead",
+      "match_reason": "Wall Skeleton of the Undead",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Undead/Skeleton/Skeleton - attack [AUIXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Undead/Skeleton/Skeleton - death [AUIXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Undead/Skeleton/Skeleton - fidget [AUIXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Undead/Skeleton/Skeleton - idle [AUIX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Undead/Skeleton/Skeleton - info [AUIXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Undead/Skeleton/Skeleton - walk [AUIXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

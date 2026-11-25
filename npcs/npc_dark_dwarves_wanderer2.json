@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_dwarves_wanderer2",
+  "name": "Grond",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "wanderer",
+  "home": null,
+  "persona": "A rover of the Dark Dwarves, far from home.",
+  "lines": {
+    "greet": [
+      "Hm. A traveller."
+    ],
+    "lore": [
+      "We come from {village}, {village_dir} of here.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 18,
+      "world": 10,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_combustion",
+      "effect_super_force",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Grond",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Grond",
+      "wbc3_code": "ATAX",
+      "wbc3_race": "Dark Dwarves",
+      "match_reason": "Grond of the Dark Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Grond/Grond - attack [ATAXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Grond/Grond - death [ATAXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Grond/Grond - fidget [ATAXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Grond/Grond - idle [ATAX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Grond/Grond - info [ATAXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Grond/Grond - walk [ATAXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

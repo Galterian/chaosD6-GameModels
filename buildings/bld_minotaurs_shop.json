@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_shop",
+  "name": "Ale Store",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Ale Store",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ale Store",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Ale Store/Ale Store - base [BPIN].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Ale Store/Ale Store - construction [BPINz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Ale Store/Ale Store - info [BPINi].png"
+      }
+    }
+  }
+}

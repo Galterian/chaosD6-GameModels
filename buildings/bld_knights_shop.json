@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_shop",
+  "name": "Market",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Market",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Market",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Market/Market - base [BPMA].png",
+        "construction": "assets/Sprites/Buildings/Knights/Market/Market - construction [BPMAz].png",
+        "info": "assets/Sprites/Buildings/Knights/Market/Market - info [BPMAi].png"
+      }
+    }
+  }
+}

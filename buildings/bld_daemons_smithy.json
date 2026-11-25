@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_smithy",
+  "name": "Brimstone Forge",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Brimstone Forge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Doomspire (level 3)",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Doomspire (level 3)/Doomspire (level 3) - base [BKV2].png",
+        "info": "assets/Sprites/Buildings/Daemons/Doomspire (level 3)/Doomspire (level 3) - info [BKV2i].png"
+      }
+    }
+  }
+}

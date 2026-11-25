@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_barracks",
+  "name": "Unicorn Grove",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Unicorn Grove",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Unicorn Grove",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Unicorn Grove/Unicorn Grove - base [BAUG].png",
+        "construction": "assets/Sprites/Buildings/Fey/Unicorn Grove/Unicorn Grove - construction [BAUGz].png",
+        "info": "assets/Sprites/Buildings/Fey/Unicorn Grove/Unicorn Grove - info [BAUGi].png"
+      }
+    }
+  }
+}

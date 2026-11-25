@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_dwarves_centre",
+  "name": "Ancestral Hall",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Dark Dwarves: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Ancestral Hall",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ancestral Hall",
+      "wbc3_race": "Dark Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Dwarves/Ancestral Hall/Ancestral Hall - base [BPAH].png",
+        "construction": "assets/Sprites/Buildings/Dark Dwarves/Ancestral Hall/Ancestral Hall - construction [BPAHz].png",
+        "info": "assets/Sprites/Buildings/Dark Dwarves/Ancestral Hall/Ancestral Hall - info [BPAHi].png"
+      }
+    }
+  }
+}

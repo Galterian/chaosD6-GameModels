@@ -1,0 +1,35 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_wood_elves_engine_ballista",
+  "name": "Bolts and Windlass",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "giver": "npc_wood_elves_engineer",
+  "need_text": "one effect card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "effect"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "allies",
+      "count": 1,
+      "units": [
+        "npc_wood_elves_ballista"
+      ]
+    }
+  ],
+  "repeatable": true
+}

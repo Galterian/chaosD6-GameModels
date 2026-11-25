@@ -286,6 +286,25 @@
           "var": "village.cap"
         }
       ]
+    },
+    "foe_at_war": {
+      "and": [
+        {
+          "!!": [
+            {
+              "var": "foe"
+            }
+          ]
+        },
+        {
+          "==": [
+            {
+              "var": "foe.war"
+            },
+            1
+          ]
+        }
+      ]
     }
   },
   "agendas": {
@@ -297,6 +316,23 @@
         "talk": 2
       },
       "rules": [
+        {
+          "id": "war_flee",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
         {
           "id": "flee_hurt",
           "when": {
@@ -386,6 +422,23 @@
       },
       "rules": [
         {
+          "id": "war",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
           "id": "alarm",
           "when": {
             "and": [
@@ -458,6 +511,23 @@
         "beckon": 12
       },
       "rules": [
+        {
+          "id": "war_flee",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
         {
           "id": "flee_hurt",
           "when": {
@@ -578,6 +648,23 @@
         "beckon": 12
       },
       "rules": [
+        {
+          "id": "war_flee",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
         {
           "id": "flee_hurt",
           "when": {
@@ -719,6 +806,23 @@
         "talk": 2
       },
       "rules": [
+        {
+          "id": "war_flee",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
         {
           "id": "flee_hurt",
           "when": {
@@ -1100,6 +1204,23 @@
       },
       "rules": [
         {
+          "id": "war",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
           "id": "alarm",
           "when": {
             "and": [
@@ -1187,6 +1308,273 @@
           "goal": {
             "do": "post",
             "at": "home"
+          }
+        }
+      ]
+    },
+    "wall_guard": {
+      "description": "Walks the ring just inside the village wall (post \"wall\"); turns on raiders and on the fighters of a village at war.",
+      "params": {
+        "alert": 5,
+        "leash": 3,
+        "talk": 2
+      },
+      "rules": [
+        {
+          "id": "war",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
+          "id": "alarm",
+          "when": {
+            "and": [
+              {
+                "cond": "alarm"
+              },
+              {
+                "cond": "foe_seen"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
+          "id": "raider",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_near"
+              },
+              {
+                "cond": "stranger_hostile"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
+          "id": "walk",
+          "when": true,
+          "goal": {
+            "do": "post",
+            "at": "wall"
+          }
+        }
+      ]
+    },
+    "mason": {
+      "description": "The builder who stays home: mends the broken buildings and wall of its village (npc.repairs), keeps clear of fights.",
+      "params": {
+        "alert": 3,
+        "leash": 9,
+        "talk": 2
+      },
+      "rules": [
+        {
+          "id": "flee",
+          "when": {
+            "cond": "foe_near"
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
+        {
+          "id": "chat",
+          "when": {
+            "and": [
+              {
+                "cond": "stranger_close"
+              },
+              {
+                "cond": "stranger_welcome"
+              }
+            ]
+          },
+          "goal": {
+            "do": "talk",
+            "say": "greet",
+            "target": "stranger"
+          }
+        },
+        {
+          "id": "mend",
+          "when": true,
+          "goal": {
+            "do": "repair"
+          }
+        }
+      ]
+    },
+    "fighter": {
+      "description": "A soldier of the village host: attacks the units of the villages at war with it on sight, otherwise guards home.",
+      "params": {
+        "alert": 7,
+        "leash": 7,
+        "talk": 2
+      },
+      "rules": [
+        {
+          "id": "war",
+          "when": {
+            "cond": "foe_at_war"
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
+          "id": "alarm",
+          "when": {
+            "and": [
+              {
+                "cond": "alarm"
+              },
+              {
+                "cond": "foe_seen"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
+          "id": "raider",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_near"
+              },
+              {
+                "cond": "stranger_hostile"
+              }
+            ]
+          },
+          "goal": {
+            "do": "attack",
+            "target": "foe"
+          }
+        },
+        {
+          "id": "go_home",
+          "when": {
+            "cond": "far_from_home"
+          },
+          "goal": {
+            "do": "return"
+          }
+        },
+        {
+          "id": "drill",
+          "when": true,
+          "goal": {
+            "do": "patrol",
+            "radius": 3
+          }
+        }
+      ]
+    },
+    "diplomat": {
+      "description": "Speaks for the village: tells where the other villages are and how they stand with it; a hero may lead it to one.",
+      "params": {
+        "alert": 3,
+        "leash": 3,
+        "talk": 2,
+        "beckon": 8
+      },
+      "rules": [
+        {
+          "id": "war_flee",
+          "when": {
+            "and": [
+              {
+                "cond": "foe_at_war"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
+        {
+          "id": "flee_hurt",
+          "when": {
+            "and": [
+              {
+                "cond": "hurt"
+              },
+              {
+                "cond": "foe_near"
+              }
+            ]
+          },
+          "goal": {
+            "do": "flee",
+            "from": "foe"
+          }
+        },
+        {
+          "id": "greet",
+          "when": {
+            "and": [
+              {
+                "cond": "stranger_close"
+              },
+              {
+                "!": {
+                  "cond": "stranger_hostile"
+                }
+              }
+            ]
+          },
+          "goal": {
+            "do": "talk",
+            "say": "greet",
+            "target": "stranger"
+          }
+        },
+        {
+          "id": "go_home",
+          "when": {
+            "cond": "far_from_home"
+          },
+          "goal": {
+            "do": "return"
+          }
+        },
+        {
+          "id": "idle",
+          "when": true,
+          "goal": {
+            "do": "wander",
+            "radius": 1
           }
         }
       ]

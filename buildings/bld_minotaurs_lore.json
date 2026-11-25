@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_lore",
+  "name": "Hall of Horns",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Hall of Horns",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ziggurat (level 3)",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Ziggurat (level 3)/Ziggurat (level 3) - base [BKH2].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Ziggurat (level 3)/Ziggurat (level 3) - info [BKH2i].png"
+      }
+    }
+  }
+}

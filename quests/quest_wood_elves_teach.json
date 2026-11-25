@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_wood_elves_teach",
+  "name": "Teach Us Ranged Weapon",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "giver": "npc_wood_elves_quest_giver",
+  "need_text": "the Ranged Weapon skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_ranged_weapon"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_mists"
+    }
+  ],
+  "repeatable": false
+}

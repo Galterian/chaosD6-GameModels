@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_wizard",
+  "name": "Serpent Spire",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Serpent Spire",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Sun Temple (level 3)",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 3)/Sun Temple (level 3) - base [BKL2].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 3)/Sun Temple (level 3) - info [BKL2i].png"
+      }
+    }
+  }
+}

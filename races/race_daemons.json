@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_daemons",
+  "name": "Daemons",
+  "version": "1.0.0",
+  "alignment": "evil",
+  "alignment_pct": 15,
+  "temper": "Spawn of the burning Portal; every bargain with a daemon is honoured exactly — and costs more than it seemed.",
+  "village": "vil_daemons",
+  "village_names": {
+    "prefix": [
+      "Brimstone",
+      "Ash",
+      "Hell",
+      "Sulfur",
+      "Doom",
+      "Cinder",
+      "Blood",
+      "Char",
+      "Flame",
+      "Pyre"
+    ],
+    "suffix": [
+      "pit",
+      "spire",
+      "gate",
+      "maw",
+      "forge",
+      "hold",
+      "abyss",
+      "brand",
+      "rift"
+    ]
+  },
+  "person_names": [
+    "Abraxas",
+    "Belial",
+    "Charnel",
+    "Dagon",
+    "Lilit",
+    "Malphas",
+    "Moloch",
+    "Naamah",
+    "Orobas",
+    "Raum",
+    "Valac",
+    "Zepar"
+  ],
+  "buildings": [
+    "bld_daemons_centre",
+    "bld_daemons_keep",
+    "bld_daemons_ministry",
+    "bld_daemons_barracks",
+    "bld_daemons_shop",
+    "bld_daemons_lore",
+    "bld_daemons_temple",
+    "bld_daemons_smithy",
+    "bld_daemons_workshop",
+    "bld_daemons_wizard",
+    "bld_daemons_merc",
+    "bld_daemons_tower"
+  ],
+  "npcs": [
+    "npc_daemons_quest_giver",
+    "npc_daemons_storyteller",
+    "npc_daemons_trader",
+    "npc_daemons_smith",
+    "npc_daemons_wizard",
+    "npc_daemons_mercenary",
+    "npc_daemons_healer",
+    "npc_daemons_diplomat",
+    "npc_daemons_builder",
+    "npc_daemons_mason",
+    "npc_daemons_gatekeeper",
+    "npc_daemons_wall_guard",
+    "npc_daemons_fighter",
+    "npc_daemons_wanderer",
+    "npc_daemons_wanderer2",
+    "npc_daemons_dragon",
+    "npc_daemons_catapult",
+    "npc_daemons_ballista",
+    "npc_daemons_ram",
+    "npc_daemons_engineer"
+  ],
+  "card": {
+    "name": "Daemons",
+    "tags": [
+      "race",
+      "evil"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Daemons"
+    }
+  },
+  "wbc3_race": "Daemons"
+}

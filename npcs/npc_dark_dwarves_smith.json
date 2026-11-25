@@ -1,0 +1,99 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_dwarves_smith",
+  "name": "Smith",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "smith",
+  "home": "bld_dark_dwarves_smithy",
+  "persona": "Arms like oak beams and a voice like a dropped anvil; judges a hero by their gear.",
+  "lines": {
+    "greet": [
+      "Mind the sparks.",
+      "Steel or nothing, stranger. What do you carry?"
+    ],
+    "quest": [
+      "Bring me {need} and I will forge you something worth the walk."
+    ],
+    "thanks": [
+      "{need}! Now we are talking. {reward}"
+    ],
+    "warn": [
+      "Hands off my anvil."
+    ]
+  },
+  "talk": [
+    {
+      "id": "forge",
+      "ask": "What do you forge?",
+      "say": [
+        "Arms for the host of the Furnace, nails for the wall, and a fine piece now and then for those who earn it."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_dark_dwarves_forge"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 18,
+      "will": 10
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Smith",
+    "tags": [
+      "npc",
+      "smith"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Engineer",
+      "wbc3_code": "AABX",
+      "wbc3_race": "Dark Dwarves",
+      "match_reason": "Smith of the Dark Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - attack [AABXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - death [AABXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - fidget [AABXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - idle [AABX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - info [AABXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - walk [AABXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_temple",
+  "name": "Brewery",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Brewery",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Brewery",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Brewery/Brewery - base [BPBR].png",
+        "construction": "assets/Sprites/Buildings/Dwarves/Brewery/Brewery - construction [BPBRz].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Brewery/Brewery - info [BPBRi].png"
+      }
+    }
+  }
+}

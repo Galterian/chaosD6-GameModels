@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_workshop",
+  "name": "Engine Hall",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Engine Hall",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hall of Plague (level 3)",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Hall of Plague (level 3)/Hall of Plague (level 3) - base [BKG2].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Hall of Plague (level 3)/Hall of Plague (level 3) - info [BKG2i].png"
+      }
+    }
+  }
+}

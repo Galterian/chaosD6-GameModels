@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_barbarians_teach",
+  "name": "Teach Us Battle Trance",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "giver": "npc_barbarians_quest_giver",
+  "need_text": "the Battle Trance skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_battle_trance"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_blizzard"
+    }
+  ],
+  "repeatable": false
+}

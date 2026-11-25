@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_elves_workshop",
+  "name": "Engine Vault",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Engine Vault",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Tower (level 4)",
+      "wbc3_race": "Dark Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 4)/Dark Tower (level 4) - base [BKT3].png",
+        "info": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 4)/Dark Tower (level 4) - info [BKT3i].png"
+      }
+    }
+  }
+}

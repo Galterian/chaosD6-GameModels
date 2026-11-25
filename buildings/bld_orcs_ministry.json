@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_ministry",
+  "name": "Ministry of Foreign Affairs",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "ministry",
+  "bank": {
+    "stat": "world",
+    "value": 50
+  },
+  "blocks": true,
+  "text": "The Ministry of Foreign Affairs: its board shows how this village stands with every other village found; a new Diplomat is trained here when the old one falls or stays abroad as an envoy.",
+  "card": {
+    "name": "Ministry of Foreign Affairs",
+    "tags": [
+      "building",
+      "ministry"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orchold (level 2)",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Orchold (level 2)/Orchold (level 2) - base [BKO1].png",
+        "info": "assets/Sprites/Buildings/Orcs/Orchold (level 2)/Orchold (level 2) - info [BKO1i].png"
+      }
+    }
+  }
+}

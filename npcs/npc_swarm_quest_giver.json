@@ -1,0 +1,107 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_swarm_quest_giver",
+  "name": "Hive Lord",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "quest_giver",
+  "home": "bld_swarm_keep",
+  "persona": "The headman of the village: speaks for the Queen, and always has work for strong hands.",
+  "lines": {
+    "greet": [
+      "Welcome to {village}, stranger.",
+      "In the name of the Queen — a new face!"
+    ],
+    "quest": [
+      "We need {need}. Bring it and {village} owes you.",
+      "Find {need} out there on the map and come back to me."
+    ],
+    "thanks": [
+      "{need}! Good work. {reward}",
+      "You are a friend of {village} now. {reward}"
+    ],
+    "warn": [
+      "Mind yourself in my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "village",
+      "ask": "Tell me about this village.",
+      "say": [
+        "{village} is a village of the Swarm. One mind in a thousand shells; the Swarm trades with outsiders only until it learns how to eat them."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "quest_giver",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_swarm_teach",
+    "quest_swarm_elders"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 10,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_poison",
+      "effect_earthquake",
+      "effect_harm",
+      "effect_fear"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Hive Lord",
+    "tags": [
+      "npc",
+      "quest_giver"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Swarm Hero",
+      "wbc3_code": "ARHX",
+      "wbc3_race": "Swarm",
+      "match_reason": "Hive Lord of the Swarm",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - attack [ARHXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - cast [ARHXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - death [ARHXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - fidget [ARHXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - idle [ARHX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - info [ARHXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Swarm/Swarm Hero/Swarm Hero - walk [ARHXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

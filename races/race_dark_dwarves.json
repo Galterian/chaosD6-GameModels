@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_dark_dwarves",
+  "name": "Dark Dwarves",
+  "version": "1.0.0",
+  "alignment": "evil",
+  "alignment_pct": 35,
+  "temper": "Soot-black smiths of fire and iron; they trade fairly, build cruelly, and think every other folk a fuel.",
+  "village": "vil_dark_dwarves",
+  "village_names": {
+    "prefix": [
+      "Ash",
+      "Cinder",
+      "Slag",
+      "Soot",
+      "Brass",
+      "Smoke",
+      "Ember",
+      "Clinker",
+      "Black",
+      "Furnace"
+    ],
+    "suffix": [
+      "forge",
+      "deep",
+      "pit",
+      "hold",
+      "works",
+      "vent",
+      "shaft",
+      "gate",
+      "kiln"
+    ]
+  },
+  "person_names": [
+    "Ashgar",
+    "Brekka",
+    "Dorn",
+    "Grimla",
+    "Hurgrim",
+    "Kazra",
+    "Mordak",
+    "Ragna",
+    "Sulfra",
+    "Thrak",
+    "Urza",
+    "Zarn"
+  ],
+  "buildings": [
+    "bld_dark_dwarves_centre",
+    "bld_dark_dwarves_keep",
+    "bld_dark_dwarves_ministry",
+    "bld_dark_dwarves_barracks",
+    "bld_dark_dwarves_shop",
+    "bld_dark_dwarves_lore",
+    "bld_dark_dwarves_temple",
+    "bld_dark_dwarves_smithy",
+    "bld_dark_dwarves_workshop",
+    "bld_dark_dwarves_wizard",
+    "bld_dark_dwarves_merc",
+    "bld_dark_dwarves_tower"
+  ],
+  "npcs": [
+    "npc_dark_dwarves_quest_giver",
+    "npc_dark_dwarves_storyteller",
+    "npc_dark_dwarves_trader",
+    "npc_dark_dwarves_smith",
+    "npc_dark_dwarves_wizard",
+    "npc_dark_dwarves_mercenary",
+    "npc_dark_dwarves_healer",
+    "npc_dark_dwarves_diplomat",
+    "npc_dark_dwarves_builder",
+    "npc_dark_dwarves_mason",
+    "npc_dark_dwarves_gatekeeper",
+    "npc_dark_dwarves_wall_guard",
+    "npc_dark_dwarves_fighter",
+    "npc_dark_dwarves_wanderer",
+    "npc_dark_dwarves_wanderer2",
+    "npc_dark_dwarves_dragon",
+    "npc_dark_dwarves_catapult",
+    "npc_dark_dwarves_ballista",
+    "npc_dark_dwarves_ram",
+    "npc_dark_dwarves_engineer"
+  ],
+  "card": {
+    "name": "Dark Dwarves",
+    "tags": [
+      "race",
+      "evil"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Dark Dwarves"
+    }
+  },
+  "wbc3_race": "Dark Dwarves"
+}

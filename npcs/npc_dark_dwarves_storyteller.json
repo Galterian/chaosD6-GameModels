@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_dwarves_storyteller",
+  "name": "Ash-Chronicler",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "storyteller",
+  "home": "bld_dark_dwarves_lore",
+  "persona": "Keeps the old tales of the Dark Dwarves and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The Furnace was lit with the heart of a mountain and has never gone out; the day it does, say the Dark Dwarves, the world grows cold."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Ash-Chronicler",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Dwarf Hero",
+      "wbc3_code": "AAHX",
+      "wbc3_race": "Dark Dwarves",
+      "match_reason": "Ash-Chronicler of the Dark Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - attack [AAHXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - cast [AAHXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - death [AAHXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - fidget [AAHXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - idle [AAHX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - info [AAHXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Dark Dwarf Hero/Dark Dwarf Hero - walk [AAHXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

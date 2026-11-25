@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_temple",
+  "name": "Chaos Shrine",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Chaos Shrine",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Chaos Shrine",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Chaos Shrine/Chaos Shrine - base [BPCS].png",
+        "construction": "assets/Sprites/Buildings/Daemons/Chaos Shrine/Chaos Shrine - construction [BPCSz].png",
+        "info": "assets/Sprites/Buildings/Daemons/Chaos Shrine/Chaos Shrine - info [BPCSi].png"
+      }
+    }
+  }
+}

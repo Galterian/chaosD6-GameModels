@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_merc",
+  "name": "Stinger Hall",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Stinger Hall",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dunekeep (level 3)",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Dunekeep (level 3)/Dunekeep (level 3) - base [BKR2].png",
+        "info": "assets/Sprites/Buildings/Swarm/Dunekeep (level 3)/Dunekeep (level 3) - info [BKR2i].png"
+      }
+    }
+  }
+}

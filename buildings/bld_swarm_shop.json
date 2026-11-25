@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_shop",
+  "name": "Trade Hive",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Trade Hive",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hive (level 2)",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Hive (level 2)/Hive (level 2) - base [BAH1].png",
+        "info": "assets/Sprites/Buildings/Swarm/Hive (level 2)/Hive (level 2) - info [BAH1i].png"
+      }
+    }
+  }
+}

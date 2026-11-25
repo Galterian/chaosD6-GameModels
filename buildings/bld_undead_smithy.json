@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_smithy",
+  "name": "Barrow Forge",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Barrow Forge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Barrow",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Barrow/Barrow - base [BPBA].png",
+        "construction": "assets/Sprites/Buildings/Undead/Barrow/Barrow - construction [BPBAz].png",
+        "info": "assets/Sprites/Buildings/Undead/Barrow/Barrow - info [BPBAi].png"
+      }
+    }
+  }
+}

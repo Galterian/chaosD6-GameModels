@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_lore",
+  "name": "Tome",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Tome",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Tome",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Tome/Tome - base [BPTM].png",
+        "construction": "assets/Sprites/Buildings/Fey/Tome/Tome - construction [BPTMz].png",
+        "info": "assets/Sprites/Buildings/Fey/Tome/Tome - info [BPTMi].png"
+      }
+    }
+  }
+}

@@ -2,11 +2,11 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_empire_archer",
   "name": "Archer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
-  "role": "guard",
-  "home": "bld_empire_blacksmith",
-  "persona": "An archer armed by the village smith.",
+  "role": "fighter",
+  "home": "bld_empire_barracks",
+  "persona": "A soldier of the host of the Lion Throne: falls on the villages at war with its own.",
   "lines": {
     "greet": [
       "Easy now."
@@ -16,7 +16,7 @@
     ]
   },
   "agenda": {
-    "uses": "guard",
+    "uses": "fighter",
     "params": {},
     "rules": []
   },
@@ -42,7 +42,7 @@
     "name": "Archer",
     "tags": [
       "npc",
-      "guard"
+      "fighter"
     ],
     "resources": {
       "source": "warlords3_battlecry",

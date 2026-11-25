@@ -1,0 +1,288 @@
+{
+  "schema": "chaosd6.village/1",
+  "id": "vil_plaguelords",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "team": "{name} Village",
+  "radius": 6,
+  "clear_radius": 9,
+  "cap": 20,
+  "layout": [
+    {
+      "building": "bld_plaguelords_centre",
+      "at": [
+        0,
+        0
+      ]
+    },
+    {
+      "building": "bld_plaguelords_keep",
+      "at": [
+        0,
+        -3
+      ]
+    },
+    {
+      "building": "bld_plaguelords_barracks",
+      "at": [
+        3,
+        -3
+      ]
+    },
+    {
+      "building": "bld_plaguelords_tower",
+      "at": [
+        3,
+        0
+      ]
+    },
+    {
+      "building": "bld_plaguelords_smithy",
+      "at": [
+        0,
+        3
+      ]
+    },
+    {
+      "building": "bld_plaguelords_shop",
+      "at": [
+        -3,
+        3
+      ]
+    },
+    {
+      "building": "bld_plaguelords_lore",
+      "at": [
+        -3,
+        0
+      ]
+    },
+    {
+      "building": "bld_plaguelords_temple",
+      "at": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "building": "bld_plaguelords_ministry",
+      "at": [
+        2,
+        2
+      ]
+    },
+    {
+      "building": "bld_plaguelords_wizard",
+      "at": [
+        4,
+        -2
+      ]
+    },
+    {
+      "building": "bld_plaguelords_workshop",
+      "at": [
+        -4,
+        2
+      ]
+    },
+    {
+      "building": "bld_plaguelords_merc",
+      "at": [
+        2,
+        -4
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "npc": "npc_plaguelords_quest_giver",
+      "at": [
+        -2,
+        9
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_plaguelords_storyteller",
+      "at": [
+        2,
+        7
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_plaguelords_diplomat",
+      "at": [
+        -4,
+        9
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_plaguelords_gatekeeper",
+      "at": [
+        0,
+        9
+      ],
+      "post": "gate"
+    },
+    {
+      "npc": "npc_plaguelords_dragon",
+      "at": [
+        1,
+        -1
+      ],
+      "post": "centre"
+    },
+    {
+      "npc": "npc_plaguelords_wall_guard",
+      "at": [
+        7,
+        -7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_plaguelords_wall_guard",
+      "at": [
+        -7,
+        0
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_plaguelords_trader",
+      "at": [
+        -2,
+        2
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_builder",
+      "at": [
+        -3,
+        1
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_mason",
+      "at": [
+        -3,
+        2
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_smith",
+      "at": [
+        0,
+        2
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_wizard",
+      "at": [
+        3,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_mercenary",
+      "at": [
+        1,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_healer",
+      "at": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_engineer",
+      "at": [
+        -4,
+        1
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_fighter",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_fighter",
+      "at": [
+        2,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_fighter",
+      "at": [
+        3,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_fighter",
+      "at": [
+        4,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_plaguelords_fighter",
+      "at": [
+        4,
+        -3
+      ]
+    }
+  ],
+  "wanderers": {
+    "ring": [
+      50,
+      100
+    ],
+    "npcs": [
+      "npc_plaguelords_wanderer",
+      "npc_plaguelords_wanderer2",
+      "npc_plaguelords_wanderer"
+    ]
+  },
+  "reputation": {
+    "unit": "percent",
+    "start": 50,
+    "start_same_race": 70,
+    "hostile": 40,
+    "enter": 70,
+    "ally_all": 90,
+    "building_broken": -5,
+    "villager_attacked": -5,
+    "trespass": -5,
+    "threat_radius": 9
+  },
+  "quests": [
+    "quest_plaguelords_teach",
+    "quest_plaguelords_elders",
+    "quest_plaguelords_forge",
+    "quest_plaguelords_secret"
+  ],
+  "wall": {
+    "radius": 8,
+    "gate": [
+      0,
+      8
+    ],
+    "name": "Bone Wall",
+    "text": "A wall of fused bone and black slime; the Gate Ghoul lets in only friends of the plague.",
+    "sprites": {
+      "joint": "assets/Sprites/Buildings/Shared/Walls (evil, 2x2 joint)/Walls (evil, 2x2 joint) - base [BWE0].png",
+      "horizontal": "assets/Sprites/Buildings/Shared/Walls (evil, 2x1 horizontal)/Walls (evil, 2x1 horizontal) - base [BWE1].png",
+      "vertical": "assets/Sprites/Buildings/Shared/Walls (evil, 1x2 vertical)/Walls (evil, 1x2 vertical) - base [BWE2].png"
+    }
+  }
+}

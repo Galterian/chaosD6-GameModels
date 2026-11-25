@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_temple",
+  "name": "Healing Hut",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Healing Hut",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Fortress (level 4)",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Fortress (level 4)/Fortress (level 4) - base [BKB3].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Fortress (level 4)/Fortress (level 4) - info [BKB3i].png"
+      }
+    }
+  }
+}

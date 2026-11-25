@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_shop",
+  "name": "Mill",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Mill",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Mill",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Mill/Mill - base [BPMI].png",
+        "construction": "assets/Sprites/Buildings/Barbarians/Mill/Mill - construction [BPMIz].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Mill/Mill - info [BPMIi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dwarves_smith",
+  "name": "Smith",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "smith",
+  "home": "bld_dwarves_smithy",
+  "persona": "Arms like oak beams and a voice like a dropped anvil; judges a hero by their gear.",
+  "lines": {
+    "greet": [
+      "Mind the sparks.",
+      "Steel or nothing, stranger. What do you carry?"
+    ],
+    "quest": [
+      "Bring me {need} and I will forge you something worth the walk."
+    ],
+    "thanks": [
+      "{need}! Now we are talking. {reward}"
+    ],
+    "warn": [
+      "Hands off my anvil."
+    ]
+  },
+  "talk": [
+    {
+      "id": "forge",
+      "ask": "What do you forge?",
+      "say": [
+        "Arms for the host of the Citadel, nails for the wall, and a fine piece now and then for those who earn it."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_dwarves_forge"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 18,
+      "will": 10
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Smith",
+    "tags": [
+      "npc",
+      "smith"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Smith",
+      "wbc3_code": "ADBX",
+      "wbc3_race": "Dwarves",
+      "match_reason": "Smith of the Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dwarves/Smith/Smith - attack [ADBXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dwarves/Smith/Smith - death [ADBXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dwarves/Smith/Smith - fidget [ADBXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dwarves/Smith/Smith - idle [ADBX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dwarves/Smith/Smith - info [ADBXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dwarves/Smith/Smith - walk [ADBXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

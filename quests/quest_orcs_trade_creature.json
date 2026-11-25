@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_orcs_trade_creature",
+  "name": "A Beast for Anger",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "giver": "npc_orcs_trader",
+  "need_text": "one monster card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "creature"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_anger"
+    }
+  ],
+  "repeatable": true
+}

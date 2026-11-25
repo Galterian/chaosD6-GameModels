@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_wizard",
+  "name": "Hex Hall",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Hex Hall",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orchold (level 3)",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Orchold (level 3)/Orchold (level 3) - base [BKO2].png",
+        "info": "assets/Sprites/Buildings/Orcs/Orchold (level 3)/Orchold (level 3) - info [BKO2i].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_plaguelords_wall_guard",
+  "name": "Wall Spore",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "guard",
+  "home": "bld_plaguelords_tower",
+  "persona": "Walks the wall from the inside, day and night.",
+  "lines": {
+    "greet": [
+      "All quiet on the wall."
+    ],
+    "warn": [
+      "Off the wall, stranger!"
+    ]
+  },
+  "agenda": {
+    "uses": "wall_guard",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wall Spore",
+    "tags": [
+      "npc",
+      "guard"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Spore",
+      "wbc3_code": "AGSP",
+      "wbc3_race": "Plaguelords",
+      "match_reason": "Wall Spore of the Plaguelords",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Plaguelords/Spore/Spore - attack [AGSPa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Plaguelords/Spore/Spore - death [AGSPd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Plaguelords/Spore/Spore - fidget [AGSPf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Plaguelords/Spore/Spore - idle [AGSP].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Plaguelords/Spore/Spore - info [AGSPi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Plaguelords/Spore/Spore - walk [AGSPw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

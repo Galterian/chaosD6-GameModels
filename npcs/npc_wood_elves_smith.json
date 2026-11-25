@@ -1,0 +1,99 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_wood_elves_smith",
+  "name": "Barkwright",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "smith",
+  "home": "bld_wood_elves_smithy",
+  "persona": "Arms like oak beams and a voice like a dropped anvil; judges a hero by their gear.",
+  "lines": {
+    "greet": [
+      "Mind the sparks.",
+      "Steel or nothing, stranger. What do you carry?"
+    ],
+    "quest": [
+      "Bring me {need} and I will forge you something worth the walk."
+    ],
+    "thanks": [
+      "{need}! Now we are talking. {reward}"
+    ],
+    "warn": [
+      "Hands off my anvil."
+    ]
+  },
+  "talk": [
+    {
+      "id": "forge",
+      "ask": "What do you forge?",
+      "say": [
+        "Arms for the host of the Tree of Life, nails for the wall, and a fine piece now and then for those who earn it."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_wood_elves_forge"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 18,
+      "will": 10
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Barkwright",
+    "tags": [
+      "npc",
+      "smith"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ironbark",
+      "wbc3_code": "ATWX",
+      "wbc3_race": "Wood Elves",
+      "match_reason": "Barkwright of the Wood Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Wood Elves/Ironbark/Ironbark - attack [ATWXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Wood Elves/Ironbark/Ironbark - death [ATWXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Wood Elves/Ironbark/Ironbark - fidget [ATWXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Wood Elves/Ironbark/Ironbark - idle [ATWX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Wood Elves/Ironbark/Ironbark - info [ATWXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Wood Elves/Ironbark/Ironbark - walk [ATWXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

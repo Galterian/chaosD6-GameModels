@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_plaguelords_teach",
+  "name": "Teach Us Counter Spell",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "giver": "npc_plaguelords_quest_giver",
+  "need_text": "the Counter Spell skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_counter_spell"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_aging"
+    }
+  ],
+  "repeatable": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_centre",
+  "name": "Totem",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Orcs: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Totem",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Totem",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Totem/Totem - base [BWTP].png",
+        "construction": "assets/Sprites/Buildings/Orcs/Totem/Totem - construction [BWTPz].png",
+        "info": "assets/Sprites/Buildings/Orcs/Totem/Totem - info [BWTPi].png"
+      }
+    }
+  }
+}

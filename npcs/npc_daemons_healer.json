@@ -1,0 +1,75 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_daemons_healer",
+  "name": "Succubus",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "healer",
+  "home": "bld_daemons_temple",
+  "persona": "Tends the sick and the wounded of the village.",
+  "lines": {
+    "greet": [
+      "Sit, sit. Let me look at that."
+    ]
+  },
+  "agenda": {
+    "uses": "healer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 10,
+      "matter": 8,
+      "will": 14
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_turn_life",
+      "effect_shield",
+      "effect_blessing_curse",
+      "effect_potion_brew"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Succubus",
+    "tags": [
+      "npc",
+      "healer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Succubus",
+      "wbc3_code": "AVIX",
+      "wbc3_race": "Daemons",
+      "match_reason": "Succubus of the Daemons",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Daemons/Succubus/Succubus - death [AVIXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Daemons/Succubus/Succubus - fidget [AVIXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Daemons/Succubus/Succubus - idle [AVIX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Daemons/Succubus/Succubus - info [AVIXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Daemons/Succubus/Succubus - walk [AVIXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

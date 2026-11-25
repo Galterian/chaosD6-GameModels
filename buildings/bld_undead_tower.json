@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_tower",
+  "name": "Watchtower",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "tower",
+  "bank": {
+    "stat": "matter",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "A watchtower of the village wall.",
+  "card": {
+    "name": "Watchtower",
+    "tags": [
+      "building",
+      "tower"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Tower (Undead)",
+      "wbc3_race": "Shared",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Shared/Tower (Undead)/Tower (Undead) - base [BWTU].png",
+        "construction": "assets/Sprites/Buildings/Shared/Tower (Undead)/Tower (Undead) - construction [BWTUz].png",
+        "info": "assets/Sprites/Buildings/Shared/Tower (Undead)/Tower (Undead) - info [BWTUi].png"
+      }
+    }
+  }
+}

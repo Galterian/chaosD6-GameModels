@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_swarm",
+  "name": "Swarm",
+  "version": "1.0.0",
+  "alignment": "evil",
+  "alignment_pct": 20,
+  "temper": "One mind in a thousand shells; the Swarm trades with outsiders only until it learns how to eat them.",
+  "village": "vil_swarm",
+  "village_names": {
+    "prefix": [
+      "Dune",
+      "Chitin",
+      "Sand",
+      "Sting",
+      "Hive",
+      "Husk",
+      "Scarab",
+      "Amber",
+      "Dust",
+      "Brood"
+    ],
+    "suffix": [
+      "hive",
+      "mound",
+      "dune",
+      "burrow",
+      "nest",
+      "tunnel",
+      "keep",
+      "chamber",
+      "cell"
+    ]
+  },
+  "person_names": [
+    "Akk",
+    "Chirrik",
+    "Ix",
+    "Kesh",
+    "Klikk",
+    "Mrrth",
+    "Skarr",
+    "Szik",
+    "Thrix",
+    "Vrikk",
+    "Xikka",
+    "Zzar"
+  ],
+  "buildings": [
+    "bld_swarm_centre",
+    "bld_swarm_keep",
+    "bld_swarm_ministry",
+    "bld_swarm_barracks",
+    "bld_swarm_shop",
+    "bld_swarm_lore",
+    "bld_swarm_temple",
+    "bld_swarm_smithy",
+    "bld_swarm_workshop",
+    "bld_swarm_wizard",
+    "bld_swarm_merc",
+    "bld_swarm_tower"
+  ],
+  "npcs": [
+    "npc_swarm_quest_giver",
+    "npc_swarm_storyteller",
+    "npc_swarm_trader",
+    "npc_swarm_smith",
+    "npc_swarm_wizard",
+    "npc_swarm_mercenary",
+    "npc_swarm_healer",
+    "npc_swarm_diplomat",
+    "npc_swarm_builder",
+    "npc_swarm_mason",
+    "npc_swarm_gatekeeper",
+    "npc_swarm_wall_guard",
+    "npc_swarm_fighter",
+    "npc_swarm_wanderer",
+    "npc_swarm_wanderer2",
+    "npc_swarm_dragon",
+    "npc_swarm_catapult",
+    "npc_swarm_ballista",
+    "npc_swarm_ram",
+    "npc_swarm_engineer"
+  ],
+  "card": {
+    "name": "Swarm",
+    "tags": [
+      "race",
+      "evil"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Swarm"
+    }
+  },
+  "wbc3_race": "Swarm"
+}

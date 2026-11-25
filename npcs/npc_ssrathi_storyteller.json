@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_ssrathi_storyteller",
+  "name": "Teller",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "storyteller",
+  "home": "bld_ssrathi_lore",
+  "persona": "Keeps the old tales of the Ssrathi and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The sun laid one egg in the Sacred Pool; from it hatched the first Ssrathi, and the pool has been warm ever since."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Teller",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Snakeman",
+      "wbc3_code": "ALIX",
+      "wbc3_race": "Ssrathi",
+      "match_reason": "Teller of the Ssrathi",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Ssrathi/Snakeman/Snakeman - attack [ALIXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Ssrathi/Snakeman/Snakeman - death [ALIXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Ssrathi/Snakeman/Snakeman - fidget [ALIXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Ssrathi/Snakeman/Snakeman - idle [ALIX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Ssrathi/Snakeman/Snakeman - info [ALIXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Ssrathi/Snakeman/Snakeman - walk [ALIXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

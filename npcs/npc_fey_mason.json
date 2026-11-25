@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_fey_mason",
+  "name": "Mason",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "builder",
+  "home": "bld_fey_workshop",
+  "persona": "The builder who never leaves: mends every broken wall and building of the village.",
+  "lines": {
+    "greet": [
+      "Every stone in its place.",
+      "Broken? I mend it."
+    ]
+  },
+  "talk": [
+    {
+      "id": "mending",
+      "ask": "What do you do here?",
+      "say": [
+        "When raiders break a wall or a building, I put it back — three good blows of work and it stands again.",
+        "I stay home. The other builder hires out; somebody has to keep the village standing."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "mason",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 6,
+      "matter": 14,
+      "will": 4
+    },
+    "life": 4,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_creation",
+      "effect_shield",
+      "effect_artifice"
+    ],
+    "innate_effect": null
+  },
+  "repairs": {
+    "rounds": 3
+  },
+  "card": {
+    "name": "Mason",
+    "tags": [
+      "npc",
+      "builder",
+      "mason"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Oakman",
+      "wbc3_code": "AFBX",
+      "wbc3_race": "Fey",
+      "match_reason": "Mason of the Fey",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - attack [AFBXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - death [AFBXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - fidget [AFBXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - idle [AFBX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - info [AFBXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Fey/Oakman/Oakman - walk [AFBXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

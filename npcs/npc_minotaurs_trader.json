@@ -1,0 +1,154 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_minotaurs_trader",
+  "name": "Gnoll Trader",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "trader",
+  "home": "bld_minotaurs_shop",
+  "persona": "A haggler with a cart full of oddments; barters cards for cards and never says what anything is worth.",
+  "lines": {
+    "greet": [
+      "Everything has a price, friend!",
+      "Come, see what the road brought me."
+    ],
+    "quest": [
+      "Give me {need} and you shall have {reward}. A bargain!"
+    ],
+    "thanks": [
+      "Pleasure doing business! {reward}"
+    ],
+    "warn": [
+      "No credit, no haggling with thieves."
+    ]
+  },
+  "talk": [
+    {
+      "id": "rumours",
+      "ask": "Heard any rumours?",
+      "say": [
+        "They say the Minotaurs pay well for Throw. They say a lot of things.",
+        "A merchant swore he saw a dragon over the hills. He also swore his prices were fair."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {
+      "beckon": 7,
+      "leash": 6
+    },
+    "rules": [
+      {
+        "id": "hawk",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "!": {
+                "cond": "far_from_home"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.talk"
+                }
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_minotaurs_trade_creature",
+    "quest_minotaurs_trade_skill"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 12,
+      "world": 14,
+      "matter": 10,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_haste",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Gnoll Trader",
+    "tags": [
+      "npc",
+      "trader"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Gnoll",
+      "wbc3_code": "AMJX",
+      "wbc3_race": "Minotaurs",
+      "match_reason": "Gnoll Trader of the Minotaurs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Minotaurs/Gnoll/Gnoll - attack [AMJXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Minotaurs/Gnoll/Gnoll - death [AMJXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Minotaurs/Gnoll/Gnoll - fidget [AMJXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Minotaurs/Gnoll/Gnoll - idle [AMJX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Minotaurs/Gnoll/Gnoll - info [AMJXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Minotaurs/Gnoll/Gnoll - walk [AMJXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

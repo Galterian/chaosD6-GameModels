@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_shop",
+  "name": "Swap Hovel",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Swap Hovel",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hovel",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Hovel/Hovel - base [BPOH].png",
+        "construction": "assets/Sprites/Buildings/Orcs/Hovel/Hovel - construction [BPOHz].png",
+        "info": "assets/Sprites/Buildings/Orcs/Hovel/Hovel - info [BPOHi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_wood_elves_trade_skill",
+  "name": "A Skill for Nature Embrace",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "giver": "npc_wood_elves_trader",
+  "need_text": "one skill card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "skill"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_nature_embrace"
+    }
+  ],
+  "repeatable": true
+}

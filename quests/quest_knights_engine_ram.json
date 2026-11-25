@@ -1,0 +1,35 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_knights_engine_ram",
+  "name": "The Iron Head",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "giver": "npc_knights_engineer",
+  "need_text": "one effect card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "effect"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "allies",
+      "count": 1,
+      "units": [
+        "npc_knights_ram"
+      ]
+    }
+  ],
+  "repeatable": true
+}

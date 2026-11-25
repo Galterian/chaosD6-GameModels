@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dwarves_storyteller",
+  "name": "Skald",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "storyteller",
+  "home": "bld_dwarves_lore",
+  "persona": "Keeps the old tales of the Dwarves and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The first Citadel was cut from one mountain in one night by a thousand dwarves who had sworn not to sleep until it stood."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Skald",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dwarf Hero",
+      "wbc3_code": "ADHX",
+      "wbc3_race": "Dwarves",
+      "match_reason": "Skald of the Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - attack [ADHXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - cast [ADHXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - death [ADHXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - fidget [ADHXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - idle [ADHX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - info [ADHXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dwarves/Dwarf Hero/Dwarf Hero - walk [ADHXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

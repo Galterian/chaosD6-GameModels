@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_minotaurs_wall_guard",
+  "name": "Wall Axe",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "guard",
+  "home": "bld_minotaurs_tower",
+  "persona": "Walks the wall from the inside, day and night.",
+  "lines": {
+    "greet": [
+      "All quiet on the wall."
+    ],
+    "warn": [
+      "Off the wall, stranger!"
+    ]
+  },
+  "agenda": {
+    "uses": "wall_guard",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wall Axe",
+    "tags": [
+      "npc",
+      "guard"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Axe Thrower",
+      "wbc3_code": "AMNX",
+      "wbc3_race": "Minotaurs",
+      "match_reason": "Wall Axe of the Minotaurs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Minotaurs/Axe Thrower/Axe Thrower - attack [AMNXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Minotaurs/Axe Thrower/Axe Thrower - death [AMNXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Minotaurs/Axe Thrower/Axe Thrower - fidget [AMNXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Minotaurs/Axe Thrower/Axe Thrower - idle [AMNX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Minotaurs/Axe Thrower/Axe Thrower - info [AMNXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Minotaurs/Axe Thrower/Axe Thrower - walk [AMNXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_temple",
+  "name": "Gravestone",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Gravestone",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Gravestone",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Gravestone/Gravestone - base [BAGR].png",
+        "construction": "assets/Sprites/Buildings/Undead/Gravestone/Gravestone - construction [BAGRz].png",
+        "info": "assets/Sprites/Buildings/Undead/Gravestone/Gravestone - info [BAGRi].png"
+      }
+    }
+  }
+}

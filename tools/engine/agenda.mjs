@@ -7,7 +7,7 @@
 // Agenda context (built by peer.mjs agendaContext(); every field may be missing → JsonLogic reads null):
 //   me        { life, life_max, q, r, dist_home, role }
 //   home      { q, r }                         the unit's home hex (village building / lair / spawn)
-//   foe       { id, dist, life, life_max } | null   nearest unit hostile to me
+//   foe       { id, dist, life, life_max, war } | null   nearest unit hostile to me (war 1: of a village at war with mine)
 //   friend    { id, dist, life, life_max } | null   nearest hurt-or-not friendly unit (not me)
 //   stranger  { id, dist, dist_village, rep, quests_open, quests_ready } | null   nearest human hero not of my side
 //   leader    { id, dist } | null              the hero a follower follows
@@ -18,7 +18,7 @@
 //   `radius`, `min`/`max`, `ring`, `complete` are goal arguments. Pure module: no I/O.
 import jsonLogic from 'json-logic-js';
 
-export const GOALS = ['flee', 'attack', 'cast', 'defend', 'approach', 'talk', 'return', 'patrol', 'wander', 'roam', 'build', 'heal', 'follow', 'post', 'idle'];   // post: go to { at: gate | gate_inner | home } and hold it
+export const GOALS = ['flee', 'attack', 'cast', 'defend', 'approach', 'talk', 'return', 'patrol', 'wander', 'roam', 'build', 'heal', 'follow', 'post', 'repair', 'idle'];   // post: go to { at: gate | gate_inner | home | wall } and hold it (wall: walk the inner ring); repair: the mason mends
 export const CONTEXT_ROOTS = ['me', 'home', 'foe', 'friend', 'stranger', 'leader', 'village', 'turn', 'params'];
 
 // Replace every {"cond": name} with the library's condition (recursively; a cycle or an unknown name throws).

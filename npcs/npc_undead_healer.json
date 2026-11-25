@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_undead_healer",
+  "name": "Blood-Mender",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "healer",
+  "home": "bld_undead_temple",
+  "persona": "Tends the sick and the wounded of the village.",
+  "lines": {
+    "greet": [
+      "Sit, sit. Let me look at that."
+    ]
+  },
+  "agenda": {
+    "uses": "healer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 10,
+      "matter": 8,
+      "will": 14
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_turn_life",
+      "effect_shield",
+      "effect_blessing_curse",
+      "effect_potion_brew"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Blood-Mender",
+    "tags": [
+      "npc",
+      "healer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Vampire",
+      "wbc3_code": "AUGX",
+      "wbc3_race": "Undead",
+      "match_reason": "Blood-Mender of the Undead",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - attack [AUGXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - cast [AUGXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - death [AUGXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - fidget [AUGXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - idle [AUGX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - info [AUGXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Undead/Vampire/Vampire - walk [AUGXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

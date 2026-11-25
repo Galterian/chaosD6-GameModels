@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_smithy",
+  "name": "Ironworks",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Ironworks",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ironworks",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Ironworks/Ironworks - base [BPIW].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Ironworks/Ironworks - construction [BPIWz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Ironworks/Ironworks - info [BPIWi].png"
+      }
+    }
+  }
+}

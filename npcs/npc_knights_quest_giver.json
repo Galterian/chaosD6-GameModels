@@ -1,0 +1,103 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_knights_quest_giver",
+  "name": "Castellan",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "quest_giver",
+  "home": "bld_knights_keep",
+  "persona": "The headman of the village: speaks for the Sword, and always has work for strong hands.",
+  "lines": {
+    "greet": [
+      "Welcome to {village}, stranger.",
+      "In the name of the Sword — a new face!"
+    ],
+    "quest": [
+      "We need {need}. Bring it and {village} owes you.",
+      "Find {need} out there on the map and come back to me."
+    ],
+    "thanks": [
+      "{need}! Good work. {reward}",
+      "You are a friend of {village} now. {reward}"
+    ],
+    "warn": [
+      "Mind yourself in my village."
+    ]
+  },
+  "talk": [
+    {
+      "id": "village",
+      "ask": "Tell me about this village.",
+      "say": [
+        "{village} is a village of the Knights. Sworn to chivalry and to the Shrine of the Sword; a stranger is judged by their deeds, never by their purse."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "quest_giver",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_knights_teach",
+    "quest_knights_elders"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 10,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_turn_life",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Castellan",
+    "tags": [
+      "npc",
+      "quest_giver"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Knight Lord",
+      "wbc3_code": "AHEX",
+      "wbc3_race": "Knights",
+      "match_reason": "Castellan of the Knights",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Knights/Knight Lord/Knight Lord - attack [AHEXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Knights/Knight Lord/Knight Lord - death [AHEXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Knights/Knight Lord/Knight Lord - fidget [AHEXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Knights/Knight Lord/Knight Lord - idle [AHEX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Knights/Knight Lord/Knight Lord - info [AHEXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Knights/Knight Lord/Knight Lord - walk [AHEXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

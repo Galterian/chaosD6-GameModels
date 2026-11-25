@@ -1,0 +1,99 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_knights_smith",
+  "name": "Armourer",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "smith",
+  "home": "bld_knights_smithy",
+  "persona": "Arms like oak beams and a voice like a dropped anvil; judges a hero by their gear.",
+  "lines": {
+    "greet": [
+      "Mind the sparks.",
+      "Steel or nothing, stranger. What do you carry?"
+    ],
+    "quest": [
+      "Bring me {need} and I will forge you something worth the walk."
+    ],
+    "thanks": [
+      "{need}! Now we are talking. {reward}"
+    ],
+    "warn": [
+      "Hands off my anvil."
+    ]
+  },
+  "talk": [
+    {
+      "id": "forge",
+      "ask": "What do you forge?",
+      "say": [
+        "Arms for the host of the Sword, nails for the wall, and a fine piece now and then for those who earn it."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_knights_forge"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 18,
+      "will": 10
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_shield",
+      "effect_super_force",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Armourer",
+    "tags": [
+      "npc",
+      "smith"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Swordsman",
+      "wbc3_code": "AHKX",
+      "wbc3_race": "Knights",
+      "match_reason": "Armourer of the Knights",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Knights/Swordsman/Swordsman - attack [AHKXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Knights/Swordsman/Swordsman - death [AHKXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Knights/Swordsman/Swordsman - fidget [AHKXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Knights/Swordsman/Swordsman - idle [AHKX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Knights/Swordsman/Swordsman - info [AHKXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Knights/Swordsman/Swordsman - walk [AHKXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_elves_wanderer",
+  "name": "Dark Rider",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "wanderer",
+  "home": null,
+  "persona": "Walks the wide circle around the villages of the Dark Elves.",
+  "lines": {
+    "greet": [
+      "Fair road, friend."
+    ],
+    "lore": [
+      "{village} lies {village_dir}, {village_dist} hexes. Tell them I sent you.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_poison",
+      "effect_invisibility",
+      "effect_sleep",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Dark Rider",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Rider",
+      "wbc3_code": "AKCX",
+      "wbc3_race": "Dark Elves",
+      "match_reason": "Dark Rider of the Dark Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Rider/Dark Rider - attack [AKCXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Rider/Dark Rider - death [AKCXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Rider/Dark Rider - fidget [AKCXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Rider/Dark Rider - idle [AKCX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Rider/Dark Rider - info [AKCXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Rider/Dark Rider - walk [AKCXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

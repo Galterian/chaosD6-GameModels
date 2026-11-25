@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_undead_teach",
+  "name": "Teach Us Intimidation",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "giver": "npc_undead_quest_giver",
+  "need_text": "the Intimidation skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_intimidation"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_resurrect_death_ward"
+    }
+  ],
+  "repeatable": false
+}

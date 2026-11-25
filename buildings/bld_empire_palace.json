@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_empire_palace",
   "name": "Palace",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
   "role": "keep",
   "bank": {
@@ -10,11 +10,7 @@
     "value": 60
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_empire_halberdier",
-    "every_turns": 40
-  },
-  "text": "The reeve's hall; a Halberdier of the guard is sworn in every 40 turns.",
+  "text": "The reeve's hall.",
   "card": {
     "name": "Palace",
     "tags": [

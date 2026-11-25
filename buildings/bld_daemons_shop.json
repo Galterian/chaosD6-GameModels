@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_shop",
+  "name": "Gallows Market",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "shop",
+  "bank": {
+    "stat": "world",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The trader keeps the stalls here.",
+  "card": {
+    "name": "Gallows Market",
+    "tags": [
+      "building",
+      "shop"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Gallows",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Gallows/Gallows - base [BPGA].png",
+        "construction": "assets/Sprites/Buildings/Daemons/Gallows/Gallows - construction [BPGAz].png",
+        "info": "assets/Sprites/Buildings/Daemons/Gallows/Gallows - info [BPGAi].png"
+      }
+    }
+  }
+}

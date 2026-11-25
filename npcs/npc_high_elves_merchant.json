@@ -2,22 +2,15 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_high_elves_merchant",
   "name": "Merchant",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "race": "race_high_elves",
-  "role": "quest_giver",
+  "role": "villager",
   "home": "bld_high_elves_merchant",
   "persona": "A sharp-eyed trader who prices everything in favours.",
   "lines": {
     "greet": [
       "Looking or buying? Favours only.",
       "Frost-silk, moonwater, rumours — all for a favour."
-    ],
-    "quest": [
-      "I pay well for {need}. You know where to find me.",
-      "Find me {need} and you will have a friend in {village}."
-    ],
-    "thanks": [
-      "A fair trade. {reward}"
     ],
     "warn": [
       "No credit for thieves."
@@ -33,14 +26,11 @@
     }
   ],
   "agenda": {
-    "uses": "quest_giver",
+    "uses": "villager",
     "params": {},
     "rules": []
   },
-  "quests": [
-    "quest_high_elves_frost",
-    "quest_high_elves_moonsight"
-  ],
+  "quests": [],
   "unit": {
     "stats": {
       "vitality": 10,
@@ -62,7 +52,7 @@
     "name": "Merchant",
     "tags": [
       "npc",
-      "quest_giver"
+      "villager"
     ],
     "resources": {
       "source": "warlords3_battlecry",

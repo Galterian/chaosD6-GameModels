@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_barracks",
+  "name": "Boneyard",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Boneyard",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Boneyard",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Boneyard/Boneyard - base [BPDM].png",
+        "construction": "assets/Sprites/Buildings/Undead/Boneyard/Boneyard - construction [BPDMz].png",
+        "info": "assets/Sprites/Buildings/Undead/Boneyard/Boneyard - info [BPDMi].png"
+      }
+    }
+  }
+}

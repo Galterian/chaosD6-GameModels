@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_workshop",
+  "name": "Grinder Yard",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Grinder Yard",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orchold (level 5)",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Orchold (level 5)/Orchold (level 5) - base [BKO4].png",
+        "info": "assets/Sprites/Buildings/Orcs/Orchold (level 5)/Orchold (level 5) - info [BKO4i].png"
+      }
+    }
+  }
+}

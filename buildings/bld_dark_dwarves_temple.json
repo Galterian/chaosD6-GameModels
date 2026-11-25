@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_dwarves_temple",
+  "name": "Ash Chapel",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Ash Chapel",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Furnace (level 3)",
+      "wbc3_race": "Dark Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Dwarves/Furnace (level 3)/Furnace (level 3) - base [BKA2].png",
+        "info": "assets/Sprites/Buildings/Dark Dwarves/Furnace (level 3)/Furnace (level 3) - info [BKA2i].png"
+      }
+    }
+  }
+}

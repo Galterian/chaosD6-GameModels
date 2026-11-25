@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_barracks",
+  "name": "Battleyard",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Battleyard",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Battleyard",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Battleyard/Battleyard - base [BABY].png",
+        "construction": "assets/Sprites/Buildings/Orcs/Battleyard/Battleyard - construction [BABYz].png",
+        "info": "assets/Sprites/Buildings/Orcs/Battleyard/Battleyard - info [BABYi].png"
+      }
+    }
+  }
+}

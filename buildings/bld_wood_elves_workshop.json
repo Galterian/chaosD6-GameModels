@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_workshop",
+  "name": "Woodwright's Hall",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Woodwright's Hall",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Haven (level 3)",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Haven (level 3)/Haven (level 3) - base [BKW2].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Haven (level 3)/Haven (level 3) - info [BKW2i].png"
+      }
+    }
+  }
+}

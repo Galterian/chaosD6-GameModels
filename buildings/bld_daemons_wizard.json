@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_wizard",
+  "name": "Lightning Spire",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Lightning Spire",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Lightning Spire (level 1)",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Lightning Spire (level 1)/Lightning Spire (level 1) - base [BWL0].png",
+        "construction": "assets/Sprites/Buildings/Daemons/Lightning Spire (level 1)/Lightning Spire (level 1) - construction [BWL0z].png",
+        "info": "assets/Sprites/Buildings/Daemons/Lightning Spire (level 1)/Lightning Spire (level 1) - info [BWL0i].png"
+      }
+    }
+  }
+}

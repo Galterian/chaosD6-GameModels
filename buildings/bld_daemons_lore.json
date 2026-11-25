@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_lore",
+  "name": "Summoning Tower",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Summoning Tower",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Summoning Tower (level 1)",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Summoning Tower (level 1)/Summoning Tower (level 1) - base [BAS0].png",
+        "construction": "assets/Sprites/Buildings/Daemons/Summoning Tower (level 1)/Summoning Tower (level 1) - construction [BAS0z].png",
+        "info": "assets/Sprites/Buildings/Daemons/Summoning Tower (level 1)/Summoning Tower (level 1) - info [BAS0i].png"
+      }
+    }
+  }
+}

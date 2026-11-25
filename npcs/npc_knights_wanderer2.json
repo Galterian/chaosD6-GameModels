@@ -1,0 +1,87 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_knights_wanderer2",
+  "name": "Knight-Errant",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "wanderer",
+  "home": null,
+  "persona": "A rover of the Knights, far from home.",
+  "lines": {
+    "greet": [
+      "Hm. A traveller."
+    ],
+    "lore": [
+      "We come from {village}, {village_dir} of here.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 18,
+      "world": 10,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_turn_life",
+      "effect_super_force",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Knight-Errant",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Knight Hero (variant 1)",
+      "wbc3_code": "AHH1",
+      "wbc3_race": "Knights",
+      "match_reason": "Knight-Errant of the Knights",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - attack [AHH1a].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - cast [AHH1c].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - death [AHH1d].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - fidget [AHH1f].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - idle [AHH1].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - info [AHH1i].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Knights/Knight Hero (variant 1)/Knight Hero (variant 1) - walk [AHH1w].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

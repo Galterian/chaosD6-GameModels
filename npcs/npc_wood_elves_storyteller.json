@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_wood_elves_storyteller",
+  "name": "Old Treant",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "storyteller",
+  "home": "bld_wood_elves_lore",
+  "persona": "Keeps the old tales of the Wood Elves and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The Tree of Life was a seed in the hand of the first druid; every elf born in its shade carries one of its leaves in their heart."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Old Treant",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Ancient Treant",
+      "wbc3_code": "AWKX",
+      "wbc3_race": "Wood Elves",
+      "match_reason": "Old Treant of the Wood Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Wood Elves/Ancient Treant/Ancient Treant - attack [AWKXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Wood Elves/Ancient Treant/Ancient Treant - death [AWKXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Wood Elves/Ancient Treant/Ancient Treant - fidget [AWKXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Wood Elves/Ancient Treant/Ancient Treant - idle [AWKX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Wood Elves/Ancient Treant/Ancient Treant - info [AWKXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Wood Elves/Ancient Treant/Ancient Treant - walk [AWKXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_fey_healer",
+  "name": "Sprite Healer",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "healer",
+  "home": "bld_fey_temple",
+  "persona": "Tends the sick and the wounded of the village.",
+  "lines": {
+    "greet": [
+      "Sit, sit. Let me look at that."
+    ]
+  },
+  "agenda": {
+    "uses": "healer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 10,
+      "matter": 8,
+      "will": 14
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_turn_life",
+      "effect_shield",
+      "effect_blessing_curse",
+      "effect_potion_brew"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Sprite Healer",
+    "tags": [
+      "npc",
+      "healer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Sprite",
+      "wbc3_code": "AASP",
+      "wbc3_race": "Fey",
+      "match_reason": "Sprite Healer of the Fey",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Fey/Sprite/Sprite - attack [AASPa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Fey/Sprite/Sprite - death [AASPd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Fey/Sprite/Sprite - fidget [AASPf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Fey/Sprite/Sprite - idle [AASP].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Fey/Sprite/Sprite - info [AASPi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Fey/Sprite/Sprite - walk [AASPw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

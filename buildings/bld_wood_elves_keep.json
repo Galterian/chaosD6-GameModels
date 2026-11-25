@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_keep",
+  "name": "Haven",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Haven",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Haven (level 1)",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Haven (level 1)/Haven (level 1) - base [BKW0].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Haven (level 1)/Haven (level 1) - construction [BKW0z].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Haven (level 1)/Haven (level 1) - info [BKW0i].png"
+      }
+    }
+  }
+}

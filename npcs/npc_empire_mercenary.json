@@ -2,10 +2,10 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_empire_mercenary",
   "name": "Sellsword",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "race": "race_empire",
   "role": "mercenary",
-  "home": "bld_empire_barracks",
+  "home": "bld_empire_quartermaster",
   "persona": "A scarred sword-for-hire who drinks at the barracks; loyal to friends of the village, and to nobody else.",
   "lines": {
     "greet": [

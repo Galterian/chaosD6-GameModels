@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_minotaurs_elders",
+  "name": "Petrify for the Elders",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "giver": "npc_minotaurs_quest_giver",
+  "need_text": "the Petrify effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_petrify"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_grapple"
+    }
+  ],
+  "repeatable": false
+}

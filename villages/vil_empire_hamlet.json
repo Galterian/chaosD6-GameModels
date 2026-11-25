@@ -1,7 +1,7 @@
 {
   "schema": "chaosd6.village/1",
   "id": "vil_empire_hamlet",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
   "size": "hamlet",
   "team": "{name} Hamlet",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "npc": "npc_empire_pikeman",
+      "npc": "npc_empire_archer",
       "at": [
         1,
         0

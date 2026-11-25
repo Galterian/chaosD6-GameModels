@@ -1,0 +1,79 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_dwarves_wanderer",
+  "name": "Hellbore",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "wanderer",
+  "home": null,
+  "persona": "Walks the wide circle around the villages of the Dark Dwarves.",
+  "lines": {
+    "greet": [
+      "Fair road, friend."
+    ],
+    "lore": [
+      "{village} lies {village_dir}, {village_dist} hexes. Tell them I sent you.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_fireball",
+      "effect_shield",
+      "effect_artifice",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Hellbore",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hellbore",
+      "wbc3_code": "AANX",
+      "wbc3_race": "Dark Dwarves",
+      "match_reason": "Hellbore of the Dark Dwarves",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Hellbore/Hellbore - death [AANXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Hellbore/Hellbore - fidget [AANXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Hellbore/Hellbore - idle [AANX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Hellbore/Hellbore - info [AANXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Hellbore/Hellbore - walk [AANXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_ssrathi_mercenary",
+  "name": "Lizard Rider",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "mercenary",
+  "home": "bld_ssrathi_merc",
+  "persona": "A scarred sword-for-hire; loyal to friends of the village, and to nobody else.",
+  "lines": {
+    "greet": [
+      "Looking for a blade?",
+      "You have the look of trouble. I like trouble."
+    ],
+    "warn": [
+      "Walk on, stranger."
+    ]
+  },
+  "talk": [
+    {
+      "id": "price",
+      "ask": "What is your price?",
+      "say": [
+        "Gold? No. The village's trust. Earn it, and my sword is yours.",
+        "Win the trust of the village and I follow you anywhere."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "guard",
+    "params": {
+      "beckon": 7
+    },
+    "rules": [
+      {
+        "id": "offer",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_welcome"
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "!": {
+                "cond": "far_from_home"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 8,
+      "matter": 16,
+      "will": 10
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_haste",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Lizard Rider",
+    "tags": [
+      "npc",
+      "mercenary"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Lizard Rider",
+      "wbc3_code": "ALCX",
+      "wbc3_race": "Ssrathi",
+      "match_reason": "Lizard Rider of the Ssrathi",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Ssrathi/Lizard Rider/Lizard Rider - attack [ALCXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Ssrathi/Lizard Rider/Lizard Rider - death [ALCXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Ssrathi/Lizard Rider/Lizard Rider - fidget [ALCXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Ssrathi/Lizard Rider/Lizard Rider - idle [ALCX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Ssrathi/Lizard Rider/Lizard Rider - info [ALCXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Ssrathi/Lizard Rider/Lizard Rider - walk [ALCXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

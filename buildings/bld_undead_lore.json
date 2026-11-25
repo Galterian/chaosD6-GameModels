@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_lore",
+  "name": "Black Library",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Black Library",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Black Library",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Black Library/Black Library - base [BPBL].png",
+        "construction": "assets/Sprites/Buildings/Undead/Black Library/Black Library - construction [BPBLz].png",
+        "info": "assets/Sprites/Buildings/Undead/Black Library/Black Library - info [BPBLi].png"
+      }
+    }
+  }
+}

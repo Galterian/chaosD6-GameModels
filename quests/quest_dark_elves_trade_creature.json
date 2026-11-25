@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_dark_elves_trade_creature",
+  "name": "A Beast for Mind Blast",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "giver": "npc_dark_elves_trader",
+  "need_text": "one monster card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "creature"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_mind_blast"
+    }
+  ],
+  "repeatable": true
+}

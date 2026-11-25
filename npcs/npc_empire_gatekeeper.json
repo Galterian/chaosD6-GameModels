@@ -2,10 +2,10 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_empire_gatekeeper",
   "name": "Gate Sergeant",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "race": "race_empire",
   "role": "guard",
-  "home": "bld_empire_palace",
+  "home": "bld_empire_barracks",
   "persona": "A halberdier sworn to the palisade gate; nobody the village does not trust walks past him.",
   "lines": {
     "warn": [

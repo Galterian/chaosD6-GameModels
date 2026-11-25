@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_dark_dwarves_elders",
+  "name": "Balefire for the Elders",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "giver": "npc_dark_dwarves_quest_giver",
+  "need_text": "the Balefire effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_balefire"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_ranged_weapon"
+    }
+  ],
+  "repeatable": false
+}

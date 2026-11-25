@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_barracks",
+  "name": "Warrior Sect",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Warrior Sect",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Warrior Sect",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Warrior Sect/Warrior Sect - base [BAKS].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Warrior Sect/Warrior Sect - construction [BAKSz].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Warrior Sect/Warrior Sect - info [BAKSi].png"
+      }
+    }
+  }
+}

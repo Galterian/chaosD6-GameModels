@@ -1,0 +1,77 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_swarm_catapult",
+  "name": "Catapult",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "siege",
+  "persona": "A throwing arm of oak and rope: it lobs a stone 2 to 4 hexes once a turn.",
+  "lines": {
+    "greet": [
+      "*creak*"
+    ]
+  },
+  "agenda": {
+    "uses": "follower",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 0,
+      "world": 0,
+      "matter": 25,
+      "will": 0
+    },
+    "life": 3,
+    "actions_per_round": 2,
+    "deck_effects": [],
+    "innate_effect": null
+  },
+  "siege": {
+    "kind": "catapult",
+    "class": "Catapult Siege Engine",
+    "min": 2,
+    "max": 4,
+    "speed": 2
+  },
+  "card": {
+    "name": "Catapult",
+    "tags": [
+      "npc",
+      "siege",
+      "catapult"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Catapult",
+      "wbc3_code": "ASCA",
+      "wbc3_race": "Siege",
+      "match_reason": "Catapult Siege Engine of the Swarm engineer",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Siege/Catapult/Catapult - death [ASCAd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Siege/Catapult/Catapult - fidget [ASCAf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Siege/Catapult/Catapult - idle [ASCA].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Siege/Catapult/Catapult - info [ASCAi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Siege/Catapult/Catapult - walk [ASCAw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

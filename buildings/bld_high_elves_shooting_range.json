@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_high_elves_shooting_range",
   "name": "Shooting Range",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
   "role": "producer",
   "bank": {
@@ -10,11 +10,7 @@
     "value": 45
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_high_elves_longbow",
-    "every_turns": 20
-  },
-  "text": "Longbows train here; a new one joins the watch every 20 turns while the village is below its cap.",
+  "text": "Longbows train here.",
   "card": {
     "name": "Shooting Range",
     "tags": [

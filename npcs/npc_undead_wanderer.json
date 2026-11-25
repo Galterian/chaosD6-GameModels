@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_undead_wanderer",
+  "name": "Skeleton Rider",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "wanderer",
+  "home": null,
+  "persona": "Walks the wide circle around the villages of the Undead.",
+  "lines": {
+    "greet": [
+      "Fair road, friend."
+    ],
+    "lore": [
+      "{village} lies {village_dir}, {village_dist} hexes. Tell them I sent you.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_drain",
+      "effect_fear",
+      "effect_light_darkness",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Skeleton Rider",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Skeleton Cavalry",
+      "wbc3_code": "AUCX",
+      "wbc3_race": "Undead",
+      "match_reason": "Skeleton Rider of the Undead",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Undead/Skeleton Cavalry/Skeleton Cavalry - attack [AUCXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Undead/Skeleton Cavalry/Skeleton Cavalry - death [AUCXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Undead/Skeleton Cavalry/Skeleton Cavalry - fidget [AUCXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Undead/Skeleton Cavalry/Skeleton Cavalry - idle [AUCX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Undead/Skeleton Cavalry/Skeleton Cavalry - info [AUCXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Undead/Skeleton Cavalry/Skeleton Cavalry - walk [AUCXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

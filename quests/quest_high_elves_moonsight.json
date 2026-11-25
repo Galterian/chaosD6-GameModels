@@ -2,9 +2,9 @@
   "schema": "chaosd6.quest/1",
   "id": "quest_high_elves_moonsight",
   "name": "Eyes of the Moon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
-  "giver": "npc_high_elves_merchant",
+  "giver": "npc_high_elves_elder",
   "need_text": "a Vision",
   "need": {
     "some": [

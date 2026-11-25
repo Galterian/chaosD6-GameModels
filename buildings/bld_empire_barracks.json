@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_empire_barracks",
   "name": "Barracks",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
   "role": "producer",
   "bank": {
@@ -10,11 +10,7 @@
     "value": 45
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_empire_pikeman",
-    "every_turns": 20
-  },
-  "text": "Pikemen drill here; a new one joins the watch every 20 turns while the village is below its cap.",
+  "text": "Pikemen drill here.",
   "card": {
     "name": "Barracks",
     "tags": [

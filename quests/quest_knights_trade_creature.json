@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_knights_trade_creature",
+  "name": "A Beast for Turn Life",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "giver": "npc_knights_trader",
+  "need_text": "one monster card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "creature"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_turn_life"
+    }
+  ],
+  "repeatable": true
+}

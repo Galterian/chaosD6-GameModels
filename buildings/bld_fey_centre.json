@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_centre",
+  "name": "Faerie Ring",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Fey: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Faerie Ring",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Faerie Ring",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Faerie Ring/Faerie Ring - base [BPFR].png",
+        "construction": "assets/Sprites/Buildings/Fey/Faerie Ring/Faerie Ring - construction [BPFRz].png",
+        "info": "assets/Sprites/Buildings/Fey/Faerie Ring/Faerie Ring - info [BPFRi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_fey_wanderer2",
+  "name": "Wandering Pixie",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "wanderer",
+  "home": null,
+  "persona": "A rover of the Fey, far from home.",
+  "lines": {
+    "greet": [
+      "Hm. A traveller."
+    ],
+    "lore": [
+      "We come from {village}, {village_dir} of here.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 18,
+      "world": 10,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_confusion",
+      "effect_phantom",
+      "effect_super_force",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wandering Pixie",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Pixie",
+      "wbc3_code": "AEXX",
+      "wbc3_race": "Fey",
+      "match_reason": "Wandering Pixie of the Fey",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Fey/Pixie/Pixie - attack [AEXXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Fey/Pixie/Pixie - death [AEXXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Fey/Pixie/Pixie - fidget [AEXXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Fey/Pixie/Pixie - idle [AEXX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Fey/Pixie/Pixie - info [AEXXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Fey/Pixie/Pixie - walk [AEXXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

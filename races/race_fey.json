@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_fey",
+  "name": "Fey",
+  "version": "1.0.0",
+  "alignment": "good",
+  "alignment_pct": 85,
+  "temper": "Merry, fickle and older than they look; a promise to the Fey is kept to the letter, never to the spirit.",
+  "village": "vil_fey",
+  "village_names": {
+    "prefix": [
+      "Glimmer",
+      "Dew",
+      "Moth",
+      "Bramble",
+      "Twilight",
+      "Thistle",
+      "Shimmer",
+      "Clover",
+      "Mist",
+      "Elf"
+    ],
+    "suffix": [
+      "ring",
+      "dell",
+      "mound",
+      "hollow",
+      "pool",
+      "brook",
+      "shade",
+      "wick",
+      "glade"
+    ]
+  },
+  "person_names": [
+    "Ariel",
+    "Bryony",
+    "Cobweb",
+    "Dulcet",
+    "Fenwick",
+    "Hawthorn",
+    "Mab",
+    "Nettle",
+    "Oberon",
+    "Puck",
+    "Titania",
+    "Wisteria"
+  ],
+  "buildings": [
+    "bld_fey_centre",
+    "bld_fey_keep",
+    "bld_fey_ministry",
+    "bld_fey_barracks",
+    "bld_fey_shop",
+    "bld_fey_lore",
+    "bld_fey_temple",
+    "bld_fey_smithy",
+    "bld_fey_workshop",
+    "bld_fey_wizard",
+    "bld_fey_merc",
+    "bld_fey_tower"
+  ],
+  "npcs": [
+    "npc_fey_quest_giver",
+    "npc_fey_storyteller",
+    "npc_fey_trader",
+    "npc_fey_smith",
+    "npc_fey_wizard",
+    "npc_fey_mercenary",
+    "npc_fey_healer",
+    "npc_fey_diplomat",
+    "npc_fey_builder",
+    "npc_fey_mason",
+    "npc_fey_gatekeeper",
+    "npc_fey_wall_guard",
+    "npc_fey_fighter",
+    "npc_fey_wanderer",
+    "npc_fey_wanderer2",
+    "npc_fey_dragon",
+    "npc_fey_catapult",
+    "npc_fey_ballista",
+    "npc_fey_ram",
+    "npc_fey_engineer"
+  ],
+  "card": {
+    "name": "Fey",
+    "tags": [
+      "race",
+      "good"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Fey"
+    }
+  },
+  "wbc3_race": "Fey"
+}

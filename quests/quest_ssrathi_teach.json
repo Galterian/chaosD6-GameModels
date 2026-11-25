@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_ssrathi_teach",
+  "name": "Teach Us Dodge",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "giver": "npc_ssrathi_quest_giver",
+  "need_text": "the Dodge skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_dodge"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_petrify"
+    }
+  ],
+  "repeatable": false
+}

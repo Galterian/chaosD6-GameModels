@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_merc",
+  "name": "Gnoll Pen",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Gnoll Pen",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Pen",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Pen/Pen - base [BAPN].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Pen/Pen - construction [BAPNz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Pen/Pen - info [BAPNi].png"
+      }
+    }
+  }
+}

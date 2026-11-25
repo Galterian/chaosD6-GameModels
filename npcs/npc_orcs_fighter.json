@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_orcs_fighter",
+  "name": "Orc Warrior",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "fighter",
+  "home": "bld_orcs_barracks",
+  "persona": "A soldier of the host of the Totem: falls on the villages at war with its own.",
+  "lines": {
+    "greet": [
+      "For the village!"
+    ],
+    "warn": [
+      "One more step, enemy."
+    ]
+  },
+  "agenda": {
+    "uses": "fighter",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_super_force",
+      "effect_shield",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Orc Warrior",
+    "tags": [
+      "npc",
+      "fighter"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orc",
+      "wbc3_code": "AOIX",
+      "wbc3_race": "Orcs",
+      "match_reason": "Orc Warrior of the Orcs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Orcs/Orc/Orc - attack [AOIXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Orcs/Orc/Orc - death [AOIXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Orcs/Orc/Orc - fidget [AOIXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Orcs/Orc/Orc - idle [AOIX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Orcs/Orc/Orc - info [AOIXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Orcs/Orc/Orc - walk [AOIXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

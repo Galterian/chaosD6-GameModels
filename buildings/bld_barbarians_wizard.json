@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_wizard",
+  "name": "Altar of Tempest",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Altar of Tempest",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Altar of Tempest",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Altar of Tempest/Altar of Tempest - base [BPAT].png",
+        "construction": "assets/Sprites/Buildings/Barbarians/Altar of Tempest/Altar of Tempest - construction [BPATz].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Altar of Tempest/Altar of Tempest - info [BPATi].png"
+      }
+    }
+  }
+}

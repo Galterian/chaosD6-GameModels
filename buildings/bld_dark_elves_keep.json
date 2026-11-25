@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_elves_keep",
+  "name": "Dark Tower",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Dark Tower",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Tower (level 1)",
+      "wbc3_race": "Dark Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 1)/Dark Tower (level 1) - base [BKT0].png",
+        "construction": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 1)/Dark Tower (level 1) - construction [BKT0z].png",
+        "info": "assets/Sprites/Buildings/Dark Elves/Dark Tower (level 1)/Dark Tower (level 1) - info [BKT0i].png"
+      }
+    }
+  }
+}

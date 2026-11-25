@@ -2,7 +2,7 @@
   "schema": "chaosd6.race/1",
   "id": "race_empire",
   "name": "Empire",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "alignment": "good",
   "temper": "Practical, loud and loyal to the Lion Throne; they pay for help in bread, steel and favours.",
   "village": "vil_empire",
@@ -59,7 +59,8 @@
     "bld_empire_granary",
     "bld_empire_library",
     "bld_empire_quartermaster",
-    "bld_empire_tower"
+    "bld_empire_tower",
+    "bld_empire_ministry"
   ],
   "npcs": [
     "npc_empire_reeve",
@@ -81,7 +82,9 @@
     "npc_empire_engineer",
     "npc_empire_catapult",
     "npc_empire_ballista",
-    "npc_empire_ram"
+    "npc_empire_ram",
+    "npc_empire_diplomat",
+    "npc_empire_mason"
   ],
   "card": {
     "name": "Empire",
@@ -94,5 +97,6 @@
       "wbc3_race": "Empire"
     }
   },
-  "wbc3_race": "Empire"
+  "wbc3_race": "Empire",
+  "alignment_pct": 70
 }

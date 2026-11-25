@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_daemons_trade_skill",
+  "name": "A Skill for Fireball",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "giver": "npc_daemons_trader",
+  "need_text": "one skill card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "skill"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_fireball"
+    }
+  ],
+  "repeatable": true
+}

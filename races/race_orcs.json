@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_orcs",
+  "name": "Orcs",
+  "version": "1.0.0",
+  "alignment": "neutral",
+  "alignment_pct": 55,
+  "temper": "Rough, greedy and honest about it; an orc sells you anything, including the truth, if the price is right.",
+  "village": "vil_orcs",
+  "village_names": {
+    "prefix": [
+      "Skull",
+      "Gut",
+      "Mud",
+      "Rot",
+      "Snag",
+      "Bone",
+      "Grot",
+      "Black",
+      "Tusk",
+      "Scab"
+    ],
+    "suffix": [
+      "pit",
+      "hole",
+      "stump",
+      "mire",
+      "gulch",
+      "heap",
+      "rock",
+      "camp",
+      "crag"
+    ]
+  },
+  "person_names": [
+    "Azog",
+    "Bruk",
+    "Dranka",
+    "Gorbag",
+    "Grishna",
+    "Hruk",
+    "Lugdush",
+    "Mauhur",
+    "Nazga",
+    "Shagrat",
+    "Ugluk",
+    "Zogga"
+  ],
+  "buildings": [
+    "bld_orcs_centre",
+    "bld_orcs_keep",
+    "bld_orcs_ministry",
+    "bld_orcs_barracks",
+    "bld_orcs_shop",
+    "bld_orcs_lore",
+    "bld_orcs_temple",
+    "bld_orcs_smithy",
+    "bld_orcs_workshop",
+    "bld_orcs_wizard",
+    "bld_orcs_merc",
+    "bld_orcs_tower"
+  ],
+  "npcs": [
+    "npc_orcs_quest_giver",
+    "npc_orcs_storyteller",
+    "npc_orcs_trader",
+    "npc_orcs_smith",
+    "npc_orcs_wizard",
+    "npc_orcs_mercenary",
+    "npc_orcs_healer",
+    "npc_orcs_diplomat",
+    "npc_orcs_builder",
+    "npc_orcs_mason",
+    "npc_orcs_gatekeeper",
+    "npc_orcs_wall_guard",
+    "npc_orcs_fighter",
+    "npc_orcs_wanderer",
+    "npc_orcs_wanderer2",
+    "npc_orcs_dragon",
+    "npc_orcs_catapult",
+    "npc_orcs_ballista",
+    "npc_orcs_ram",
+    "npc_orcs_engineer"
+  ],
+  "card": {
+    "name": "Orcs",
+    "tags": [
+      "race",
+      "neutral"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Orcs"
+    }
+  },
+  "wbc3_race": "Orcs"
+}

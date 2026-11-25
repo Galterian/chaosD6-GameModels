@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_merc",
+  "name": "Berserker Hall",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Berserker Hall",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Citadel (level 5)",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Citadel (level 5)/Citadel (level 5) - base [BKD4].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Citadel (level 5)/Citadel (level 5) - info [BKD4i].png"
+      }
+    }
+  }
+}

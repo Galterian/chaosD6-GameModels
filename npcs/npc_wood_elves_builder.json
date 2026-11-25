@@ -1,0 +1,176 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_wood_elves_builder",
+  "name": "Builder Treant",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "builder",
+  "home": "bld_wood_elves_workshop",
+  "persona": "A builder with a cart of stones and opinions about walls; works for whoever pays.",
+  "lines": {
+    "greet": [
+      "Walls don't build themselves, friend.",
+      "Mind the mortar!"
+    ],
+    "quest": [
+      "For {need} I put my tools to work for you — wherever you stand."
+    ],
+    "thanks": [
+      "A deal! Lead on — I build where you stand."
+    ]
+  },
+  "talk": [
+    {
+      "id": "craft",
+      "ask": "What can you build?",
+      "say": [
+        "A watchtower, a Healing Orb, a White Tree if you have the patience — and barricades, always barricades."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "builder",
+    "params": {
+      "beckon": 6
+    },
+    "rules": [
+      {
+        "id": "offer",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_wood_elves_hire_builder"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 12,
+      "world": 8,
+      "matter": 10,
+      "will": 4
+    },
+    "life": 3,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_creation",
+      "effect_shield",
+      "effect_artifice",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "builds": [
+    {
+      "id": "tower",
+      "building": "bld_wood_elves_tower",
+      "ask": "Build a Watchtower here.",
+      "power": {
+        "kind": "stance",
+        "code": "B"
+      }
+    },
+    {
+      "id": "temple",
+      "building": "bld_wood_elves_temple",
+      "ask": "Build a Healing Orb here.",
+      "power": {
+        "kind": "mend"
+      }
+    },
+    {
+      "id": "lore",
+      "building": "bld_wood_elves_lore",
+      "ask": "Build a White Tree here.",
+      "power": {
+        "kind": "draw"
+      }
+    },
+    {
+      "id": "barricade",
+      "wall": true,
+      "ask": "Raise a Barricade here."
+    }
+  ],
+  "build_max": 4,
+  "card": {
+    "name": "Builder Treant",
+    "tags": [
+      "npc",
+      "builder"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Treant",
+      "wbc3_code": "AWJX",
+      "wbc3_race": "Wood Elves",
+      "match_reason": "Builder Treant of the Wood Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Wood Elves/Treant/Treant - attack [AWJXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Wood Elves/Treant/Treant - death [AWJXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Wood Elves/Treant/Treant - fidget [AWJXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Wood Elves/Treant/Treant - idle [AWJX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Wood Elves/Treant/Treant - info [AWJXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Wood Elves/Treant/Treant - walk [AWJXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

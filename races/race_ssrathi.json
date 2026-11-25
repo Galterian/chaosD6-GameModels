@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_ssrathi",
+  "name": "Ssrathi",
+  "version": "1.0.0",
+  "alignment": "neutral",
+  "alignment_pct": 40,
+  "temper": "Cold-blooded and patient lizard-folk of the jungle; they keep every bargain — and every slight — in the temple records.",
+  "village": "vil_ssrathi",
+  "village_names": {
+    "prefix": [
+      "Sun",
+      "Scale",
+      "Jade",
+      "Coil",
+      "Fang",
+      "Serpent",
+      "Venom",
+      "Ember",
+      "Moss",
+      "Obsidian"
+    ],
+    "suffix": [
+      "pool",
+      "temple",
+      "mire",
+      "coil",
+      "nest",
+      "step",
+      "basin",
+      "pyre",
+      "hollow"
+    ]
+  },
+  "person_names": [
+    "Ashka",
+    "Ithis",
+    "Kessra",
+    "Nashir",
+    "Ossith",
+    "Rhassa",
+    "Sesh",
+    "Shirra",
+    "Sskar",
+    "Thessk",
+    "Vissa",
+    "Zhass"
+  ],
+  "buildings": [
+    "bld_ssrathi_centre",
+    "bld_ssrathi_keep",
+    "bld_ssrathi_ministry",
+    "bld_ssrathi_barracks",
+    "bld_ssrathi_shop",
+    "bld_ssrathi_lore",
+    "bld_ssrathi_temple",
+    "bld_ssrathi_smithy",
+    "bld_ssrathi_workshop",
+    "bld_ssrathi_wizard",
+    "bld_ssrathi_merc",
+    "bld_ssrathi_tower"
+  ],
+  "npcs": [
+    "npc_ssrathi_quest_giver",
+    "npc_ssrathi_storyteller",
+    "npc_ssrathi_trader",
+    "npc_ssrathi_smith",
+    "npc_ssrathi_wizard",
+    "npc_ssrathi_mercenary",
+    "npc_ssrathi_healer",
+    "npc_ssrathi_diplomat",
+    "npc_ssrathi_builder",
+    "npc_ssrathi_mason",
+    "npc_ssrathi_gatekeeper",
+    "npc_ssrathi_wall_guard",
+    "npc_ssrathi_fighter",
+    "npc_ssrathi_wanderer",
+    "npc_ssrathi_wanderer2",
+    "npc_ssrathi_dragon",
+    "npc_ssrathi_catapult",
+    "npc_ssrathi_ballista",
+    "npc_ssrathi_ram",
+    "npc_ssrathi_engineer"
+  ],
+  "card": {
+    "name": "Ssrathi",
+    "tags": [
+      "race",
+      "neutral"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Ssrathi"
+    }
+  },
+  "wbc3_race": "Ssrathi"
+}

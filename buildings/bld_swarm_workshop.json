@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_workshop",
+  "name": "Engine Hive",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Engine Hive",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hive (level 4)",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Hive (level 4)/Hive (level 4) - base [BAH3].png",
+        "info": "assets/Sprites/Buildings/Swarm/Hive (level 4)/Hive (level 4) - info [BAH3i].png"
+      }
+    }
+  }
+}

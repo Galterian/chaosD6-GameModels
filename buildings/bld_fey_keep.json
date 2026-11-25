@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_keep",
+  "name": "Dreamhold",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Dreamhold",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dreamhold (level 1)",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Dreamhold (level 1)/Dreamhold (level 1) - base [BKF0].png",
+        "construction": "assets/Sprites/Buildings/Fey/Dreamhold (level 1)/Dreamhold (level 1) - construction [BKF0z].png",
+        "info": "assets/Sprites/Buildings/Fey/Dreamhold (level 1)/Dreamhold (level 1) - info [BKF0i].png"
+      }
+    }
+  }
+}

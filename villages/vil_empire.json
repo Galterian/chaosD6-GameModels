@@ -1,7 +1,7 @@
 {
   "schema": "chaosd6.village/1",
   "id": "vil_empire",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "race": "race_empire",
   "team": "{name} Village",
   "radius": 6,
@@ -63,95 +63,46 @@
         -2,
         -2
       ]
+    },
+    {
+      "building": "bld_empire_ministry",
+      "at": [
+        2,
+        2
+      ]
+    },
+    {
+      "building": "bld_empire_tower",
+      "at": [
+        4,
+        -2
+      ]
     }
   ],
   "residents": [
     {
       "npc": "npc_empire_reeve",
       "at": [
-        -3,
+        -2,
         9
-      ],
-      "post": "outside"
-    },
-    {
-      "npc": "npc_empire_quartermaster",
-      "at": [
-        3,
-        6
       ],
       "post": "outside"
     },
     {
       "npc": "npc_empire_chronicler",
       "at": [
-        -5,
-        9
+        2,
+        7
       ],
       "post": "outside"
     },
     {
-      "npc": "npc_empire_healer",
+      "npc": "npc_empire_diplomat",
       "at": [
-        1,
-        -2
-      ]
-    },
-    {
-      "npc": "npc_empire_builder",
-      "at": [
-        -1,
-        1
-      ]
-    },
-    {
-      "npc": "npc_empire_pikeman",
-      "at": [
-        2,
-        -1
-      ]
-    },
-    {
-      "npc": "npc_empire_pikeman",
-      "at": [
-        -1,
-        -1
-      ]
-    },
-    {
-      "npc": "npc_empire_halberdier",
-      "at": [
-        0,
-        -2
-      ]
-    },
-    {
-      "npc": "npc_empire_blacksmith",
-      "at": [
-        1,
-        2
-      ]
-    },
-    {
-      "npc": "npc_empire_wizard",
-      "at": [
-        -2,
-        0
-      ]
-    },
-    {
-      "npc": "npc_empire_mercenary",
-      "at": [
-        3,
-        -2
-      ]
-    },
-    {
-      "npc": "npc_empire_trader",
-      "at": [
-        -2,
-        3
-      ]
+        -4,
+        9
+      ],
+      "post": "outside"
     },
     {
       "npc": "npc_empire_gatekeeper",
@@ -170,10 +121,110 @@
       "post": "centre"
     },
     {
+      "npc": "npc_empire_pikeman",
+      "at": [
+        7,
+        -7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_empire_pikeman",
+      "at": [
+        -7,
+        0
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_empire_trader",
+      "at": [
+        -2,
+        2
+      ]
+    },
+    {
+      "npc": "npc_empire_builder",
+      "at": [
+        2,
+        0
+      ]
+    },
+    {
+      "npc": "npc_empire_mason",
+      "at": [
+        2,
+        1
+      ]
+    },
+    {
+      "npc": "npc_empire_blacksmith",
+      "at": [
+        0,
+        2
+      ]
+    },
+    {
+      "npc": "npc_empire_wizard",
+      "at": [
+        3,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_empire_mercenary",
+      "at": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_empire_healer",
+      "at": [
+        0,
+        -2
+      ]
+    },
+    {
       "npc": "npc_empire_engineer",
       "at": [
         -1,
-        2
+        3
+      ]
+    },
+    {
+      "npc": "npc_empire_archer",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_empire_archer",
+      "at": [
+        2,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_empire_archer",
+      "at": [
+        3,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_empire_archer",
+      "at": [
+        4,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_empire_archer",
+      "at": [
+        4,
+        -3
       ]
     }
   ],

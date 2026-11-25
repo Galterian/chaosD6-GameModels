@@ -1,0 +1,32 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_minotaurs_trade_creature",
+  "name": "A Beast for Haste",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "giver": "npc_minotaurs_trader",
+  "need_text": "one monster card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "creature"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "effect",
+      "id": "effect_haste"
+    }
+  ],
+  "repeatable": true
+}

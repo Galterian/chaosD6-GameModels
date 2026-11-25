@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_workshop",
+  "name": "Engine Court",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Engine Court",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Sun Temple (level 4)",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 4)/Sun Temple (level 4) - base [BKL3].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 4)/Sun Temple (level 4) - info [BKL3i].png"
+      }
+    }
+  }
+}

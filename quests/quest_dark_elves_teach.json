@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_dark_elves_teach",
+  "name": "Teach Us Dodge",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "giver": "npc_dark_elves_quest_giver",
+  "need_text": "the Dodge skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_dodge"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_domination"
+    }
+  ],
+  "repeatable": false
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_keep",
+  "name": "Thane's Hall",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Thane's Hall",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Citadel (level 2)",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/Citadel (level 2)/Citadel (level 2) - base [BKD1].png",
+        "info": "assets/Sprites/Buildings/Dwarves/Citadel (level 2)/Citadel (level 2) - info [BKD1i].png"
+      }
+    }
+  }
+}

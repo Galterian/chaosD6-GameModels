@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_centre",
+  "name": "Plague Shrine",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Plaguelords: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Plague Shrine",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Plague Shrine",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Plague Shrine/Plague Shrine - base [BPPS].png",
+        "construction": "assets/Sprites/Buildings/Plaguelords/Plague Shrine/Plague Shrine - construction [BPPSz].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Plague Shrine/Plague Shrine - info [BPPSi].png"
+      }
+    }
+  }
+}

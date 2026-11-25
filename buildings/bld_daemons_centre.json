@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_centre",
+  "name": "Portal",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Daemons: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Portal",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Portal",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Portal/Portal - base [BPPO].png",
+        "construction": "assets/Sprites/Buildings/Daemons/Portal/Portal - construction [BPPOz].png",
+        "info": "assets/Sprites/Buildings/Daemons/Portal/Portal - info [BPPOi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_barbarians_spy",
+  "name": "Whispers and Sabotage",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "giver": "npc_barbarians_diplomat",
+  "need_text": "one skill card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "skill"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "sabotage"
+    }
+  ],
+  "repeatable": true
+}

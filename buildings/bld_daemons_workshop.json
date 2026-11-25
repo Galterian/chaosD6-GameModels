@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_workshop",
+  "name": "Engine Pit",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Engine Pit",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Summoning Tower (level 2)",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Summoning Tower (level 2)/Summoning Tower (level 2) - base [BAS1].png",
+        "info": "assets/Sprites/Buildings/Daemons/Summoning Tower (level 2)/Summoning Tower (level 2) - info [BAS1i].png"
+      }
+    }
+  }
+}

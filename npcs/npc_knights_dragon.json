@@ -1,0 +1,119 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_knights_dragon",
+  "name": "Celestial Dragon",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "dragon",
+  "home": "bld_knights_centre",
+  "persona": "The Celestial Dragon coiled by the Sword: it never strays far, and its breath reaches every foe within two hexes.",
+  "lines": {
+    "greet": [
+      "Step softly, little one.",
+      "I have guarded this hearth for a thousand winters."
+    ],
+    "warn": [
+      "Come closer and burn.",
+      "One more step and you are ash."
+    ]
+  },
+  "agenda": {
+    "uses": "guard",
+    "params": {
+      "alert": 4,
+      "leash": 3,
+      "talk": 2
+    },
+    "rules": [
+      {
+        "id": "leash",
+        "when": {
+          "cond": "far_from_home"
+        },
+        "goal": {
+          "do": "return"
+        }
+      },
+      {
+        "id": "breathe",
+        "when": {
+          "cond": "foe_near"
+        },
+        "goal": {
+          "do": "attack",
+          "target": "foe"
+        }
+      },
+      {
+        "id": "hold",
+        "when": true,
+        "goal": {
+          "do": "post",
+          "at": "home"
+        }
+      }
+    ]
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 30,
+      "world": 30,
+      "matter": 30,
+      "will": 30
+    },
+    "life": 12,
+    "actions_per_round": 4,
+    "tags": [
+      "flying"
+    ],
+    "breath": {
+      "range": 2
+    },
+    "deck_effects": [
+      "effect_fireball",
+      "effect_meteor_shower",
+      "effect_light_darkness",
+      "effect_inner_fire"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Celestial Dragon",
+    "tags": [
+      "npc",
+      "dragon",
+      "flying"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Celestial Dragon",
+      "wbc3_code": "AADC",
+      "wbc3_race": "Dragons",
+      "match_reason": "the Knights village dragon -> Celestial Dragon",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Dragons/Celestial Dragon/Celestial Dragon - death [AADCd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dragons/Celestial Dragon/Celestial Dragon - fidget [AADCf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dragons/Celestial Dragon/Celestial Dragon - idle [AADC].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dragons/Celestial Dragon/Celestial Dragon - info [AADCi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dragons/Celestial Dragon/Celestial Dragon - walk [AADCw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

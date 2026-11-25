@@ -2,11 +2,11 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_high_elves_longbow",
   "name": "Longbow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
-  "role": "guard",
+  "role": "fighter",
   "home": "bld_high_elves_shooting_range",
-  "persona": "A silent archer of the watch.",
+  "persona": "A soldier of the host of the Tree of Gold: falls on the villages at war with its own.",
   "lines": {
     "greet": [
       "Keep your hands where I can see them."
@@ -17,7 +17,7 @@
     ]
   },
   "agenda": {
-    "uses": "guard",
+    "uses": "fighter",
     "params": {},
     "rules": []
   },
@@ -43,7 +43,7 @@
     "name": "Longbow",
     "tags": [
       "npc",
-      "guard"
+      "fighter"
     ],
     "resources": {
       "source": "warlords3_battlecry",

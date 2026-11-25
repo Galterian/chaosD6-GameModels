@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_wood_elves_forge",
+  "name": "Invisibility for the Forge",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "giver": "npc_wood_elves_smith",
+  "need_text": "the Invisibility effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_invisibility"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_sanctuary"
+    }
+  ],
+  "repeatable": false
+}

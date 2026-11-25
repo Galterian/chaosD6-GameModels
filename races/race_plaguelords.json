@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_plaguelords",
+  "name": "Plaguelords",
+  "version": "1.0.0",
+  "alignment": "evil",
+  "alignment_pct": 5,
+  "temper": "Worshippers of rot and change; to the Plaguelords every living thing is a cure that has not yet spoiled.",
+  "village": "vil_plaguelords",
+  "village_names": {
+    "prefix": [
+      "Rot",
+      "Bile",
+      "Pox",
+      "Mire",
+      "Fester",
+      "Murk",
+      "Blight",
+      "Ooze",
+      "Spore",
+      "Gall"
+    ],
+    "suffix": [
+      "pool",
+      "pit",
+      "mire",
+      "fen",
+      "cave",
+      "heap",
+      "bog",
+      "drain",
+      "sump"
+    ]
+  },
+  "person_names": [
+    "Antharg",
+    "Bubo",
+    "Cankra",
+    "Dregg",
+    "Fetida",
+    "Gangra",
+    "Lepra",
+    "Mucor",
+    "Pestra",
+    "Rancid",
+    "Scrofa",
+    "Vomica"
+  ],
+  "buildings": [
+    "bld_plaguelords_centre",
+    "bld_plaguelords_keep",
+    "bld_plaguelords_ministry",
+    "bld_plaguelords_barracks",
+    "bld_plaguelords_shop",
+    "bld_plaguelords_lore",
+    "bld_plaguelords_temple",
+    "bld_plaguelords_smithy",
+    "bld_plaguelords_workshop",
+    "bld_plaguelords_wizard",
+    "bld_plaguelords_merc",
+    "bld_plaguelords_tower"
+  ],
+  "npcs": [
+    "npc_plaguelords_quest_giver",
+    "npc_plaguelords_storyteller",
+    "npc_plaguelords_trader",
+    "npc_plaguelords_smith",
+    "npc_plaguelords_wizard",
+    "npc_plaguelords_mercenary",
+    "npc_plaguelords_healer",
+    "npc_plaguelords_diplomat",
+    "npc_plaguelords_builder",
+    "npc_plaguelords_mason",
+    "npc_plaguelords_gatekeeper",
+    "npc_plaguelords_wall_guard",
+    "npc_plaguelords_fighter",
+    "npc_plaguelords_wanderer",
+    "npc_plaguelords_wanderer2",
+    "npc_plaguelords_dragon",
+    "npc_plaguelords_catapult",
+    "npc_plaguelords_ballista",
+    "npc_plaguelords_ram",
+    "npc_plaguelords_engineer"
+  ],
+  "card": {
+    "name": "Plaguelords",
+    "tags": [
+      "race",
+      "evil"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Plaguelords"
+    }
+  },
+  "wbc3_race": "Plaguelords"
+}

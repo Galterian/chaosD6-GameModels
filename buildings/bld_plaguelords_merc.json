@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_merc",
+  "name": "Hydra Cave",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Hydra Cave",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hydra Cave",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Hydra Cave/Hydra Cave - base [BPHC].png",
+        "construction": "assets/Sprites/Buildings/Plaguelords/Hydra Cave/Hydra Cave - construction [BPHCz].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Hydra Cave/Hydra Cave - info [BPHCi].png"
+      }
+    }
+  }
+}

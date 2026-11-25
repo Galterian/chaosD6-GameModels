@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_centre",
+  "name": "Altar of Sartek",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Minotaurs: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Altar of Sartek",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Altar of Sartek",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Altar of Sartek/Altar of Sartek - base [BPDA].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Altar of Sartek/Altar of Sartek - construction [BPDAz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Altar of Sartek/Altar of Sartek - info [BPDAi].png"
+      }
+    }
+  }
+}

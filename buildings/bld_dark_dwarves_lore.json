@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_dwarves_lore",
+  "name": "Guild",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Guild",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Guild",
+      "wbc3_race": "Dark Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Dwarves/Guild/Guild - base [BAGU].png",
+        "construction": "assets/Sprites/Buildings/Dark Dwarves/Guild/Guild - construction [BAGUz].png",
+        "info": "assets/Sprites/Buildings/Dark Dwarves/Guild/Guild - info [BAGUi].png"
+      }
+    }
+  }
+}

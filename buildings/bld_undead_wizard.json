@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_wizard",
+  "name": "Liche Spire",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Liche Spire",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Deathkeep (level 3)",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Deathkeep (level 3)/Deathkeep (level 3) - base [BKU2].png",
+        "info": "assets/Sprites/Buildings/Undead/Deathkeep (level 3)/Deathkeep (level 3) - info [BKU2i].png"
+      }
+    }
+  }
+}

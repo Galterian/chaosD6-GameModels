@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_dwarves_workshop",
+  "name": "Siege Workshop",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Siege Workshop",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Siege Workshop",
+      "wbc3_race": "Dark Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Dwarves/Siege Workshop/Siege Workshop - base [BASW].png",
+        "construction": "assets/Sprites/Buildings/Dark Dwarves/Siege Workshop/Siege Workshop - construction [BASWz].png",
+        "info": "assets/Sprites/Buildings/Dark Dwarves/Siege Workshop/Siege Workshop - info [BASWi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_tower",
+  "name": "Watchtower",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "tower",
+  "bank": {
+    "stat": "matter",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "A watchtower of the village wall.",
+  "card": {
+    "name": "Watchtower",
+    "tags": [
+      "building",
+      "tower"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Tower (Knights)",
+      "wbc3_race": "Shared",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Shared/Tower (Knights)/Tower (Knights) - base [BWTC].png",
+        "construction": "assets/Sprites/Buildings/Shared/Tower (Knights)/Tower (Knights) - construction [BWTCz].png",
+        "info": "assets/Sprites/Buildings/Shared/Tower (Knights)/Tower (Knights) - info [BWTCi].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.race/1",
+  "id": "race_knights",
+  "name": "Knights",
+  "version": "1.0.0",
+  "alignment": "good",
+  "alignment_pct": 80,
+  "temper": "Sworn to chivalry and to the Shrine of the Sword; a stranger is judged by their deeds, never by their purse.",
+  "village": "vil_knights",
+  "village_names": {
+    "prefix": [
+      "Lance",
+      "Shield",
+      "Valor",
+      "Crown",
+      "White",
+      "Holy",
+      "Banner",
+      "Dawn",
+      "Grail",
+      "Oath"
+    ],
+    "suffix": [
+      "keep",
+      "hold",
+      "cross",
+      "ford",
+      "gard",
+      "mont",
+      "well",
+      "bury",
+      "helm"
+    ]
+  },
+  "person_names": [
+    "Alaric",
+    "Brienne",
+    "Cedric",
+    "Elaine",
+    "Gawain",
+    "Isolde",
+    "Lancel",
+    "Maud",
+    "Percival",
+    "Rowena",
+    "Tristan",
+    "Yvain"
+  ],
+  "buildings": [
+    "bld_knights_centre",
+    "bld_knights_keep",
+    "bld_knights_ministry",
+    "bld_knights_barracks",
+    "bld_knights_shop",
+    "bld_knights_lore",
+    "bld_knights_temple",
+    "bld_knights_smithy",
+    "bld_knights_workshop",
+    "bld_knights_wizard",
+    "bld_knights_merc",
+    "bld_knights_tower"
+  ],
+  "npcs": [
+    "npc_knights_quest_giver",
+    "npc_knights_storyteller",
+    "npc_knights_trader",
+    "npc_knights_smith",
+    "npc_knights_wizard",
+    "npc_knights_mercenary",
+    "npc_knights_healer",
+    "npc_knights_diplomat",
+    "npc_knights_builder",
+    "npc_knights_mason",
+    "npc_knights_gatekeeper",
+    "npc_knights_wall_guard",
+    "npc_knights_fighter",
+    "npc_knights_wanderer",
+    "npc_knights_wanderer2",
+    "npc_knights_dragon",
+    "npc_knights_catapult",
+    "npc_knights_ballista",
+    "npc_knights_ram",
+    "npc_knights_engineer"
+  ],
+  "card": {
+    "name": "Knights",
+    "tags": [
+      "race",
+      "good"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_race": "Knights"
+    }
+  },
+  "wbc3_race": "Knights"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_centre",
+  "name": "Sacred Pool",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "centre",
+  "bank": {
+    "stat": "will",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The heart of the village of the Ssrathi: its dragon coils beside it, and a fallen builder is replaced from here.",
+  "card": {
+    "name": "Sacred Pool",
+    "tags": [
+      "building",
+      "centre"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Sacred Pool",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Sacred Pool/Sacred Pool - base [BPCP].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Sacred Pool/Sacred Pool - construction [BPCPz].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Sacred Pool/Sacred Pool - info [BPCPi].png"
+      }
+    }
+  }
+}

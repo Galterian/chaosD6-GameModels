@@ -1,0 +1,288 @@
+{
+  "schema": "chaosd6.village/1",
+  "id": "vil_undead",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "team": "{name} Village",
+  "radius": 6,
+  "clear_radius": 9,
+  "cap": 20,
+  "layout": [
+    {
+      "building": "bld_undead_centre",
+      "at": [
+        0,
+        0
+      ]
+    },
+    {
+      "building": "bld_undead_keep",
+      "at": [
+        0,
+        -3
+      ]
+    },
+    {
+      "building": "bld_undead_barracks",
+      "at": [
+        3,
+        -3
+      ]
+    },
+    {
+      "building": "bld_undead_tower",
+      "at": [
+        3,
+        0
+      ]
+    },
+    {
+      "building": "bld_undead_smithy",
+      "at": [
+        0,
+        3
+      ]
+    },
+    {
+      "building": "bld_undead_shop",
+      "at": [
+        -3,
+        3
+      ]
+    },
+    {
+      "building": "bld_undead_lore",
+      "at": [
+        -3,
+        0
+      ]
+    },
+    {
+      "building": "bld_undead_temple",
+      "at": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "building": "bld_undead_ministry",
+      "at": [
+        2,
+        2
+      ]
+    },
+    {
+      "building": "bld_undead_wizard",
+      "at": [
+        4,
+        -2
+      ]
+    },
+    {
+      "building": "bld_undead_workshop",
+      "at": [
+        -4,
+        2
+      ]
+    },
+    {
+      "building": "bld_undead_merc",
+      "at": [
+        2,
+        -4
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "npc": "npc_undead_quest_giver",
+      "at": [
+        7,
+        2
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_undead_storyteller",
+      "at": [
+        9,
+        -2
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_undead_diplomat",
+      "at": [
+        5,
+        4
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_undead_gatekeeper",
+      "at": [
+        9,
+        0
+      ],
+      "post": "gate"
+    },
+    {
+      "npc": "npc_undead_dragon",
+      "at": [
+        1,
+        -1
+      ],
+      "post": "centre"
+    },
+    {
+      "npc": "npc_undead_wall_guard",
+      "at": [
+        0,
+        -7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_undead_wall_guard",
+      "at": [
+        -7,
+        7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_undead_trader",
+      "at": [
+        -2,
+        2
+      ]
+    },
+    {
+      "npc": "npc_undead_builder",
+      "at": [
+        -3,
+        1
+      ]
+    },
+    {
+      "npc": "npc_undead_mason",
+      "at": [
+        -3,
+        2
+      ]
+    },
+    {
+      "npc": "npc_undead_smith",
+      "at": [
+        0,
+        2
+      ]
+    },
+    {
+      "npc": "npc_undead_wizard",
+      "at": [
+        3,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_undead_mercenary",
+      "at": [
+        1,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_undead_healer",
+      "at": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_undead_engineer",
+      "at": [
+        -4,
+        1
+      ]
+    },
+    {
+      "npc": "npc_undead_fighter",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_undead_fighter",
+      "at": [
+        2,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_undead_fighter",
+      "at": [
+        3,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_undead_fighter",
+      "at": [
+        4,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_undead_fighter",
+      "at": [
+        4,
+        -3
+      ]
+    }
+  ],
+  "wanderers": {
+    "ring": [
+      50,
+      100
+    ],
+    "npcs": [
+      "npc_undead_wanderer",
+      "npc_undead_wanderer2",
+      "npc_undead_wanderer"
+    ]
+  },
+  "reputation": {
+    "unit": "percent",
+    "start": 50,
+    "start_same_race": 70,
+    "hostile": 40,
+    "enter": 70,
+    "ally_all": 90,
+    "building_broken": -5,
+    "villager_attacked": -5,
+    "trespass": -5,
+    "threat_radius": 9
+  },
+  "quests": [
+    "quest_undead_teach",
+    "quest_undead_elders",
+    "quest_undead_forge",
+    "quest_undead_secret"
+  ],
+  "wall": {
+    "radius": 8,
+    "gate": [
+      8,
+      0
+    ],
+    "name": "Gravestone Wall",
+    "text": "A wall of old gravestones; the Gate Knight lets in only friends of the dead.",
+    "sprites": {
+      "joint": "assets/Sprites/Buildings/Shared/Walls (evil, 2x2 joint)/Walls (evil, 2x2 joint) - base [BWE0].png",
+      "horizontal": "assets/Sprites/Buildings/Shared/Walls (evil, 2x1 horizontal)/Walls (evil, 2x1 horizontal) - base [BWE1].png",
+      "vertical": "assets/Sprites/Buildings/Shared/Walls (evil, 1x2 vertical)/Walls (evil, 1x2 vertical) - base [BWE2].png"
+    }
+  }
+}

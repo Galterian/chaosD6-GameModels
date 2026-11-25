@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_keep",
+  "name": "Sun Temple",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Sun Temple",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Sun Temple (level 1)",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 1)/Sun Temple (level 1) - base [BKL0].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 1)/Sun Temple (level 1) - construction [BKL0z].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Sun Temple (level 1)/Sun Temple (level 1) - info [BKL0i].png"
+      }
+    }
+  }
+}

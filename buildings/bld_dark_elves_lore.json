@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_elves_lore",
+  "name": "Kargothian Gate",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Kargothian Gate",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Kargothian Gate",
+      "wbc3_race": "Dark Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Elves/Kargothian Gate/Kargothian Gate - base [BAAG].png",
+        "construction": "assets/Sprites/Buildings/Dark Elves/Kargothian Gate/Kargothian Gate - construction [BAAGz].png",
+        "info": "assets/Sprites/Buildings/Dark Elves/Kargothian Gate/Kargothian Gate - info [BAAGi].png"
+      }
+    }
+  }
+}

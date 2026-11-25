@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_smithy",
+  "name": "Glimmer Forge",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Glimmer Forge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dreamhold (level 3)",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Dreamhold (level 3)/Dreamhold (level 3) - base [BKF2].png",
+        "info": "assets/Sprites/Buildings/Fey/Dreamhold (level 3)/Dreamhold (level 3) - info [BKF2i].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_tower",
+  "name": "Watchtower",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "tower",
+  "bank": {
+    "stat": "matter",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "A watchtower of the village wall.",
+  "card": {
+    "name": "Watchtower",
+    "tags": [
+      "building",
+      "tower"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Tower (Swarm)",
+      "wbc3_race": "Shared",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Shared/Tower (Swarm)/Tower (Swarm) - base [BWTE].png",
+        "construction": "assets/Sprites/Buildings/Shared/Tower (Swarm)/Tower (Swarm) - construction [BWTEz].png",
+        "info": "assets/Sprites/Buildings/Shared/Tower (Swarm)/Tower (Swarm) - info [BWTEi].png"
+      }
+    }
+  }
+}

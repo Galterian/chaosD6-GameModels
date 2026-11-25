@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_elves_fighter",
+  "name": "Dark Infantry",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "fighter",
+  "home": "bld_dark_elves_barracks",
+  "persona": "A soldier of the host of the Tree of Pain: falls on the villages at war with its own.",
+  "lines": {
+    "greet": [
+      "For the village!"
+    ],
+    "warn": [
+      "One more step, enemy."
+    ]
+  },
+  "agenda": {
+    "uses": "fighter",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_poison",
+      "effect_super_force",
+      "effect_shield",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Dark Infantry",
+    "tags": [
+      "npc",
+      "fighter"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dark Infantry",
+      "wbc3_code": "AKIX",
+      "wbc3_race": "Dark Elves",
+      "match_reason": "Dark Infantry of the Dark Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Infantry/Dark Infantry - attack [AKIXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Infantry/Dark Infantry - death [AKIXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Infantry/Dark Infantry - fidget [AKIXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Infantry/Dark Infantry - idle [AKIX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Infantry/Dark Infantry - info [AKIXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Elves/Dark Infantry/Dark Infantry - walk [AKIXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

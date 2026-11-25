@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_smithy",
+  "name": "Worker Sect",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Worker Sect",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Worker Sect",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Worker Sect/Worker Sect - base [BAWS].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Worker Sect/Worker Sect - construction [BAWSz].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Worker Sect/Worker Sect - info [BAWSi].png"
+      }
+    }
+  }
+}

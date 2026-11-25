@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dark_dwarves_wizard",
+  "name": "Flame Hall",
+  "version": "1.0.0",
+  "race": "race_dark_dwarves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Flame Hall",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Furnace (level 4)",
+      "wbc3_race": "Dark Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dark Dwarves/Furnace (level 4)/Furnace (level 4) - base [BKA3].png",
+        "info": "assets/Sprites/Buildings/Dark Dwarves/Furnace (level 4)/Furnace (level 4) - info [BKA3i].png"
+      }
+    }
+  }
+}

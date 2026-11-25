@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_minotaurs_wizard",
+  "name": "Star Lookout",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Star Lookout",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Lookout",
+      "wbc3_race": "Minotaurs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Minotaurs/Lookout/Lookout - base [BPLO].png",
+        "construction": "assets/Sprites/Buildings/Minotaurs/Lookout/Lookout - construction [BPLOz].png",
+        "info": "assets/Sprites/Buildings/Minotaurs/Lookout/Lookout - info [BPLOi].png"
+      }
+    }
+  }
+}

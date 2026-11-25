@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_plaguelords_wanderer",
+  "name": "Pyrohydra",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "wanderer",
+  "home": null,
+  "persona": "Walks the wide circle around the villages of the Plaguelords.",
+  "lines": {
+    "greet": [
+      "Fair road, friend."
+    ],
+    "lore": [
+      "{village} lies {village_dir}, {village_dist} hexes. Tell them I sent you.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_poison",
+      "effect_harm",
+      "effect_combustion",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Pyrohydra",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Pyrohydra",
+      "wbc3_code": "AGPY",
+      "wbc3_race": "Plaguelords",
+      "match_reason": "Pyrohydra of the Plaguelords",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Plaguelords/Pyrohydra/Pyrohydra - attack [AGPYa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Plaguelords/Pyrohydra/Pyrohydra - death [AGPYd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Plaguelords/Pyrohydra/Pyrohydra - fidget [AGPYf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Plaguelords/Pyrohydra/Pyrohydra - idle [AGPY].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Plaguelords/Pyrohydra/Pyrohydra - info [AGPYi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Plaguelords/Pyrohydra/Pyrohydra - walk [AGPYw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

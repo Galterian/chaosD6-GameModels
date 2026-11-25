@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_temple",
+  "name": "Healing Orb",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Healing Orb",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Healing Orb",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Healing Orb/Healing Orb - base [BPHO].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Healing Orb/Healing Orb - construction [BPHOz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Healing Orb/Healing Orb - info [BPHOi].png"
+      }
+    }
+  }
+}

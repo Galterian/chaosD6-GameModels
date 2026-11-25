@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_wizard",
+  "name": "Watcher",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Watcher",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Watcher",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Watcher/Watcher - base [BPWA].png",
+        "construction": "assets/Sprites/Buildings/Swarm/Watcher/Watcher - construction [BPWAz].png",
+        "info": "assets/Sprites/Buildings/Swarm/Watcher/Watcher - info [BPWAi].png"
+      }
+    }
+  }
+}

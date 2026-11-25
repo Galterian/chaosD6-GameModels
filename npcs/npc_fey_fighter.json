@@ -1,0 +1,82 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_fey_fighter",
+  "name": "Spriggan",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "fighter",
+  "home": "bld_fey_barracks",
+  "persona": "A soldier of the host of the Dreamhold: falls on the villages at war with its own.",
+  "lines": {
+    "greet": [
+      "For the village!"
+    ],
+    "warn": [
+      "One more step, enemy."
+    ]
+  },
+  "agenda": {
+    "uses": "fighter",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 14,
+      "world": 8,
+      "matter": 16,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_sleep",
+      "effect_super_force",
+      "effect_shield",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Spriggan",
+    "tags": [
+      "npc",
+      "fighter"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Spriggan",
+      "wbc3_code": "AFIX",
+      "wbc3_race": "Fey",
+      "match_reason": "Spriggan of the Fey",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Fey/Spriggan/Spriggan - attack [AFIXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Fey/Spriggan/Spriggan - death [AFIXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Fey/Spriggan/Spriggan - fidget [AFIXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Fey/Spriggan/Spriggan - idle [AFIX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Fey/Spriggan/Spriggan - info [AFIXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Fey/Spriggan/Spriggan - walk [AFIXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

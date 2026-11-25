@@ -1,0 +1,176 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_swarm_builder",
+  "name": "Builder Ant",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "builder",
+  "home": "bld_swarm_workshop",
+  "persona": "A builder with a cart of stones and opinions about walls; works for whoever pays.",
+  "lines": {
+    "greet": [
+      "Walls don't build themselves, friend.",
+      "Mind the mortar!"
+    ],
+    "quest": [
+      "For {need} I put my tools to work for you — wherever you stand."
+    ],
+    "thanks": [
+      "A deal! Lead on — I build where you stand."
+    ]
+  },
+  "talk": [
+    {
+      "id": "craft",
+      "ask": "What can you build?",
+      "say": [
+        "A watchtower, a Shrine of Melkor, a Burial Hall if you have the patience — and barricades, always barricades."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "builder",
+    "params": {
+      "beckon": 6
+    },
+    "rules": [
+      {
+        "id": "offer",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_swarm_hire_builder"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 12,
+      "world": 8,
+      "matter": 10,
+      "will": 4
+    },
+    "life": 3,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_creation",
+      "effect_shield",
+      "effect_artifice",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "builds": [
+    {
+      "id": "tower",
+      "building": "bld_swarm_tower",
+      "ask": "Build a Watchtower here.",
+      "power": {
+        "kind": "stance",
+        "code": "B"
+      }
+    },
+    {
+      "id": "temple",
+      "building": "bld_swarm_temple",
+      "ask": "Build a Shrine of Melkor here.",
+      "power": {
+        "kind": "mend"
+      }
+    },
+    {
+      "id": "lore",
+      "building": "bld_swarm_lore",
+      "ask": "Build a Burial Hall here.",
+      "power": {
+        "kind": "draw"
+      }
+    },
+    {
+      "id": "barricade",
+      "wall": true,
+      "ask": "Raise a Barricade here."
+    }
+  ],
+  "build_max": 4,
+  "card": {
+    "name": "Builder Ant",
+    "tags": [
+      "npc",
+      "builder"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Giant Ant",
+      "wbc3_code": "ARBX",
+      "wbc3_race": "Swarm",
+      "match_reason": "Builder Ant of the Swarm",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Swarm/Giant Ant/Giant Ant - attack [ARBXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Swarm/Giant Ant/Giant Ant - death [ARBXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Swarm/Giant Ant/Giant Ant - fidget [ARBXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Swarm/Giant Ant/Giant Ant - idle [ARBX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Swarm/Giant Ant/Giant Ant - info [ARBXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Swarm/Giant Ant/Giant Ant - walk [ARBXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_daemons_barracks",
+  "name": "Pit",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The village host drills here; a fallen fighter is replaced every 50 turns, the guards of the gate and wall after 20.",
+  "card": {
+    "name": "Pit",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Pit",
+      "wbc3_race": "Daemons",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Daemons/Pit/Pit - base [BAPI].png",
+        "construction": "assets/Sprites/Buildings/Daemons/Pit/Pit - construction [BAPIz].png",
+        "info": "assets/Sprites/Buildings/Daemons/Pit/Pit - info [BAPIi].png"
+      }
+    }
+  }
+}

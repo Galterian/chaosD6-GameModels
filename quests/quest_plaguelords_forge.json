@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_plaguelords_forge",
+  "name": "Dark Matter for the Forge",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "giver": "npc_plaguelords_smith",
+  "need_text": "the Dark Matter effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_dark_matter"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_intimidation"
+    }
+  ],
+  "repeatable": false
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_wizard",
+  "name": "Seer's Tower",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 45
+  },
+  "blocks": true,
+  "text": "The wizard studies here.",
+  "card": {
+    "name": "Seer's Tower",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Keep (level 4)",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Keep (level 4)/Keep (level 4) - base [BKK3].png",
+        "info": "assets/Sprites/Buildings/Knights/Keep (level 4)/Keep (level 4) - info [BKK3i].png"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_keep",
+  "name": "Orchold",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "keep",
+  "bank": {
+    "stat": "vitality",
+    "value": 60
+  },
+  "blocks": true,
+  "text": "The hall of the village headman; a new one is chosen here when the old one falls.",
+  "card": {
+    "name": "Orchold",
+    "tags": [
+      "building",
+      "keep"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Orchold (level 1)",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Orchold (level 1)/Orchold (level 1) - base [BKO0].png",
+        "construction": "assets/Sprites/Buildings/Orcs/Orchold (level 1)/Orchold (level 1) - construction [BKO0z].png",
+        "info": "assets/Sprites/Buildings/Orcs/Orchold (level 1)/Orchold (level 1) - info [BKO0i].png"
+      }
+    }
+  }
+}

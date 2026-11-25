@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_empire_barn",
   "name": "Barn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_empire",
   "role": "producer",
   "bank": {
@@ -10,10 +10,6 @@
     "value": 30
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_empire_peasant",
-    "every_turns": 20
-  },
   "text": "Farmhands and builders come from the barn, one every 20 turns.",
   "card": {
     "name": "Barn",

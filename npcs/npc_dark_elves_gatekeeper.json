@@ -1,0 +1,97 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_dark_elves_gatekeeper",
+  "name": "Gate Blackguard",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "role": "guard",
+  "home": "bld_dark_elves_tower",
+  "persona": "Sworn to the gate; nobody the village does not trust walks past.",
+  "lines": {
+    "warn": [
+      "Gate's closed to strangers. Earn your welcome first.",
+      "Halt. State your business — from there."
+    ],
+    "greet": [
+      "You're known here. In you go."
+    ]
+  },
+  "talk": [
+    {
+      "id": "duty",
+      "ask": "Why do you guard the gate?",
+      "say": [
+        "Orders, stranger. And because the last one let a goblin in."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "gate_guard",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 16,
+      "world": 8,
+      "matter": 18,
+      "will": 8
+    },
+    "life": 5,
+    "actions_per_round": 3,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_shield",
+      "effect_earthquake",
+      "effect_haste"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Gate Blackguard",
+    "tags": [
+      "npc",
+      "guard",
+      "gatekeeper"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Blackguard",
+      "wbc3_code": "AKGX",
+      "wbc3_race": "Dark Elves",
+      "match_reason": "Gate Blackguard of the Dark Elves",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - attack [AKGXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "cast": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - cast [AKGXc].png",
+          "usage": "8-direction cast, play on Posture emissions"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - death [AKGXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - fidget [AKGXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - idle [AKGX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - info [AKGXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Elves/Blackguard/Blackguard - walk [AKGXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

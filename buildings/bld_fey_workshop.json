@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_fey_workshop",
+  "name": "Tinker's Hollow",
+  "version": "1.0.0",
+  "race": "race_fey",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Tinker's Hollow",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Dreamhold (level 4)",
+      "wbc3_race": "Fey",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Fey/Dreamhold (level 4)/Dreamhold (level 4) - base [BKF3].png",
+        "info": "assets/Sprites/Buildings/Fey/Dreamhold (level 4)/Dreamhold (level 4) - info [BKF3i].png"
+      }
+    }
+  }
+}

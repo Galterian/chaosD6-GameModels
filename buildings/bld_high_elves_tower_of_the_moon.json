@@ -2,7 +2,7 @@
   "schema": "chaosd6.building/1",
   "id": "bld_high_elves_tower_of_the_moon",
   "name": "Tower of the Moon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "race": "race_high_elves",
   "role": "producer",
   "bank": {
@@ -10,11 +10,7 @@
     "value": 50
   },
   "blocks": true,
-  "produces": {
-    "npc": "npc_high_elves_iceguard",
-    "every_turns": 30
-  },
-  "text": "The Iceguard keep vigil here; one is sent down every 30 turns.",
+  "text": "The Iceguard keep vigil here.",
   "card": {
     "name": "Tower of the Moon",
     "tags": [

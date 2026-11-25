@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_knights_workshop",
+  "name": "Fletcher",
+  "version": "1.0.0",
+  "race": "race_knights",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The engineer builds the siege engines here.",
+  "card": {
+    "name": "Fletcher",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Fletcher",
+      "wbc3_race": "Knights",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Knights/Fletcher/Fletcher - base [BPFL].png",
+        "construction": "assets/Sprites/Buildings/Knights/Fletcher/Fletcher - construction [BPFLz].png",
+        "info": "assets/Sprites/Buildings/Knights/Fletcher/Fletcher - info [BPFLi].png"
+      }
+    }
+  }
+}

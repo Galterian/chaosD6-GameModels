@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_minotaurs_teach",
+  "name": "Teach Us Overrun",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "giver": "npc_minotaurs_quest_giver",
+  "need_text": "the Overrun skill",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "skill"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "skill_overrun"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "effect",
+      "id": "effect_anger"
+    }
+  ],
+  "repeatable": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_dark_elves_engine_ram",
+  "name": "The Iron Head",
+  "version": "1.0.0",
+  "race": "race_dark_elves",
+  "giver": "npc_dark_elves_engineer",
+  "need_text": "one effect card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "effect"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "allies",
+      "count": 1,
+      "units": [
+        "npc_dark_elves_ram"
+      ]
+    }
+  ],
+  "repeatable": true
+}

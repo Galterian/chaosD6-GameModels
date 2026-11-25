@@ -1,0 +1,35 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_ssrathi_engine_ram",
+  "name": "The Iron Head",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "giver": "npc_ssrathi_engineer",
+  "need_text": "one effect card from your archive",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "==": [
+          {
+            "var": "kind"
+          },
+          "effect"
+        ]
+      }
+    ]
+  },
+  "consume": true,
+  "rewards": [
+    {
+      "kind": "allies",
+      "count": 1,
+      "units": [
+        "npc_ssrathi_ram"
+      ]
+    }
+  ],
+  "repeatable": true
+}

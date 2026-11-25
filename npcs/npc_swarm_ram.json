@@ -1,0 +1,77 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_swarm_ram",
+  "name": "Battering Ram",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "siege",
+  "persona": "An iron-capped beam under a roof of hides: three blows in a row and a wall comes down.",
+  "lines": {
+    "greet": [
+      "*creak*"
+    ]
+  },
+  "agenda": {
+    "uses": "follower",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 0,
+      "world": 0,
+      "matter": 25,
+      "will": 0
+    },
+    "life": 3,
+    "actions_per_round": 2,
+    "deck_effects": [],
+    "innate_effect": null
+  },
+  "siege": {
+    "kind": "ram",
+    "class": "Battering Ram Siege Engine",
+    "min": 1,
+    "max": 1,
+    "rounds": 3
+  },
+  "card": {
+    "name": "Battering Ram",
+    "tags": [
+      "npc",
+      "siege",
+      "ram"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Battering Ram",
+      "wbc3_code": "ASBA",
+      "wbc3_race": "Siege",
+      "match_reason": "Battering Ram Siege Engine of the Swarm engineer",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Siege/Battering Ram/Battering Ram - death [ASBAd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Siege/Battering Ram/Battering Ram - fidget [ASBAf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Siege/Battering Ram/Battering Ram - idle [ASBA].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Siege/Battering Ram/Battering Ram - info [ASBAi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Siege/Battering Ram/Battering Ram - walk [ASBAw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

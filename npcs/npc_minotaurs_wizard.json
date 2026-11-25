@@ -1,0 +1,100 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_minotaurs_wizard",
+  "name": "Shaman",
+  "version": "1.0.0",
+  "race": "race_minotaurs",
+  "role": "wizard",
+  "home": "bld_minotaurs_wizard",
+  "persona": "A scholar of the magic of Sartek; collects spells the way misers collect coins.",
+  "lines": {
+    "greet": [
+      "You smell of the wilds — and of magic.",
+      "Speak, but quickly; my candle is short."
+    ],
+    "quest": [
+      "I seek {need}. Bring it to me and I will share what I know."
+    ],
+    "thanks": [
+      "{need}, at last! {reward}"
+    ],
+    "warn": [
+      "Do not touch the scrolls."
+    ]
+  },
+  "talk": [
+    {
+      "id": "elements",
+      "ask": "How does magic work here?",
+      "say": [
+        "Every spell is a chain of elements, one emitted each action — break the chain and the spell is gone. Posture, stranger: stand still and let it flow.",
+        "A spell joins the next when its last element is the other's first. The wise chain them."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "villager",
+    "params": {},
+    "rules": []
+  },
+  "quests": [
+    "quest_minotaurs_secret"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 14,
+      "matter": 8,
+      "will": 18
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_haste",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Shaman",
+    "tags": [
+      "npc",
+      "wizard"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Minotaur Shaman",
+      "wbc3_code": "AMMX",
+      "wbc3_race": "Minotaurs",
+      "match_reason": "Shaman of the Minotaurs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Minotaurs/Minotaur Shaman/Minotaur Shaman - attack [AMMXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Minotaurs/Minotaur Shaman/Minotaur Shaman - death [AMMXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Minotaurs/Minotaur Shaman/Minotaur Shaman - fidget [AMMXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Minotaurs/Minotaur Shaman/Minotaur Shaman - idle [AMMX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Minotaurs/Minotaur Shaman/Minotaur Shaman - info [AMMXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Minotaurs/Minotaur Shaman/Minotaur Shaman - walk [AMMXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

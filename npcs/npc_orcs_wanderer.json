@@ -1,0 +1,83 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_orcs_wanderer",
+  "name": "Wolf Rider",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "wanderer",
+  "home": null,
+  "persona": "Walks the wide circle around the villages of the Orcs.",
+  "lines": {
+    "greet": [
+      "Fair road, friend."
+    ],
+    "lore": [
+      "{village} lies {village_dir}, {village_dist} hexes. Tell them I sent you.",
+      "{lore}"
+    ]
+  },
+  "agenda": {
+    "uses": "wanderer",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 16,
+      "matter": 14,
+      "will": 12
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_super_force",
+      "effect_throw",
+      "effect_poison",
+      "effect_shield"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Wolf Rider",
+    "tags": [
+      "npc",
+      "wanderer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Wolf Rider",
+      "wbc3_code": "AOCX",
+      "wbc3_race": "Orcs",
+      "match_reason": "Wolf Rider of the Orcs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Orcs/Wolf Rider/Wolf Rider - attack [AOCXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Orcs/Wolf Rider/Wolf Rider - death [AOCXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Orcs/Wolf Rider/Wolf Rider - fidget [AOCXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Orcs/Wolf Rider/Wolf Rider - idle [AOCX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Orcs/Wolf Rider/Wolf Rider - info [AOCXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Orcs/Wolf Rider/Wolf Rider - walk [AOCXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

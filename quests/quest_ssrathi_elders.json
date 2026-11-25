@@ -1,0 +1,48 @@
+{
+  "schema": "chaosd6.quest/1",
+  "id": "quest_ssrathi_elders",
+  "name": "Elementals Water for the Elders",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "giver": "npc_ssrathi_quest_giver",
+  "need_text": "the Elementals Water effect",
+  "need": {
+    "some": [
+      {
+        "var": "player.archive"
+      },
+      {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "kind"
+              },
+              "effect"
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "id"
+              },
+              "effect_elementals_water"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "consume": false,
+  "rewards": [
+    {
+      "kind": "reputation",
+      "value": 5
+    },
+    {
+      "kind": "skill",
+      "id": "skill_bluff"
+    }
+  ],
+  "repeatable": false
+}

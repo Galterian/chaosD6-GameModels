@@ -1,0 +1,94 @@
+{
+  "schema": "chaosd6.village/1",
+  "id": "vil_orcs_hamlet",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "size": "hamlet",
+  "team": "{name} Hamlet",
+  "radius": 3,
+  "clear_radius": 5,
+  "cap": 6,
+  "layout": [
+    {
+      "building": "bld_orcs_centre",
+      "at": [
+        0,
+        0
+      ]
+    },
+    {
+      "building": "bld_orcs_shop",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "building": "bld_orcs_lore",
+      "at": [
+        -2,
+        2
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "npc": "npc_orcs_quest_giver",
+      "at": [
+        1,
+        1
+      ]
+    },
+    {
+      "npc": "npc_orcs_storyteller",
+      "at": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_orcs_builder",
+      "at": [
+        -1,
+        0
+      ]
+    },
+    {
+      "npc": "npc_orcs_fighter",
+      "at": [
+        1,
+        0
+      ]
+    },
+    {
+      "npc": "npc_orcs_trader",
+      "at": [
+        0,
+        -2
+      ]
+    }
+  ],
+  "wanderers": {
+    "ring": [
+      50,
+      100
+    ],
+    "npcs": []
+  },
+  "reputation": {
+    "unit": "percent",
+    "start": 50,
+    "start_same_race": 70,
+    "hostile": 40,
+    "enter": 70,
+    "ally_all": 90,
+    "building_broken": -5,
+    "villager_attacked": -5,
+    "trespass": -5,
+    "threat_radius": 9
+  },
+  "quests": [
+    "quest_orcs_teach",
+    "quest_orcs_elders"
+  ]
+}

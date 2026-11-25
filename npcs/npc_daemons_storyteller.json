@@ -1,0 +1,89 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_daemons_storyteller",
+  "name": "Balora",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "role": "storyteller",
+  "home": "bld_daemons_lore",
+  "persona": "Keeps the old tales of the Daemons and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The Portal opened when a mortal king traded his name for a crown; it has been open ever since, and the king is still looking for his name."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Balora",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Balora",
+      "wbc3_code": "ATVX",
+      "wbc3_race": "Daemons",
+      "match_reason": "Balora of the Daemons",
+      "confidence": "high",
+      "sprites": {
+        "death": {
+          "path": "assets/Sprites/Units/Daemons/Balora/Balora - death [ATVXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Daemons/Balora/Balora - fidget [ATVXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Daemons/Balora/Balora - idle [ATVX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Daemons/Balora/Balora - info [ATVXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Daemons/Balora/Balora - walk [ATVXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

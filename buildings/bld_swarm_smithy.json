@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_smithy",
+  "name": "Chitin Forge",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Chitin Forge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hive (level 3)",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Hive (level 3)/Hive (level 3) - base [BAH2].png",
+        "info": "assets/Sprites/Buildings/Swarm/Hive (level 3)/Hive (level 3) - info [BAH2i].png"
+      }
+    }
+  }
+}

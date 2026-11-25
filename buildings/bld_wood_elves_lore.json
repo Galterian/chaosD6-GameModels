@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_lore",
+  "name": "White Tree",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "White Tree",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "White Tree",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/White Tree/White Tree - base [BPWT].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/White Tree/White Tree - construction [BPWTz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/White Tree/White Tree - info [BPWTi].png"
+      }
+    }
+  }
+}

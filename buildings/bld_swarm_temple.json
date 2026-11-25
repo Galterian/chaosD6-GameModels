@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_swarm_temple",
+  "name": "Shrine of Melkor",
+  "version": "1.0.0",
+  "race": "race_swarm",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Shrine of Melkor",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Shrine of Melkor",
+      "wbc3_race": "Swarm",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Swarm/Shrine of Melkor/Shrine of Melkor - base [BPSK].png",
+        "construction": "assets/Sprites/Buildings/Swarm/Shrine of Melkor/Shrine of Melkor - construction [BPSKz].png",
+        "info": "assets/Sprites/Buildings/Swarm/Shrine of Melkor/Shrine of Melkor - info [BPSKi].png"
+      }
+    }
+  }
+}

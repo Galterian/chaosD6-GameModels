@@ -1,0 +1,147 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_orcs_engineer",
+  "name": "Engineer",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "engineer",
+  "home": "bld_orcs_workshop",
+  "persona": "Grease to the elbows, a pencil behind the ear: for a price an engine follows you anywhere.",
+  "lines": {
+    "greet": [
+      "Need a wall gone? A wagon of stones thrown? I build engines.",
+      "Mind the gears."
+    ],
+    "quest": [
+      "Pay me {need} and the engine is yours — it follows you anywhere."
+    ],
+    "thanks": [
+      "Done! It rolls after you now. One engine at a time, mind."
+    ]
+  },
+  "agenda": {
+    "uses": "villager",
+    "params": {
+      "beckon": 6
+    },
+    "rules": [
+      {
+        "id": "offer",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_orcs_engine_catapult",
+    "quest_orcs_engine_ballista",
+    "quest_orcs_engine_ram"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 10,
+      "world": 8,
+      "matter": 14,
+      "will": 6
+    },
+    "life": 4,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_creation",
+      "effect_shield",
+      "effect_artifice",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "talk": [
+    {
+      "id": "engines",
+      "ask": "What do your engines do?",
+      "say": [
+        "The Catapult throws a stone 2 to 4 hexes once a turn — it flies two hexes an action and hurts whoever stands where it lands.",
+        "The Ballista shoots a bolt along a line: every foe in the first three hexes of its path takes a wound.",
+        "The Battering Ram: next to a wall for three actions in a row and the wall comes down."
+      ]
+    }
+  ],
+  "card": {
+    "name": "Engineer",
+    "tags": [
+      "npc",
+      "engineer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Engineer",
+      "wbc3_code": "AABX",
+      "wbc3_race": "Dark Dwarves",
+      "match_reason": "the Orcs village engineer -> Engineer",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - attack [AABXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - death [AABXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - fidget [AABXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - idle [AABX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - info [AABXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Dark Dwarves/Engineer/Engineer - walk [AABXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

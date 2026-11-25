@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_lore",
+  "name": "Saga Hall",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Saga Hall",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Fortress (level 3)",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Fortress (level 3)/Fortress (level 3) - base [BKB2].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Fortress (level 3)/Fortress (level 3) - info [BKB2i].png"
+      }
+    }
+  }
+}

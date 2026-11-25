@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_ssrathi_merc",
+  "name": "Hatchery",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Hatchery",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Hatchery",
+      "wbc3_race": "Ssrathi",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Ssrathi/Hatchery/Hatchery - base [BPHA].png",
+        "construction": "assets/Sprites/Buildings/Ssrathi/Hatchery/Hatchery - construction [BPHAz].png",
+        "info": "assets/Sprites/Buildings/Ssrathi/Hatchery/Hatchery - info [BPHAi].png"
+      }
+    }
+  }
+}

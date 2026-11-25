@@ -1,0 +1,288 @@
+{
+  "schema": "chaosd6.village/1",
+  "id": "vil_daemons",
+  "version": "1.0.0",
+  "race": "race_daemons",
+  "team": "{name} Village",
+  "radius": 6,
+  "clear_radius": 9,
+  "cap": 20,
+  "layout": [
+    {
+      "building": "bld_daemons_centre",
+      "at": [
+        0,
+        0
+      ]
+    },
+    {
+      "building": "bld_daemons_keep",
+      "at": [
+        0,
+        -3
+      ]
+    },
+    {
+      "building": "bld_daemons_barracks",
+      "at": [
+        3,
+        -3
+      ]
+    },
+    {
+      "building": "bld_daemons_tower",
+      "at": [
+        3,
+        0
+      ]
+    },
+    {
+      "building": "bld_daemons_smithy",
+      "at": [
+        0,
+        3
+      ]
+    },
+    {
+      "building": "bld_daemons_shop",
+      "at": [
+        -3,
+        3
+      ]
+    },
+    {
+      "building": "bld_daemons_lore",
+      "at": [
+        -3,
+        0
+      ]
+    },
+    {
+      "building": "bld_daemons_temple",
+      "at": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "building": "bld_daemons_ministry",
+      "at": [
+        2,
+        2
+      ]
+    },
+    {
+      "building": "bld_daemons_wizard",
+      "at": [
+        4,
+        -2
+      ]
+    },
+    {
+      "building": "bld_daemons_workshop",
+      "at": [
+        -4,
+        2
+      ]
+    },
+    {
+      "building": "bld_daemons_merc",
+      "at": [
+        2,
+        -4
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "npc": "npc_daemons_quest_giver",
+      "at": [
+        -9,
+        7
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_daemons_storyteller",
+      "at": [
+        -7,
+        9
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_daemons_diplomat",
+      "at": [
+        -9,
+        5
+      ],
+      "post": "outside"
+    },
+    {
+      "npc": "npc_daemons_gatekeeper",
+      "at": [
+        -9,
+        9
+      ],
+      "post": "gate"
+    },
+    {
+      "npc": "npc_daemons_dragon",
+      "at": [
+        1,
+        -1
+      ],
+      "post": "centre"
+    },
+    {
+      "npc": "npc_daemons_wall_guard",
+      "at": [
+        7,
+        0
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_daemons_wall_guard",
+      "at": [
+        0,
+        -7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_daemons_trader",
+      "at": [
+        -2,
+        2
+      ]
+    },
+    {
+      "npc": "npc_daemons_builder",
+      "at": [
+        -3,
+        1
+      ]
+    },
+    {
+      "npc": "npc_daemons_mason",
+      "at": [
+        -3,
+        2
+      ]
+    },
+    {
+      "npc": "npc_daemons_smith",
+      "at": [
+        0,
+        2
+      ]
+    },
+    {
+      "npc": "npc_daemons_wizard",
+      "at": [
+        3,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_daemons_mercenary",
+      "at": [
+        1,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_daemons_healer",
+      "at": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_daemons_engineer",
+      "at": [
+        -4,
+        1
+      ]
+    },
+    {
+      "npc": "npc_daemons_fighter",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_daemons_fighter",
+      "at": [
+        2,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_daemons_fighter",
+      "at": [
+        3,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_daemons_fighter",
+      "at": [
+        4,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_daemons_fighter",
+      "at": [
+        4,
+        -3
+      ]
+    }
+  ],
+  "wanderers": {
+    "ring": [
+      50,
+      100
+    ],
+    "npcs": [
+      "npc_daemons_wanderer",
+      "npc_daemons_wanderer2",
+      "npc_daemons_wanderer"
+    ]
+  },
+  "reputation": {
+    "unit": "percent",
+    "start": 50,
+    "start_same_race": 70,
+    "hostile": 40,
+    "enter": 70,
+    "ally_all": 90,
+    "building_broken": -5,
+    "villager_attacked": -5,
+    "trespass": -5,
+    "threat_radius": 9
+  },
+  "quests": [
+    "quest_daemons_teach",
+    "quest_daemons_elders",
+    "quest_daemons_forge",
+    "quest_daemons_secret"
+  ],
+  "wall": {
+    "radius": 8,
+    "gate": [
+      -8,
+      8
+    ],
+    "name": "Brimstone Wall",
+    "text": "A wall of black brimstone that never cools; the Gate Daemon opens it only to friends of the pit.",
+    "sprites": {
+      "joint": "assets/Sprites/Buildings/Shared/Walls (evil, 2x2 joint)/Walls (evil, 2x2 joint) - base [BWE0].png",
+      "horizontal": "assets/Sprites/Buildings/Shared/Walls (evil, 2x1 horizontal)/Walls (evil, 2x1 horizontal) - base [BWE1].png",
+      "vertical": "assets/Sprites/Buildings/Shared/Walls (evil, 1x2 vertical)/Walls (evil, 1x2 vertical) - base [BWE2].png"
+    }
+  }
+}

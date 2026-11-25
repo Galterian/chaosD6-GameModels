@@ -2,7 +2,7 @@
   "schema": "chaosd6.npc/1",
   "id": "npc_high_elves_elder",
   "name": "Elder",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "race": "race_high_elves",
   "role": "quest_giver",
   "home": "bld_high_elves_tree_of_gold",
@@ -41,7 +41,9 @@
   },
   "quests": [
     "quest_high_elves_starfire",
-    "quest_high_elves_counterspell"
+    "quest_high_elves_counterspell",
+    "quest_high_elves_frost",
+    "quest_high_elves_moonsight"
   ],
   "unit": {
     "stats": {

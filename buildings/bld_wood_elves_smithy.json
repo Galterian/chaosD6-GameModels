@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_wood_elves_smithy",
+  "name": "Bowyer Tower",
+  "version": "1.0.0",
+  "race": "race_wood_elves",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Bowyer Tower",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Forest Tower",
+      "wbc3_race": "Wood Elves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Wood Elves/Forest Tower/Forest Tower - base [BPFT].png",
+        "construction": "assets/Sprites/Buildings/Wood Elves/Forest Tower/Forest Tower - construction [BPFTz].png",
+        "info": "assets/Sprites/Buildings/Wood Elves/Forest Tower/Forest Tower - info [BPFTi].png"
+      }
+    }
+  }
+}

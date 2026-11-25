@@ -3,11 +3,11 @@
   "files": {
     "tools/engine/gamemodels.mjs": {
       "source": "game/gamemodels.mjs",
-      "sha256": "e68a1a2590ce6a3173ffc9cc39e7ef729038357c6880c8f638c36993fc2b0861"
+      "sha256": "4b9f262eb94f35e5c4431f26fe9826a6b93c5ca9fd5ce6b670abcbbeb0cbbda4"
     },
     "tools/engine/agenda.mjs": {
       "source": "game/agenda.mjs",
-      "sha256": "210dd77a7cf772063a95d4fcbbd49924a04031b013d5e951e185cb6af8fb6442"
+      "sha256": "2dd1be7bf791c26205ace6922c01984010183525858827829716f59168cc857e"
     },
     "tools/check.mjs": {
       "source": "game/tools/gamemodels-repo-template/tools/check.mjs",

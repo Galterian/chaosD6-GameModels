@@ -1,0 +1,168 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_ssrathi_builder",
+  "name": "Builder",
+  "version": "1.0.0",
+  "race": "race_ssrathi",
+  "role": "builder",
+  "home": "bld_ssrathi_workshop",
+  "persona": "A builder with a cart of stones and opinions about walls; works for whoever pays.",
+  "lines": {
+    "greet": [
+      "Walls don't build themselves, friend.",
+      "Mind the mortar!"
+    ],
+    "quest": [
+      "For {need} I put my tools to work for you — wherever you stand."
+    ],
+    "thanks": [
+      "A deal! Lead on — I build where you stand."
+    ]
+  },
+  "talk": [
+    {
+      "id": "craft",
+      "ask": "What can you build?",
+      "say": [
+        "A watchtower, a Religious Sect, a Scrying Pool if you have the patience — and barricades, always barricades."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "builder",
+    "params": {
+      "beckon": 6
+    },
+    "rules": [
+      {
+        "id": "offer",
+        "when": {
+          "and": [
+            {
+              "cond": "stranger_seen"
+            },
+            {
+              "!": {
+                "cond": "stranger_hostile"
+              }
+            },
+            {
+              "!": {
+                "cond": "foe_near"
+              }
+            },
+            {
+              "<=": [
+                {
+                  "var": "stranger.dist"
+                },
+                {
+                  "var": "params.beckon"
+                }
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "stranger.dist"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "goal": {
+          "do": "approach",
+          "target": "stranger",
+          "stop": 2
+        }
+      }
+    ]
+  },
+  "quests": [
+    "quest_ssrathi_hire_builder"
+  ],
+  "unit": {
+    "stats": {
+      "vitality": 12,
+      "world": 8,
+      "matter": 10,
+      "will": 4
+    },
+    "life": 3,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_creation",
+      "effect_shield",
+      "effect_artifice",
+      "effect_throw"
+    ],
+    "innate_effect": null
+  },
+  "builds": [
+    {
+      "id": "tower",
+      "building": "bld_ssrathi_tower",
+      "ask": "Build a Watchtower here.",
+      "power": {
+        "kind": "stance",
+        "code": "B"
+      }
+    },
+    {
+      "id": "temple",
+      "building": "bld_ssrathi_temple",
+      "ask": "Build a Religious Sect here.",
+      "power": {
+        "kind": "mend"
+      }
+    },
+    {
+      "id": "lore",
+      "building": "bld_ssrathi_lore",
+      "ask": "Build a Scrying Pool here.",
+      "power": {
+        "kind": "draw"
+      }
+    },
+    {
+      "id": "barricade",
+      "wall": true,
+      "ask": "Raise a Barricade here."
+    }
+  ],
+  "build_max": 4,
+  "card": {
+    "name": "Builder",
+    "tags": [
+      "npc",
+      "builder"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Iriki",
+      "wbc3_code": "ATLX",
+      "wbc3_race": "Ssrathi",
+      "match_reason": "Builder of the Ssrathi",
+      "confidence": "high",
+      "sprites": {
+        "fidget": {
+          "path": "assets/Sprites/Units/Ssrathi/Iriki/Iriki - fidget [ATLXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Ssrathi/Iriki/Iriki - idle [ATLX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Ssrathi/Iriki/Iriki - info [ATLXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Ssrathi/Iriki/Iriki - walk [ATLXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

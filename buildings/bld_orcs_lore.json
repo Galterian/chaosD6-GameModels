@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_orcs_lore",
+  "name": "Goblin Tower",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "Goblin Tower",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Goblin Tower",
+      "wbc3_race": "Orcs",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Orcs/Goblin Tower/Goblin Tower - base [BAGT].png",
+        "construction": "assets/Sprites/Buildings/Orcs/Goblin Tower/Goblin Tower - construction [BAGTz].png",
+        "info": "assets/Sprites/Buildings/Orcs/Goblin Tower/Goblin Tower - info [BAGTi].png"
+      }
+    }
+  }
+}

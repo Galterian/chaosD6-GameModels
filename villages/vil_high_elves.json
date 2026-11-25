@@ -1,7 +1,7 @@
 {
   "schema": "chaosd6.village/1",
   "id": "vil_high_elves",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "race": "race_high_elves",
   "team": "{name} Village",
   "radius": 6,
@@ -63,6 +63,20 @@
         -2,
         -2
       ]
+    },
+    {
+      "building": "bld_high_elves_ministry",
+      "at": [
+        2,
+        2
+      ]
+    },
+    {
+      "building": "bld_high_elves_tower",
+      "at": [
+        4,
+        -2
+      ]
     }
   ],
   "residents": [
@@ -70,88 +84,25 @@
       "npc": "npc_high_elves_elder",
       "at": [
         -9,
-        6
-      ],
-      "post": "outside"
-    },
-    {
-      "npc": "npc_high_elves_merchant",
-      "at": [
-        -6,
-        9
+        7
       ],
       "post": "outside"
     },
     {
       "npc": "npc_high_elves_lorekeeper",
       "at": [
-        -9,
-        5
+        -7,
+        9
       ],
       "post": "outside"
     },
     {
-      "npc": "npc_high_elves_healer",
+      "npc": "npc_high_elves_diplomat",
       "at": [
-        1,
-        2
-      ]
-    },
-    {
-      "npc": "npc_high_elves_builder",
-      "at": [
-        -1,
-        1
-      ]
-    },
-    {
-      "npc": "npc_high_elves_longbow",
-      "at": [
-        2,
-        -1
-      ]
-    },
-    {
-      "npc": "npc_high_elves_longbow",
-      "at": [
-        -1,
-        -2
-      ]
-    },
-    {
-      "npc": "npc_high_elves_moonguard",
-      "at": [
-        0,
-        -2
-      ]
-    },
-    {
-      "npc": "npc_high_elves_blacksmith",
-      "at": [
-        3,
-        -2
-      ]
-    },
-    {
-      "npc": "npc_high_elves_wizard",
-      "at": [
-        -1,
-        3
-      ]
-    },
-    {
-      "npc": "npc_high_elves_mercenary",
-      "at": [
-        2,
-        1
-      ]
-    },
-    {
-      "npc": "npc_high_elves_trader",
-      "at": [
-        -3,
-        1
-      ]
+        -9,
+        5
+      ],
+      "post": "outside"
     },
     {
       "npc": "npc_high_elves_gatekeeper",
@@ -170,10 +121,110 @@
       "post": "centre"
     },
     {
+      "npc": "npc_high_elves_moonguard",
+      "at": [
+        7,
+        0
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_high_elves_moonguard",
+      "at": [
+        0,
+        -7
+      ],
+      "post": "wall"
+    },
+    {
+      "npc": "npc_high_elves_trader",
+      "at": [
+        -2,
+        0
+      ]
+    },
+    {
+      "npc": "npc_high_elves_builder",
+      "at": [
+        2,
+        0
+      ]
+    },
+    {
+      "npc": "npc_high_elves_mason",
+      "at": [
+        2,
+        1
+      ]
+    },
+    {
+      "npc": "npc_high_elves_blacksmith",
+      "at": [
+        2,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_high_elves_wizard",
+      "at": [
+        0,
+        2
+      ]
+    },
+    {
+      "npc": "npc_high_elves_mercenary",
+      "at": [
+        3,
+        -1
+      ]
+    },
+    {
+      "npc": "npc_high_elves_healer",
+      "at": [
+        -2,
+        2
+      ]
+    },
+    {
       "npc": "npc_high_elves_engineer",
       "at": [
-        -1,
-        2
+        3,
+        1
+      ]
+    },
+    {
+      "npc": "npc_high_elves_longbow",
+      "at": [
+        2,
+        -3
+      ]
+    },
+    {
+      "npc": "npc_high_elves_longbow",
+      "at": [
+        3,
+        -2
+      ]
+    },
+    {
+      "npc": "npc_high_elves_longbow",
+      "at": [
+        3,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_high_elves_longbow",
+      "at": [
+        4,
+        -4
+      ]
+    },
+    {
+      "npc": "npc_high_elves_longbow",
+      "at": [
+        4,
+        -3
       ]
     }
   ],

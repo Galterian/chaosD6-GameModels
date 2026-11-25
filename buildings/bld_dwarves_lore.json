@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_dwarves_lore",
+  "name": "College",
+  "version": "1.0.0",
+  "race": "race_dwarves",
+  "role": "lore",
+  "bank": {
+    "stat": "will",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The old tales of the village are kept here.",
+  "card": {
+    "name": "College",
+    "tags": [
+      "building",
+      "lore"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "College",
+      "wbc3_race": "Dwarves",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Dwarves/College/College - base [BPCL].png",
+        "construction": "assets/Sprites/Buildings/Dwarves/College/College - construction [BPCLz].png",
+        "info": "assets/Sprites/Buildings/Dwarves/College/College - info [BPCLi].png"
+      }
+    }
+  }
+}

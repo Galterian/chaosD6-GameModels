@@ -1,0 +1,93 @@
+{
+  "schema": "chaosd6.npc/1",
+  "id": "npc_orcs_storyteller",
+  "name": "Old Goblin Chief",
+  "version": "1.0.0",
+  "race": "race_orcs",
+  "role": "storyteller",
+  "home": "bld_orcs_lore",
+  "persona": "Keeps the old tales of the Orcs and loves a listener.",
+  "lines": {
+    "greet": [
+      "Ah, a listener! Sit, sit."
+    ],
+    "lore": [
+      "{lore}",
+      "The old tales say: {lore}",
+      "Hear this, traveller — {lore}"
+    ]
+  },
+  "talk": [
+    {
+      "id": "legend",
+      "ask": "Tell me a legend.",
+      "say": [
+        "The Totem was carved by the first warboss from the bones of the beast that ate his brother; it watches every orc, and it is never pleased."
+      ]
+    }
+  ],
+  "agenda": {
+    "uses": "storyteller",
+    "params": {},
+    "rules": []
+  },
+  "quests": [],
+  "unit": {
+    "stats": {
+      "vitality": 8,
+      "world": 16,
+      "matter": 8,
+      "will": 16
+    },
+    "life": 5,
+    "actions_per_round": 2,
+    "deck_effects": [
+      "effect_vision",
+      "effect_mind_blast",
+      "effect_super_sense",
+      "effect_delay_time"
+    ],
+    "innate_effect": null
+  },
+  "card": {
+    "name": "Old Goblin Chief",
+    "tags": [
+      "npc",
+      "storyteller"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Goblin Chief",
+      "wbc3_code": "AOKX",
+      "wbc3_race": "Orcs",
+      "match_reason": "Old Goblin Chief of the Orcs",
+      "confidence": "high",
+      "sprites": {
+        "attack": {
+          "path": "assets/Sprites/Units/Orcs/Goblin Chief/Goblin Chief - attack [AOKXa].png",
+          "usage": "8-direction attack, play on action A / skill"
+        },
+        "death": {
+          "path": "assets/Sprites/Units/Orcs/Goblin Chief/Goblin Chief - death [AOKXd].png",
+          "usage": "8-direction death, play once"
+        },
+        "fidget": {
+          "path": "assets/Sprites/Units/Orcs/Goblin Chief/Goblin Chief - fidget [AOKXf].png",
+          "usage": "8-direction fidget (idle variation)"
+        },
+        "idle": {
+          "path": "assets/Sprites/Units/Orcs/Goblin Chief/Goblin Chief - idle [AOKX].png",
+          "usage": "8-direction idle loop (rows = directions, cols = frames; grid in assets/frames.json)"
+        },
+        "info": {
+          "path": "assets/Sprites/Units/Orcs/Goblin Chief/Goblin Chief - info [AOKXi].png",
+          "usage": "info panel image: portrait on top, team-coloured icons below"
+        },
+        "walk": {
+          "path": "assets/Sprites/Units/Orcs/Goblin Chief/Goblin Chief - walk [AOKXw].png",
+          "usage": "8-direction walk cycle"
+        }
+      }
+    }
+  }
+}

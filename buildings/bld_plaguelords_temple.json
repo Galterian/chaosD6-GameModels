@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_plaguelords_temple",
+  "name": "Cess Pool",
+  "version": "1.0.0",
+  "race": "race_plaguelords",
+  "role": "temple",
+  "bank": {
+    "stat": "vitality",
+    "value": 35
+  },
+  "blocks": true,
+  "text": "The healer tends the sick here.",
+  "card": {
+    "name": "Cess Pool",
+    "tags": [
+      "building",
+      "temple"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Cess Pool",
+      "wbc3_race": "Plaguelords",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Plaguelords/Cess Pool/Cess Pool - base [BACP].png",
+        "construction": "assets/Sprites/Buildings/Plaguelords/Cess Pool/Cess Pool - construction [BACPz].png",
+        "info": "assets/Sprites/Buildings/Plaguelords/Cess Pool/Cess Pool - info [BACPi].png"
+      }
+    }
+  }
+}

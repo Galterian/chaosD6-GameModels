@@ -1,0 +1,30 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_barbarians_smithy",
+  "name": "Forge",
+  "version": "1.0.0",
+  "race": "race_barbarians",
+  "role": "producer",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The smith works here.",
+  "card": {
+    "name": "Forge",
+    "tags": [
+      "building",
+      "producer"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Fortress (level 5)",
+      "wbc3_race": "Barbarians",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Barbarians/Fortress (level 5)/Fortress (level 5) - base [BKB4].png",
+        "info": "assets/Sprites/Buildings/Barbarians/Fortress (level 5)/Fortress (level 5) - info [BKB4i].png"
+      }
+    }
+  }
+}

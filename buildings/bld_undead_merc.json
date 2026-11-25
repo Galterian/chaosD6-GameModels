@@ -1,0 +1,31 @@
+{
+  "schema": "chaosd6.building/1",
+  "id": "bld_undead_merc",
+  "name": "Graveyard",
+  "version": "1.0.0",
+  "race": "race_undead",
+  "role": "house",
+  "bank": {
+    "stat": "matter",
+    "value": 40
+  },
+  "blocks": true,
+  "text": "The sellsword waits here for work.",
+  "card": {
+    "name": "Graveyard",
+    "tags": [
+      "building",
+      "house"
+    ],
+    "resources": {
+      "source": "warlords3_battlecry",
+      "wbc3_name": "Graveyard",
+      "wbc3_race": "Undead",
+      "sprites": {
+        "base": "assets/Sprites/Buildings/Undead/Graveyard/Graveyard - base [BAGY].png",
+        "construction": "assets/Sprites/Buildings/Undead/Graveyard/Graveyard - construction [BAGYz].png",
+        "info": "assets/Sprites/Buildings/Undead/Graveyard/Graveyard - info [BAGYi].png"
+      }
+    }
+  }
+}
